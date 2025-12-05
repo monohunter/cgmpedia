@@ -1,0 +1,36 @@
+site_name: 丹阳合成手册
+theme:
+  name: material
+  icon:
+    logo: material/flask-round-bottom
+  language: zh
+  palette:
+    primary: indigo
+
+  features:
+    #- navigation.tabs
+    - navigation.top
+    - search.highlight
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - glightbox
+  - search:
+      lang: [en, ja]          # 中文一定要加
+      separator: '[\s\-\.]+'  # 优化中文切词
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+copyright: Copyright © by Yangxin Zhang
