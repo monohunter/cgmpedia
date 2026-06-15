@@ -1148,25 +1148,25 @@
 <h2 id="_1">复数之形式</h2>
 <p>利用Euler公式和简单的代数运算，可把实数形式的Fourier级数写成复数形式，根据欧拉公式，可知：
 $$
-\cos {n x}=\frac{1}{2}(\mathrm{e}^{in x}+\mathrm{e}^{-inx}), \quad \sin{n x}=\frac{1}{2i}(\mathrm{e}^{in x}-\mathrm{e}^{-in x})=\frac{-i}{2}(\mathrm{e}^{in x}-\mathrm{e}^{-in x})
-$$
-将之代入到Fourier展开式：
+\cos {n x}=\frac{1}{2}\left(\mathrm{e}^{in x}+\mathrm{e}^{-inx}\right), \quad \sin{n x}=\frac{1}{2i}\left(\mathrm{e}^{in x}-\mathrm{e}^{-in x}\right)=\frac{-i}{2}\left(\mathrm{e}^{in x}-\mathrm{e}^{-in x}\right)
+$$</p>
+<p>将之代入到Fourier展开式：
 $$
 f(x)=\frac{a_0}{2}+\sum_{n=1}^{\infty}{(a_n\cos nx +b_n \sin nx)} = \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big(a_n\frac{1}{2}(\mathrm{e}^{in x}+\mathrm{e}^{-inx})-b_n\frac{i}{2}(\mathrm{e}^{in x}-\mathrm{e}^{-in x})\Big)} = \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big( \frac{1}{2}(a_n-ib_n)\mathrm{e}^{inx}+\frac{1}{2}(a_n+ib_n)\mathrm{e}^{-inx}\Big)}
-$$
-而若令：
+$$</p>
+<p>而若令：
 $$
 C_n=\frac{1}{2}(a_n-ib_n)=\frac{1}{2}\Big(\frac{1}{\pi}\int_{-\pi}^{\pi}{f(x)\cos {nx} \, \mathrm{d}x}-i\frac{1}{\pi}\int_{-\pi}^{\pi}{f(x)\sin {nx} \, \mathrm{d}x}\Big) = \frac{1}{2\pi}\int_{-\pi}^{\pi}{f(x)\mathrm{e}^{-inx}\, \mathrm{d}x}
-$$
-把<span class="arithmatex">\(n\)</span>取做<span class="arithmatex">\(-n\)</span>，可得：
+$$</p>
+<p>把<span class="arithmatex">\(n\)</span>取做<span class="arithmatex">\(-n\)</span>，可得：
 $$
 C_{-n}=\frac{1}{2\pi}\int_{-\pi}^{\pi}{f(x)\mathrm{e}^{inx}\mathrm dx}=\frac{1}{2}(a_n+ib_n)
-$$
-把<span class="arithmatex">\(n\)</span>取做<span class="arithmatex">\(0\)</span>，可得：
+$$</p>
+<p>把<span class="arithmatex">\(n\)</span>取做<span class="arithmatex">\(0\)</span>，可得：
 $$
 C_0=\frac{1}{2\pi}\int_{-\pi}^{\pi}{f(x)\, \mathrm{d}x}=\frac{a_0}{2}
-$$
-这样，Fourier展开式中的三项，就可以合起来了，只要<span class="arithmatex">\(n\)</span>的取值遍历从<span class="arithmatex">\(-\infty\)</span>到<span class="arithmatex">\(+\infty\)</span>的所有整数：
+$$</p>
+<p>这样，Fourier展开式中的三项，就可以合起来了，只要<span class="arithmatex">\(n\)</span>的取值遍历从<span class="arithmatex">\(-\infty\)</span>到<span class="arithmatex">\(+\infty\)</span>的所有整数：
 $$
 f(x) = \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big( \frac{1}{2}(a_n-ib_n)\mathrm{e}^{inx}+\frac{1}{2}(a_n+ib_n)\mathrm{e}^{-inx}\Big)} = C_0+\sum_{n=1}^{\infty}{C_n \mathrm{e}^{inx}}+\sum_{n=1}^{\infty}{C_{-n} \mathrm{e}^{-inx}} = \sum_{n=-\infty}^{\infty}{C_n \mathrm{e}^{inx}}
 $$</p>
