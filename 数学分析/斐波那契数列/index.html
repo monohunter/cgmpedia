@@ -1106,14 +1106,14 @@ r\cdot s = -1
 \end{cases}
 \]</div>
 <p>此时，<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\(s\)</span>为一元二次方程<span class="arithmatex">\(x^2-x-1=0\)</span>的两个根，解得：<span class="arithmatex">\(r=\dfrac{1-\sqrt{5}}{2}\)</span>或<span class="arithmatex">\(r=\dfrac{1+\sqrt{5}}{2}\)</span>.</p>
-<p>同样地，可以构造<span class="arithmatex">\(2\)</span>个等比数列如下：
-$$
+<p>同样地，可以构造<span class="arithmatex">\(2\)</span>个等比数列如下：</p>
+<div class="arithmatex">\[
 \begin{split}
-        a_n-\left(\frac{1-\sqrt{5}}{2}\right)a_{n-1} &amp;=\frac{1+\sqrt{5}}{2}\left[a_{n-1}-\left(\frac{1-\sqrt{5}}{2}\right)a_{n-2}\right] =\cdots \
-         &amp;= \left(\frac{1+\sqrt{5}}{2}\right)^{n-1}\left[a_1-\left(\frac{1-\sqrt{5}}{2}\right)a_0\right] \
+        a_n-\left(\frac{1-\sqrt{5}}{2}\right)a_{n-1} &amp;=\frac{1+\sqrt{5}}{2}\left[a_{n-1}-\left(\frac{1-\sqrt{5}}{2}\right)a_{n-2}\right] =\cdots \\
+         &amp;= \left(\frac{1+\sqrt{5}}{2}\right)^{n-1}\left[a_1-\left(\frac{1-\sqrt{5}}{2}\right)a_0\right] \\
          &amp;= \left(\frac{1+\sqrt{5}}{2}\right)^{n-1}\left[1-\left(\frac{1-\sqrt{5}}{2}\right)\right]=\left(\frac{1+\sqrt{5}}{2}\right)^{n}
     \end{split}\label{eq1}
-$$</p>
+\]</div>
 <div class="arithmatex">\[
 \begin{split}
         a_n-\left(\frac{1+\sqrt{5}}{2}\right)a_{n-1} &amp;=\frac{1-\sqrt{5}}{2}\left[a_{n-1}-\left(\frac{1+\sqrt{5}}{2}\right)a_{n-2}\right] =\cdots \\
@@ -1121,23 +1121,23 @@ $$</p>
         &amp;= \left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\left[1-\left(\frac{1+\sqrt{5}}{2}\right)\right]=\left(\frac{1-\sqrt{5}}{2}\right)^{n}
     \end{split} \label{eq2}
 \]</div>
-<p>由方程<span class="arithmatex">\(\eqref{eq1}\)</span> <span class="arithmatex">\(-\)</span> 方程<span class="arithmatex">\(\eqref{eq2}\)</span>得：
-$$
+<p>由方程<span class="arithmatex">\(\eqref{eq1}\)</span> <span class="arithmatex">\(-\)</span> 方程<span class="arithmatex">\(\eqref{eq2}\)</span>得：</p>
+<div class="arithmatex">\[
 \left(\frac{1+\sqrt{5}}{2}-\frac{1-\sqrt{5}}{2}\right)a_{n-1}=\sqrt{5}a_{n-1}
 =\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}
-$$</p>
-<p>即：
-$$
+\]</div>
+<p>即：</p>
+<div class="arithmatex">\[
 a_{n-1}=\frac{1}{\sqrt{5}}\left[ \left( \frac{1+\sqrt{5}}{2} \right)^{n}-\left( \frac{1-\sqrt{5}}{2} \right)^{n} \right],\quad n=1,2,\cdots
-$$</p>
-<p>即:
-$$
+\]</div>
+<p>即:</p>
+<p>$$
 a_{n-1}=\frac{1}{\sqrt{5}}\left[ \left( \frac{1+\sqrt{5}}{2} \right)^{n}-\left( \frac{1-\sqrt{5}}{2}\right)^{n} \right],\quad n=1,2,\cdots
 $$
-因此通项公式可表示为：
-$$
+因此通项公式可表示为：</p>
+<div class="arithmatex">\[
 a_n=\frac{1}{\sqrt{5}}\left[ \left( \frac{1+\sqrt{5}}{2} \right)^{n+1}-\left( \frac{1-\sqrt{5}}{2} \right)^{n+1} \right],\quad n=0,1,2,\cdots
-$$</p>
+\]</div>
 <h2 id="2">方法2：线性代数特征值方法</h2>
 <p>其递推关系<span class="arithmatex">\(a_n =a_{n-1}+a_{n-2},~n\geqslant 2\)</span>实质是一个代数方程，是一个二阶标量方程(second-order scalar problem)，通过增加一个方程式<span class="arithmatex">\(a_{n-1}=a_{n-1}\)</span>可以将之转化为一阶向量方程组(first-order system)：</p>
 <div class="arithmatex">\[
@@ -1146,37 +1146,37 @@ $$</p>
         a_{n-1}=a_{n-1}
     \end{cases}
 \]</div>
-<p>采用向量的记法，若记<span class="arithmatex">\(\mathbf {u}_n = \begin{bmatrix}a_n \\ a_{n-1} \end{bmatrix}\)</span>，记矩阵<span class="arithmatex">\(\mathbf{A}=\begin{bmatrix} 1 &amp; 1\\1 &amp; 0 \end{bmatrix}\)</span>,则此方程组简写为矩阵方程，它具有一阶差分方程(difference equation)的形式：
-$$
-\mathbf{u}<em n-1="n-1">n=\mathbf{A} \cdot \mathbf{u}</em>
-$$</p>
+<p>采用向量的记法，若记<span class="arithmatex">\(\mathbf {u}_n = \begin{bmatrix}a_n \\ a_{n-1} \end{bmatrix}\)</span>，记矩阵<span class="arithmatex">\(\mathbf{A}=\begin{bmatrix} 1 &amp; 1\\1 &amp; 0 \end{bmatrix}\)</span>,则此方程组简写为矩阵方程，它具有一阶差分方程(difference equation)的形式：</p>
+<div class="arithmatex">\[
+\mathbf{u}_n=\mathbf{A} \cdot \mathbf{u}_{n-1}
+\]</div>
 <p>​ <br>
 其中初始向量<span class="arithmatex">\(\mathbf u_1 =\begin{bmatrix} a_1\\a_0\end{bmatrix} = \begin{bmatrix} 1\\ 1 \end{bmatrix}\)</span>，依次类推：<span class="arithmatex">\(\mathbf u_2 = \begin{bmatrix} 2\\ 1 \end{bmatrix},\mathbf u_3 = \begin{bmatrix} 3\\2  \end{bmatrix},\cdots\)</span></p>
 <p>原问题变为求矩阵<span class="arithmatex">\(\mathbf A\)</span>的幂次问题：从<span class="arithmatex">\(\mathbf u_2 = \mathbf A \mathbf u_1\)</span>开始，求<span class="arithmatex">\(\mathbf u_n = \mathbf A^{n-1}\mathbf u_1\)</span>. 要解此方程，需要求得矩阵<span class="arithmatex">\(\mathbf A\)</span>的特征值、特征向量。</p>
-<p>计算矩阵<span class="arithmatex">\(\mathbf{A}\)</span>的特征值，由：
-$$
-\lvert A-\lambda I \rvert = \left| \begin{array}{cc} 1-\lambda &amp; 1 \ 1 &amp; -\lambda \end{array}\right|={\lambda}^2-\lambda -1 =0.
-$$
-得到其特征值为：
-$$
+<p>计算矩阵<span class="arithmatex">\(\mathbf{A}\)</span>的特征值，由：</p>
+<div class="arithmatex">\[
+\lvert A-\lambda I \rvert = \left| \begin{array}{cc} 1-\lambda &amp; 1 \\ 1 &amp; -\lambda \end{array}\right|={\lambda}^2-\lambda -1 =0.
+\]</div>
+<p>得到其特征值为：</p>
+<div class="arithmatex">\[
 {\lambda}_1=\dfrac{1+\sqrt{5}}{2}\approx 1.618,\quad{\lambda}_2=\dfrac{1-\sqrt{5}}{2} \approx -0.618
-$$
-矩阵有两个不同的特征值，则一定会有两个线性无关的特征向量，该矩阵可以被对角化。对应的特征向量容易求得：
-$$
-\mathbf x_1 = \begin{bmatrix}\frac{1+\sqrt{5}}{2}\1\end{bmatrix},\quad \mathbf x_2 = \begin{bmatrix}\frac{1-\sqrt{5}}{2} \1 \end{bmatrix}
-$$</p>
-<p>那么矩阵
-$$
-\mathbf X = \begin{bmatrix}\mathbf x_1 &amp; \mathbf x_2 \end{bmatrix} = \begin{bmatrix}\frac{1+\sqrt{5}}{2} &amp; \frac{1-\sqrt{5}}{2} \ 1&amp; 1 \end{bmatrix}\
-$$
-可使矩阵<span class="arithmatex">\(\mathbf A\)</span>对角化，即：
-$$
-\mathbf X^{-1}\mathbf A \mathbf X =\begin{bmatrix}\lambda_1 &amp; 0 \ 0 &amp; \lambda_2 \end{bmatrix}=\begin{bmatrix}\frac{1+\sqrt{5}}{2} &amp; 0 \ 0&amp; \frac{1-\sqrt{5}}{2}\end{bmatrix} = \mathbf \Lambda
-$$
-也可以写为：
-$$
+\]</div>
+<p>矩阵有两个不同的特征值，则一定会有两个线性无关的特征向量，该矩阵可以被对角化。对应的特征向量容易求得：</p>
+<div class="arithmatex">\[
+\mathbf x_1 = \begin{bmatrix}\frac{1+\sqrt{5}}{2}\\1\end{bmatrix},\quad \mathbf x_2 = \begin{bmatrix}\frac{1-\sqrt{5}}{2} \\1 \end{bmatrix}
+\]</div>
+<p>那么矩阵</p>
+<div class="arithmatex">\[
+\mathbf X = \begin{bmatrix}\mathbf x_1 &amp; \mathbf x_2 \end{bmatrix} = \begin{bmatrix}\frac{1+\sqrt{5}}{2} &amp; \frac{1-\sqrt{5}}{2} \\ 1&amp; 1 \end{bmatrix}\
+\]</div>
+<p>可使矩阵<span class="arithmatex">\(\mathbf A\)</span>对角化，即：</p>
+<div class="arithmatex">\[
+\mathbf X^{-1}\mathbf A \mathbf X =\begin{bmatrix}\lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{bmatrix}=\begin{bmatrix}\frac{1+\sqrt{5}}{2} &amp; 0 \\ 0&amp; \frac{1-\sqrt{5}}{2}\end{bmatrix} = \mathbf \Lambda
+\]</div>
+<p>也可以写为：</p>
+<div class="arithmatex">\[
 \mathbf A = \mathbf X \mathbf \Lambda \mathbf X^{-1}
-$$</p>
+\]</div>
 <p>将初始项用特征向量表示出来：<span class="arithmatex">\(\mathbf u_1 = \mathbf X \mathbf c =  c_1\begin{bmatrix}
     \lambda_1 \\ 1
 \end{bmatrix}+c_2\begin{bmatrix}
@@ -1185,18 +1185,18 @@ $$</p>
 <div class="arithmatex">\[
 \mathbf u_n =  \mathbf A^{n-1}\mathbf u_1=\mathbf X \mathbf \Lambda^{n-1} \mathbf X^{-1}\mathbf u_1 = \mathbf X \mathbf \Lambda^{n-1} \mathbf X^{-1}\mathbf X \mathbf c = \mathbf X \mathbf \Lambda^{n-1} \mathbf c
 \]</div>
-<p>将计算出来的<span class="arithmatex">\(\lambda_1,\lambda_2,\mathbf X,\mathbf c\)</span>的值代入，计算如下：
-$$
-\begin{split}\mathbf u_n =&amp; \begin{bmatrix}a_n \ a_{n-1}\end{bmatrix} = \begin{bmatrix}\frac{1+\sqrt{5}}{2}&amp;\frac{1-\sqrt{5}}{2}\1&amp;1\end{bmatrix}\begin{bmatrix}\left(\frac{1+\sqrt{5}}{2} \right)^{n-1}&amp;0\0&amp;\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\end{bmatrix}\begin{bmatrix}\frac{1+\sqrt{5}}{2\sqrt{5}}\\frac{\sqrt{5}-1}{2\sqrt{5}} \end{bmatrix}\
+<p>将计算出来的<span class="arithmatex">\(\lambda_1,\lambda_2,\mathbf X,\mathbf c\)</span>的值代入，计算如下：</p>
+<div class="arithmatex">\[
+\begin{split}\mathbf u_n =&amp; \begin{bmatrix}a_n \\ a_{n-1}\end{bmatrix} = \begin{bmatrix}\frac{1+\sqrt{5}}{2}&amp;\frac{1-\sqrt{5}}{2}\\1&amp;1\end{bmatrix}\begin{bmatrix}\left(\frac{1+\sqrt{5}}{2} \right)^{n-1}&amp;0\\0&amp;\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\end{bmatrix}\begin{bmatrix}\frac{1+\sqrt{5}}{2\sqrt{5}}\\\frac{\sqrt{5}-1}{2\sqrt{5}} \end{bmatrix}\\
 =&amp;\begin{bmatrix}
-     \frac{1+\sqrt{5}}{2\sqrt{5}}\left(\frac{1+\sqrt{5}}{2} \right)^{n}+ \frac{\sqrt{5}-1}{2\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n}\\frac{1+\sqrt{5}}{2\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n-1}+ \frac{\sqrt{5}-1}{2\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}
+     \frac{1+\sqrt{5}}{2\sqrt{5}}\left(\frac{1+\sqrt{5}}{2} \right)^{n}+ \frac{\sqrt{5}-1}{2\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n}\\\frac{1+\sqrt{5}}{2\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n-1}+ \frac{\sqrt{5}-1}{2\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}
 \end{bmatrix}
 \end{split}
-$$</p>
-<p>由此得到：
-$$
+\]</div>
+<p>由此得到：</p>
+<div class="arithmatex">\[
 a_n=\frac{1}{\sqrt{5}}\left[ \left( \frac{1+\sqrt{5}}{2} \right)^{n+1}-\left( \frac{1-\sqrt{5}}{2}\right)^{n+1} \right],\quad n=0,1,2,\cdots
-$$</p>
+\]</div>
 <p>这个数列是如何增长的、其增长速度，是由矩阵的特征值控制的，而较大的特征值起了决定性作用。由：</p>
 <div class="arithmatex">\[
 a_n = c_1\left(\frac{1+\sqrt{5}}{2} \right)^{n}+ c_2\left(\frac{1-\sqrt{5}}{2}\right)^{n}\approx c_1\left(\frac{1+\sqrt{5}}{2} \right)^{n} 
