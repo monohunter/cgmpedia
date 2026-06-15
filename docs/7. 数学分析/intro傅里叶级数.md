@@ -3,18 +3,24 @@
 ## 复数之形式
 
 利用Euler公式和简单的代数运算，可把实数形式的Fourier级数写成复数形式，根据欧拉公式，可知：
+
+
 $$
 \cos {n x}=\frac{1}{2}\left(\mathrm{e}^{in x}+\mathrm{e}^{-inx}\right), \quad \sin{n x}=\frac{1}{2i}\left(\mathrm{e}^{in x}-\mathrm{e}^{-in x}\right)=\frac{-i}{2}\left(\mathrm{e}^{in x}-\mathrm{e}^{-in x}\right)
 $$
 
 
+
 将之代入到Fourier展开式：
+
+
 $$
 f(x)=\frac{a_0}{2}+\sum_{n=1}^{\infty}{(a_n\cos nx +b_n \sin nx)} = \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big(a_n\frac{1}{2}(\mathrm{e}^{in x}+\mathrm{e}^{-inx})-b_n\frac{i}{2}(\mathrm{e}^{in x}-\mathrm{e}^{-in x})\Big)} = \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big( \frac{1}{2}(a_n-ib_n)\mathrm{e}^{inx}+\frac{1}{2}(a_n+ib_n)\mathrm{e}^{-inx}\Big)}
 $$
 
-
 而若令：
+
+
 $$
 C_n=\frac{1}{2}(a_n-ib_n)=\frac{1}{2}\Big(\frac{1}{\pi}\int_{-\pi}^{\pi}{f(x)\cos {nx} \, \mathrm{d}x}-i\frac{1}{\pi}\int_{-\pi}^{\pi}{f(x)\sin {nx} \, \mathrm{d}x}\Big) = \frac{1}{2\pi}\int_{-\pi}^{\pi}{f(x)\mathrm{e}^{-inx}\, \mathrm{d}x}
 $$
