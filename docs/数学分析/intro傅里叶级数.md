@@ -35,8 +35,9 @@ $$
 C_{-n}=\frac{1}{2\pi}\int_{-\pi}^{\pi}{f(x)\mathrm{e}^{inx}\mathrm dx}=\frac{1}{2}(a_n+ib_n)
 $$
 
-
 把$n$取做$0$，可得：
+
+
 $$
 C_0=\frac{1}{2\pi}\int_{-\pi}^{\pi}{f(x)\, \mathrm{d}x}=\frac{a_0}{2}
 $$
@@ -46,6 +47,7 @@ $$
 这样，Fourier展开式中的三项，就可以合起来了，只要$n$的取值遍历从$-\infty$到$+\infty$的所有整数：
 
 
+
 $$
 f(x) = \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big( \frac{1}{2}(a_n-ib_n)\mathrm{e}^{inx}+\frac{1}{2}(a_n+ib_n)\mathrm{e}^{-inx}\Big)} = C_0+\sum_{n=1}^{\infty}{C_n \mathrm{e}^{inx}}+\sum_{n=1}^{\infty}{C_{-n} \mathrm{e}^{-inx}} = \sum_{n=-\infty}^{\infty}{C_n \mathrm{e}^{inx}}
 $$
@@ -53,6 +55,7 @@ $$
 
 
 因此，我们有如下之定义：Fourier级数的复数形式：设收敛条件满足，定义在$[-\pi,\pi]$上的函数$f$，可以写成：
+
 
 
 $$
