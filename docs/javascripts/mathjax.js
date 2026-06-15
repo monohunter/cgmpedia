@@ -1,10 +1,11 @@
 window.MathJax = {
   tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
+    // 明确告诉 MathJax 认识 $ 和 $$
+    inlineMath: [["\\(", "\\)"], ["$", "$"]],
+    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true,
-    // 关键配置：告诉 MathJax 加载 mhchem 宏包
+    // 加载化学方程式 mhchem 宏包
     packages: {'[+]': ['mhchem']} 
   },
   options: {
