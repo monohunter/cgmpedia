@@ -1087,10 +1087,10 @@
 <p>斐波那契数列(Fibonacci)是一个递归数列(recursive sequence)，递推关系是：<span class="arithmatex">\(a_n =a_{n-1}+a_{n-2},~n\geqslant 2\)</span>. 规定<span class="arithmatex">\(a_0=1,a_1=1\)</span>（这2个值就相当于微分方程中的初始条件）。</p>
 <p>这个数列写下来就是：</p>
 <div class="arithmatex">\[
-\begin{bmatrix}
+\begin{matrix}
 a_0 &amp; a_1 &amp; a_2 &amp; a_3 &amp; a_4 &amp; a_5 &amp; a_6 &amp; a_7 &amp; \cdots \\
 1 &amp; 1 &amp; 2 &amp; 3 &amp; 5 &amp; 8 &amp; 13 &amp; 21 &amp; \cdots
-\end{bmatrix}
+\end{matrix}
 \]</div>
 <p>这个数列的通项公式如何求？</p>
 <h2 id="1">方法1：初等数学的方法</h2>
@@ -1121,7 +1121,7 @@ r\cdot s = -1
         &amp;= \left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\left[1-\left(\frac{1+\sqrt{5}}{2}\right)\right]=\left(\frac{1-\sqrt{5}}{2}\right)^{n}
     \end{split} \label{eq2}
 \]</div>
-<p>由方程(<span class="arithmatex">\(\ref{eq1}\)</span>) <span class="arithmatex">\(-\)</span> 方程(<span class="arithmatex">\(\ref{eq2}\)</span>)得：</p>
+<p>由方程(4)<span class="arithmatex">\(-\)</span>方程(5)得：</p>
 <div class="arithmatex">\[
 \left(\frac{1+\sqrt{5}}{2}-\frac{1-\sqrt{5}}{2}\right)a_{n-1}=\sqrt{5}a_{n-1}
 =\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}
@@ -1129,10 +1129,6 @@ r\cdot s = -1
 <p>即：</p>
 <div class="arithmatex">\[
 a_{n-1}=\frac{1}{\sqrt{5}}\left[ \left( \frac{1+\sqrt{5}}{2} \right)^{n}-\left( \frac{1-\sqrt{5}}{2} \right)^{n} \right],\quad n=1,2,\cdots
-\]</div>
-<p>即:</p>
-<div class="arithmatex">\[
-a_{n-1}=\frac{1}{\sqrt{5}}\left[ \left( \frac{1+\sqrt{5}}{2} \right)^{n}-\left( \frac{1-\sqrt{5}}{2}\right)^{n} \right],\quad n=1,2,\cdots
 \]</div>
 <p>因此通项公式可表示为：</p>
 <div class="arithmatex">\[
