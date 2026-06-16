@@ -1,6 +1,12 @@
-这是对傅里叶级数的简单介绍。
+# Fourier分析
 
-## 复数之形式
+
+
+请看详细笔记：傅里叶级数](../static/傅里叶级数.pdf)
+
+
+
+## 复数的定义
 
 利用Euler公式和简单的代数运算，可把实数形式的Fourier级数写成复数形式，根据欧拉公式，可知：
 
@@ -17,7 +23,7 @@ $$
 
 $$
 \begin{split}
-f(x) &=\frac{a_0}{2}+\sum_{n=1}^{\infty}{(a_n\cos nx +b_n \sin nx)} \\&= \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big(a_n\frac{1}{2}(\mathrm{e}^{in x}+\mathrm{e}^{-inx})-b_n\frac{i}{2}(\mathrm{e}^{in x}-\mathrm{e}^{-in x})\Big)} \\&= \frac{a_0}{2}+\sum_{n=1}^{\infty}{\Big( \frac{1}{2}(a_n-ib_n)\mathrm{e}^{inx}+\frac{1}{2}(a_n+ib_n)\mathrm{e}^{-inx}\Big)}
+f(x) &=\frac{a_0}{2}+\sum_{n=1}^{\infty}{(a_n\cos nx +b_n \sin nx)} \\&= \frac{a_0}{2}+\sum_{n=1}^{\infty}{\left(a_n\frac{1}{2}(\mathrm{e}^{in x}+\mathrm{e}^{-inx})-b_n\frac{i}{2}(\mathrm{e}^{in x}-\mathrm{e}^{-in x})\right)} \\&= \frac{a_0}{2}+\sum_{n=1}^{\infty}{\left( \frac{1}{2}(a_n-ib_n)\mathrm{e}^{inx}+\frac{1}{2}(a_n+ib_n)\mathrm{e}^{-inx}\right)}
 \end{split}
 $$
 
