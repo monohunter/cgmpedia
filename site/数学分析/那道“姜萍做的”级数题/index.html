@@ -1323,15 +1323,15 @@
 </blockquote>
 <p>取对数：<span class="arithmatex">\(\ln \Gamma(z) + \ln \Gamma(1-z) =  \ln \pi - \ln \sin \pi z\)</span></p>
 <p>求一阶导数：<span class="arithmatex">\(\psi(1-z)-\psi(z) = \pi \cot \pi z\)</span> </p>
-<p>继续做下去，成立一些递推式：
-$$
-\begin{equation<em>}
-\psi'(1-z)+\psi'(z) = -\pi \frac{\mathrm d}{\mathrm dz} \cot \pi z \
-\psi''(1-z)-\psi''(z) = \pi \frac{\mathrm d^2}{\mathrm dz^2} \cot \pi z \
-\vdots \
+<p>继续做下去，成立一些递推式：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\psi'(1-z)+\psi'(z) = -\pi \frac{\mathrm d}{\mathrm dz} \cot \pi z \\
+\psi''(1-z)-\psi''(z) = \pi \frac{\mathrm d^2}{\mathrm dz^2} \cot \pi z \\
+\vdots \\
 \displaystyle \psi^{(n)}(1-z)+(-1)^{n+1}\psi^{(n)}(z) = (-1)^n\pi \frac{\mathrm d^n}{\mathrm dz^n} \cot \pi z
-\end{equation</em>}
-$$</p>
+\end{equation*}
+\]</div>
 <blockquote>
 <p>这些递推式是用不到的，这只是姜萍的思考的过程。有用的是第一个递推式，因为它出现了<span class="arithmatex">\(\csc x\)</span>：</p>
 <div class="arithmatex">\[
