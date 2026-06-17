@@ -31,9 +31,9 @@
 
 如果行文有误，或者有问题想与我讨论，有问题想通过我解决，
 
-可以和我联系：exastris@163.com
+可以和我联系：
 
-微信：
+- 邮箱：[exastris@163.com](mailto:exastris@163.com)
+- 微信：扫码添加
 
-
-
+![wechat](./images/wechat.jpg){width="200"}
