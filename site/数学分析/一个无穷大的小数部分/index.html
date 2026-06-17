@@ -1085,7 +1085,7 @@
 
 <h1 id="_1">一个无穷大的小数部分</h1>
 <p><strong>题目：</strong>是否存在一个足够大的整数，使得<span class="arithmatex">\((2+\sqrt{2})^n\)</span>的小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>？</p>
-<p><strong>分析：</strong>这是一个很有意思的题目。<span class="arithmatex">\((2+\sqrt{2})^n\)</span>当然是无穷大的。如果对一个<span class="arithmatex">\(N\)</span>，它的小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>，也就是说，它比之下一个整数相差的量小于<span class="arithmatex">\(10^{-100}\)</span>，这是非常小的正数。这让我们想到极限过程：题目是问，虽然它是无穷大，但它是不是从左侧逼近于整数，不是说逼近于某个固定的整数，而是逼近于整数这个形式。</p>
+<p><strong>分析：</strong>这是一个很有意思的题目。<span class="arithmatex">\((2+\sqrt{2})^n\)</span>当然是无穷大的。如果对一个足够大的<span class="arithmatex">\(N\)</span>，<span class="arithmatex">\((2+\sqrt{2})^N\)</span>的小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>，也就是说，它比之下一个整数相差的量小于<span class="arithmatex">\(10^{-100}\)</span>，这是非常小的正数。这让我们想到极限过程：题目是问，虽然它是无穷大，但它是不是从左侧逼近于整数？不是说逼近于某个固定的整数，而是逼近于整数这个形式。</p>
 <p><strong>数学处理：</strong></p>
 <p>对<span class="arithmatex">\((2+\sqrt{2})^n\)</span>二项展开：</p>
 <div class="arithmatex">\[
@@ -1103,11 +1103,11 @@
 (2-\sqrt{2})^n &amp; = A-B\\
 \end{split}
 \]</div>
-<p>由于<span class="arithmatex">\(0&lt;(2-\sqrt{2})&lt;1\)</span>，因此<span class="arithmatex">\(0&lt;A-B&lt;1\)</span>，由于<span class="arithmatex">\(B\)</span>是无理数，因此存在关系：</p>
+<p>由于<span class="arithmatex">\(0&lt;(2-\sqrt{2})&lt;1\)</span>，因此<span class="arithmatex">\(0&lt;A-B&lt;1\)</span>，由于<span class="arithmatex">\(B\)</span>是无理数，因此成立：</p>
 <div class="arithmatex">\[
 A=[B]+1\quad \implies \quad [B]=A-1 \tag i
 \]</div>
-<p>其中<span class="arithmatex">\([B]\)</span>就是无理数<span class="arithmatex">\(B\)</span>的取整。</p>
+<p>其中<span class="arithmatex">\([B]\)</span>就是无理数<span class="arithmatex">\(B\)</span>的整数部分。</p>
 <p>由于<span class="arithmatex">\(0&lt;(2-\sqrt{2})&lt;1\)</span>，因此<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}{(2-\sqrt{2})^n}=\lim\limits_{n\rightarrow \infty}{(A-B)}=0\)</span>，那么根据极限的定义：对于任意<span class="arithmatex">\(\varepsilon &gt;0\)</span>，存在正整数<span class="arithmatex">\(N\)</span>，使得当<span class="arithmatex">\(n&gt;N\)</span>时，有：<span class="arithmatex">\(|A-B-0|=A-B &lt;\varepsilon\)</span> 恒成立。</p>
 <p>那么可取<span class="arithmatex">\(\varepsilon = 10^{-100}\)</span>，则存在正整数<span class="arithmatex">\(N\)</span>，使得当<span class="arithmatex">\(n&gt;N\)</span>时，有：</p>
 <div class="arithmatex">\[

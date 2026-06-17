@@ -5,7 +5,8 @@ theme:
     logo: material/flask-round-bottom
   language: zh
   palette:
-    primary: indigo
+    primary: blue-grey
+    accent: teal
 
   features:
     #- navigation.tabs
