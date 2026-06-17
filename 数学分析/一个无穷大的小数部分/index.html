@@ -1084,36 +1084,36 @@
 
 
 <h1 id="_1">一个无穷大的小数部分</h1>
-<p>问：是否存在一个足够大的整数，使得<span class="arithmatex">\(\left(2+\sqrt{2}\right)^n\)</span>的小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>？</p>
-<p>这是一个很有意思的题目。<span class="arithmatex">\(\left(2+\sqrt{2}\right)^n\)</span>当然是无穷大的。</p>
-<p>如果小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>，也就是说，它照下一个整数相差的量小于<span class="arithmatex">\(10^{-100}\)</span>，这是非常小的数，也就是说，它从左侧逼近于整数，不是逼近于固定的整数，而是逼近于整数这个形式。</p>
-<p>对<span class="arithmatex">\(\left(2+\sqrt{2}\right)^n\)</span>二项展开：</p>
+<p><strong>题目：</strong>是否存在一个足够大的整数，使得<span class="arithmatex">\((2+\sqrt{2})^n\)</span>的小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>？</p>
+<p><strong>分析：</strong>这是一个很有意思的题目。<span class="arithmatex">\((2+\sqrt{2})^n\)</span>当然是无穷大的。如果对一个<span class="arithmatex">\(N\)</span>，它的小数部分大于<span class="arithmatex">\(0.\underbrace{999\cdots9}_{100\text{个}}\)</span>，也就是说，它比之下一个整数相差的量小于<span class="arithmatex">\(10^{-100}\)</span>，这是非常小的正数。这让我们想到极限过程：题目是问，虽然它是无穷大，但它是不是从左侧逼近于整数，不是说逼近于某个固定的整数，而是逼近于整数这个形式。</p>
+<p><strong>数学处理：</strong></p>
+<p>对<span class="arithmatex">\((2+\sqrt{2})^n\)</span>二项展开：</p>
 <div class="arithmatex">\[
-\left(2+\sqrt{2}\right)^n = C_n^02^n\left(\sqrt{2}\right)^0+C_n^12^{n-1}\left(\sqrt{2}\right)^1 + C_n^22^{n-2}\left(\sqrt{2}\right)^2 +\cdots + C_n^n2^{0}\left(\sqrt{2}\right)^n
+(2+\sqrt{2})^n = \textcolor{blue}{C_n^02^n(\sqrt{2})^0}+\textcolor{red}{C_n^12^{n-1}(\sqrt{2})^1} + \textcolor{blue}{C_n^22^{n-2}(\sqrt{2})^2} +\cdots + C_n^n2^{0}(\sqrt{2})^n
 \]</div>
-<p>可以看出它的奇数项都是整数，而偶数项都是无理数。再考察<span class="arithmatex">\(\left(2-\sqrt{2}\right)^n\)</span>二项展开：</p>
+<p>可以看出它的奇数项都是整数，而偶数项都是无理数。再考察<span class="arithmatex">\((2-\sqrt{2})^n\)</span>的二项展开：</p>
 <div class="arithmatex">\[
-\left(2-\sqrt{2}\right)^n = C_n^02^n\left(\sqrt{2}\right)^0-C_n^12^{n-1}\left(\sqrt{2}\right)^1 + C_n^22^{n-2}\left(\sqrt{2}\right)^2 +\cdots + C_n^n2^{0}\left(\sqrt{2}\right)^n
+(2-\sqrt{2})^n = \textcolor{blue}{C_n^02^n(\sqrt{2})^0}-\textcolor{red}{C_n^12^{n-1}(\sqrt{2})^1} + \textcolor{blue}{C_n^22^{n-2}(\sqrt{2})^2} +\cdots + C_n^n2^{0}(-\sqrt{2})^n
 \]</div>
-<p>同样的，它的奇数项都是整数，而偶数项都是无理数，只是偶数项前的系数都变成了负的。</p>
-<p>如果记<span class="arithmatex">\(\left(2+\sqrt{2}\right)^n\)</span>的所有奇数项的和为<span class="arithmatex">\(A\)</span>，所有偶数项的和为<span class="arithmatex">\(B\)</span>，那么<span class="arithmatex">\(A\)</span>是整数，<span class="arithmatex">\(B\)</span>是无理数。那么存在关系：</p>
+<p>同样的，它的奇数项都是整数，而偶数项都是相同的无理数，只是偶数项前的系数都变成了负的。</p>
+<p>如果记<span class="arithmatex">\((2+\sqrt{2})^n\)</span>的所有奇数项的和为<span class="arithmatex">\(\textcolor{blue}{A}\)</span>，所有偶数项的和为<span class="arithmatex">\(\textcolor{red}{B}\)</span>，那么<span class="arithmatex">\(A\)</span>是整数，<span class="arithmatex">\(B\)</span>是无理数。以及存在关系：</p>
 <div class="arithmatex">\[
 \begin{split}
-\left(2+\sqrt{2}\right)^n &amp; = A+B\\
-\left(2-\sqrt{2}\right)^n &amp; = A-B\\
+(2+\sqrt{2})^n &amp; = A+B\\
+(2-\sqrt{2})^n &amp; = A-B\\
 \end{split}
 \]</div>
-<p>由于<span class="arithmatex">\(0&lt;\left(2-\sqrt{2}\right)&lt;1\)</span>，因此<span class="arithmatex">\(0&lt;A-B&lt;1\)</span>，由于<span class="arithmatex">\(B\)</span>是无理数，因此存在关系：</p>
+<p>由于<span class="arithmatex">\(0&lt;(2-\sqrt{2})&lt;1\)</span>，因此<span class="arithmatex">\(0&lt;A-B&lt;1\)</span>，由于<span class="arithmatex">\(B\)</span>是无理数，因此存在关系：</p>
 <div class="arithmatex">\[
 A=[B]+1\quad \implies \quad [B]=A-1 \tag i
 \]</div>
 <p>其中<span class="arithmatex">\([B]\)</span>就是无理数<span class="arithmatex">\(B\)</span>的取整。</p>
-<p>由于<span class="arithmatex">\(0&lt;\left(2-\sqrt{2}\right)&lt;1\)</span>，因此<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}{\left(2-\sqrt{2}\right)^n}=\lim\limits_{n\rightarrow \infty}{(A-B)}=0\)</span>，那么根据极限的定义：对于任意<span class="arithmatex">\(\varepsilon &gt;0\)</span>，存在正整数<span class="arithmatex">\(N\)</span>，使得当<span class="arithmatex">\(n&gt;N\)</span>时，有：<span class="arithmatex">\(|A-B-0|=A-B &lt;\varepsilon\)</span> 恒成立。</p>
+<p>由于<span class="arithmatex">\(0&lt;(2-\sqrt{2})&lt;1\)</span>，因此<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}{(2-\sqrt{2})^n}=\lim\limits_{n\rightarrow \infty}{(A-B)}=0\)</span>，那么根据极限的定义：对于任意<span class="arithmatex">\(\varepsilon &gt;0\)</span>，存在正整数<span class="arithmatex">\(N\)</span>，使得当<span class="arithmatex">\(n&gt;N\)</span>时，有：<span class="arithmatex">\(|A-B-0|=A-B &lt;\varepsilon\)</span> 恒成立。</p>
 <p>那么可取<span class="arithmatex">\(\varepsilon = 10^{-100}\)</span>，则存在正整数<span class="arithmatex">\(N\)</span>，使得当<span class="arithmatex">\(n&gt;N\)</span>时，有：</p>
 <div class="arithmatex">\[
 A-B&lt;\varepsilon = 10^{-100} \tag {ii}
 \]</div>
-<p>根据式（i），无穷大<span class="arithmatex">\(\left(2+\sqrt{2}\right)^n\)</span>的小数部分即可表示为：</p>
+<p>根据式（i），无穷大<span class="arithmatex">\((2+\sqrt{2})^n\)</span>的小数部分即可表示为：</p>
 <div class="arithmatex">\[
 A+B-[A+B]=B-[B]=B-(A-1)=1-(A-B)
 \]</div>
