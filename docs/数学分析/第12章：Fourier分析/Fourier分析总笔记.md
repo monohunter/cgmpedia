@@ -1,8 +1,8 @@
-# Fourier分析
+# Fourier分析总笔记
 
 
 
-请看详细笔记：[Fourier分析](../static/傅里叶级数.pdf)
+请看详细笔记：[Fourier分析](../../static/傅里叶级数.pdf)
 
 
 
