@@ -23,6 +23,7 @@ markdown_extensions:
 
 plugins:
   - glightbox
+  # - blog
   - search:
       lang: [en, ja]          # 中文一定要加
       separator: '[\s\-\.]+'  # 优化中文切词
