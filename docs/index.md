@@ -14,11 +14,11 @@
 
 ### 第一章 实数和数列的极限
 
-[第一章习题及解答](../static/chapter1.pdf) version260721
+[第一章习题及解答](static/chapter1.pdf) version260721
 
 ### 第二章 函数的连续性
 
-[第二章习题及解答](../static/chapter2.pdf) version260916
+[第二章习题及解答](static/chapter2.pdf) version260916
 
 ### 第三章 函数的导数
 
@@ -58,7 +58,7 @@
 
 ### 第十二章 Fourier分析
 
-这章的总笔记：[Fourier分析笔记](../static/傅里叶级数.pdf)
+这章的总笔记：[Fourier分析笔记](static/傅里叶级数.pdf)
 
 
 
