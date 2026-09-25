@@ -298,6 +298,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ch1-3-6 递归数列的极限
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -314,6 +332,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法1：普通方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法2： 线性代数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法3：向量方程组
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -845,6 +926,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法1：普通方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法2： 线性代数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法3：向量方程组
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -861,6 +994,149 @@
 
 
 <h1 id="ch1-3-6">ch1-3-6 递归数列的极限</h1>
+<h2 id="_1">题目</h2>
+<p>设<span class="arithmatex">\(a,b,c\)</span>是三个给定的实数，令<span class="arithmatex">\(a_0=a,b_0=b,c_0=c\)</span>,并递归地定义：</p>
+<div class="arithmatex">\[
+\begin{cases}
+a_n = \frac{b_{n-1}+c_{n-1}}{2},\\ 
+b_n = \frac{c_{n-1}+a_{n-1}}{2},\\ 
+c_n = \frac{a_{n-1}+b_{n-1}}{2},\\ 
+\end{cases} \quad n=1,2,3,\cdots
+\]</div>
+<p>求证：</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}{a_n}=\lim_{n\rightarrow \infty}{b_n}=\lim_{n\rightarrow \infty}{c_n}=\frac{1}{3}(a+b+c).
+\]</div>
+<h2 id="1">方法1：普通方法</h2>
+<p>由于<span class="arithmatex">\(a,b,c\)</span>地位等同，因此只需求出<span class="arithmatex">\(\{a_n\}\)</span>的极限。可以求出<span class="arithmatex">\(\{a_n\}\)</span>的递推式：</p>
+<div class="arithmatex">\[
+a_n=\frac{b_{n-1}+c_{n-1}}{2}=\frac{a_{n-2}+c_{n-2}}{4}+\frac{a_{n-2}+b_{n-2}}{4}=\frac{a_{n-1}}{2}+\frac{a_{n-2}}{2},\quad n=2,3,\cdots
+\]</div>
+<p>其中<span class="arithmatex">\(a_0=a,\,a_1={(b+c)}/{2}\)</span>. 构造等比数列，设常数<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\(s\)</span>满足：</p>
+<div class="arithmatex">\[
+a_n-r\cdot a_{n-1}=s\cdot (a_{n-1}-r\cdot a_{n-2})\quad\quad \text{即：}a_n=(r+s)\cdot a_{n-1}-sr\cdot a_{n-2}
+\]</div>
+<p>对比递推式，可知：</p>
+<div class="arithmatex">\[
+\begin{cases}r+s = \frac{1}{2}\\
+r\cdot s = -\frac{1}{2} 
+\end{cases}
+\]</div>
+<p>由韦达定理知，<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\(s\)</span>为一元二次方程<span class="arithmatex">\(2x^2-x-1=0\)</span>的两个根，解得：<span class="arithmatex">\(r=1\)</span>或<span class="arithmatex">\(-\frac{1}{2}\)</span>.</p>
+<p>因此在递推式两侧同时加<span class="arithmatex">\({a_{n-1}}/{2}\)</span>，可得</p>
+<div class="arithmatex">\[
+a_n+\frac{a_{n-1}}{2}=a_{n-1}+\frac{a_{n-2}}{2}=\cdots = a_1+\frac{a_0}{2}=\frac{a+b+c}{2}\label{eq8}\tag{1}
+\]</div>
+<p>这相当于构造了一个公比为<span class="arithmatex">\(1\)</span>的等比数列。</p>
+<p>在递推式两侧同时减<span class="arithmatex">\(a_{n-1}\)</span>，可得</p>
+<div class="arithmatex">\[
+a_n - a_{n-1} = -\frac{1}{2}\left(a_{n-1}-a_{n-2}\right)=\cdots = \left(-\frac{1}{2}\right)^{n-1}\left(a_{1}-a_{0}\right)\label{eq9}\tag{2}
+\]</div>
+<p>这相当于构造了一个公比为<span class="arithmatex">\(-{1}/{2}\)</span>的等比数列。</p>
+<p>由<span class="arithmatex">\(2\times \eqref{eq8}+\eqref{eq9}\)</span>可得<span class="arithmatex">\(a_n\)</span>的表达式：</p>
+<div class="arithmatex">\[
+a_n=\frac{a+b+c}{3}+\left(-\frac{1}{2}\right)^{n-1}\frac{a_{1}-a_{0}}{3}\label{eq12}\tag{3}
+\]</div>
+<p>易知<span class="arithmatex">\(a_n\rightarrow \frac{a+b+c}{3},\;(n\rightarrow \infty)\)</span>，同时可知<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}{b_n}=\lim\limits_{n\rightarrow \infty}{c_n}=\frac{1}{3}(a+b+c).\)</span></p>
+<h2 id="2">方法2： 线性代数</h2>
+<p>这种递归的定义可以写成矩阵的形式：</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+    a_n \\ b_n \\c_n 
+\end{bmatrix} = \begin{bmatrix}
+    0 &amp; {1}/{2} &amp; {1}/{2} \\
+    {1}/{2} &amp; 0 &amp; {1}/{2} \\
+    {1}/{2} &amp; {1}/{2} &amp; 0
+\end{bmatrix}\begin{bmatrix}
+    a_{n-1}\\ b_{n-1}\\ b_{n-1}\\ 
+\end{bmatrix}
+\]</div>
+<p>计算系数矩阵的特征值和特征向量，由此将该矩阵对角化：</p>
+<div class="arithmatex">\[
+\begin{split}
+    \begin{bmatrix}
+        0 &amp; {1}/{2} &amp; {1}/{2} \\ {1}/{2} &amp; 0 &amp; {1}/{2} \\ {1}/{2} &amp; {1}/{2} &amp; 0
+    \end{bmatrix} &amp;=\begin{bmatrix}
+        -1&amp;-1&amp;1\\0&amp;1&amp;1\\1&amp;0&amp;1
+    \end{bmatrix}
+    \begin{bmatrix}
+    -{1}/{2}&amp;&amp;\\&amp;-{1}/{2}&amp;\\&amp;&amp;1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -1&amp;-1&amp;1\\0&amp;1&amp;1\\1&amp;0&amp;1
+    \end{bmatrix}^{-1}\\
+    &amp;=\begin{bmatrix}
+        -1&amp;-1&amp;1\\0&amp;1&amp;1\\1&amp;0&amp;1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -{1}/{2}&amp;&amp;\\&amp;-{1}/{2}&amp;\\&amp;&amp;1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -{1}/{3}&amp;-{1}/{3}&amp;{2}/{3}\\-{1}/{3}&amp;{2}/{3}&amp;-{1}/{3}\\{1}/{3}&amp;{1}/{3}&amp;{1}/{3}
+    \end{bmatrix}
+\end{split}
+\]</div>
+<p>因此直接可以写出：</p>
+<div class="arithmatex">\[
+\begin{split}
+\begin{bmatrix}
+    a_n\\b_n\\c_n
+\end{bmatrix}
+    &amp;=\begin{bmatrix}
+        -1&amp;-1&amp;1\\0&amp;1&amp;1\\1&amp;0&amp;1
+    \end{bmatrix}
+    \begin{bmatrix}
+        (-{1}/{2})^n&amp;&amp;\\&amp;(-{1}/{2})^n&amp;\\&amp;&amp;1
+    \end{bmatrix}
+    \begin{bmatrix}
+        -{1}/{3}&amp;-{1}/{3}&amp;{2}/{3}\\-{1}/{3}&amp;{2}/{3}&amp;-{1}/{3}\\{1}/{3}&amp;{1}/{3}&amp;{1}/{3}
+    \end{bmatrix}
+    \begin{bmatrix}
+    a_0\\b_0\\c_0 \end{bmatrix}\\
+    &amp; = \begin{bmatrix}
+        (-{1}/{2})^n{(2a-b-c)}/{3}+{(a+b+c)}/{3}\\ (-{1}/{2})^n{(-a+2b-c)}/{3}+{(a+b+c)}/{3}\\ (-{1}/{2})^n{(-a-b+2c)}/{3}+{(a+b+c)}/{3}
+    \end{bmatrix}
+    \begin{matrix}
+        \quad \leftarrow a_n\text{的表达式与式\eqref{eq12}是一样的}\\ \quad \\ \quad 
+    \end{matrix}
+\end{split}
+\]</div>
+<p>可以看出，方法<span class="arithmatex">\(1\)</span>和方法<span class="arithmatex">\(2\)</span>得到的<span class="arithmatex">\(a_n\)</span>的显式表达式<span class="arithmatex">\(\eqref{eq12}\)</span>是一样的。递推式<span class="arithmatex">\(a_n =\frac{1}{2}a_{n-1}+\frac{1}{2}a_{n-2},~n\geqslant 2\)</span>的形式像斐波那契数列，请参考求斐波那契数列通项公式的其他方法。它本质是一个动力学的问题，线性代数提供了更深刻的理解角度，可以通过向量方程组的方法实现矩阵降维，简化运算。当然新方法得到的<span class="arithmatex">\(a_n\)</span>的表达式(式<span class="arithmatex">\(\ref{eq13}\)</span>)也是一样的。</p>
+<h2 id="3">方法3：向量方程组</h2>
+<p>此时向量方程组<span class="arithmatex">\(\mathbf u_n = \mathbf A^{n-1}\mathbf u_1\)</span>中，<span class="arithmatex">\(\mathbf u_n = \begin{bmatrix}
+    a_n\\a_{n-1}
+\end{bmatrix}\)</span>，而对此时的矩阵<span class="arithmatex">\(\mathbf A\)</span>进行对角化得：</p>
+<div class="arithmatex">\[
+\mathbf A = \begin{bmatrix}
+    {1}/{2}&amp;{1}/{2}\\1&amp;0
+\end{bmatrix}=\begin{bmatrix}
+    1&amp;1\\1&amp;-2
+\end{bmatrix}\begin{bmatrix}
+    1 &amp; \\ &amp; -1/2
+\end{bmatrix}\begin{bmatrix}
+    {2}/{3}&amp;{1}/{3}\\ {1}/{3} &amp;-{1}/{3}
+\end{bmatrix}
+\]</div>
+<p>因此可以写出：</p>
+<div class="arithmatex">\[
+\begin{split}
+    \mathbf u_n=\begin{bmatrix}
+        a_n\\a_{n-1}
+    \end{bmatrix}&amp;=\begin{bmatrix}
+        1&amp;1\\1&amp;-2
+    \end{bmatrix}\begin{bmatrix}
+        1&amp;0\\0&amp;(-{1}/{2})^{n-1}
+    \end{bmatrix}\begin{bmatrix}
+        {2}/{3}&amp;{1}/{3}\\ {1}/{3}&amp;- {1}/{3}
+    \end{bmatrix}\begin{bmatrix}
+        a_1\\a_{0}
+    \end{bmatrix} \\
+    &amp;=\begin{bmatrix}
+        {(a+b+c)}/{3}+(-{1}/{2})^{n-1}{(a_{1}-a_{0})}/{3}\\ {(a+b+c)}/{3}+(-{1}/{2})^{n-2}{(a_{1}-a_{0})}/{3}
+    \end{bmatrix}
+\end{split}\tag{4}\label{eq13}
+\]</div>
+<p>这样可以求出<span class="arithmatex">\(a_n=\frac{(a+b+c)}{3}+\left(-\frac{1}{2}\right)^{n-1}\frac{a_{1}-a_{0}}{3}\)</span>, 与老方法得到的<span class="arithmatex">\(a_n\)</span>表达式<span class="arithmatex">\(\eqref{eq12}\)</span>是完全一致的。</p>
 
 
 
