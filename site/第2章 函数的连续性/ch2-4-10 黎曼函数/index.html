@@ -1072,7 +1072,7 @@ F(x) = \begin{cases} q, &amp; x = \frac{p}{q} \;\left(p, q \in \mathbf{Z}, q &gt
 <p>下面使用数学归纳法，从任意一个非退化闭区间 <span class="arithmatex">\(I_0\)</span> 出发，逐次构造闭区间套 <span class="arithmatex">\(\{I_n\}\)</span>，满足以下条件：</p>
 <div class="arithmatex">\[\begin{gathered} I_n\subset\operatorname{int}I_{n-1},\; |I_n|\leqslant 2^{-n},\; q_n\notin I_n;\\ \text{且}\forall \,x,y\in I_n\,\text{成立：}|f(x)-f(y)|&lt;\frac1n \quad \end{gathered}\]</div>
 <p>这里 <span class="arithmatex">\(\operatorname{int}I\)</span> 表示区间 <span class="arithmatex">\(I\)</span> 的内部（即不取端点值），<span class="arithmatex">\(|I|\)</span> 表示区间长度。</p>
-<p>假设已经构造出：<span class="arithmatex">\(I_{n-1}=[a_{n-1},b_{n-1}]\)</span>，由于退退化区间内部包含无穷多个有理数，因此在它的内部一定可以取到一个有理数 <span class="arithmatex">\(r_n\in (a_{n-1},b_{n-1})\ne q_n\)</span>。由于 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(r_n\)</span> 连续，那么存在 <span class="arithmatex">\(\delta_n&gt;0\)</span>，使得：</p>
+<p>假设已经构造出：<span class="arithmatex">\(I_{n-1}=[a_{n-1},b_{n-1}]\)</span>，由于非退化区间内部包含无穷多个有理数，因此在它的内部一定可以取到一个有理数 <span class="arithmatex">\(r_n\in (a_{n-1},b_{n-1})\ne q_n\)</span>。由于 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(r_n\)</span> 连续，那么存在 <span class="arithmatex">\(\delta_n&gt;0\)</span>，使得：</p>
 <div class="arithmatex">\[\text{当}\,|x-r_n|&lt;\delta_n \,\text{时，有：}|f(x)-f(r_n)|&lt;\frac1{2n}\]</div>
 <p>取半径：</p>
 <div class="arithmatex">\[h_n = \frac12\min\left\{ \delta_n, 2^{-n},r_n-a_{n-1},b_{n-1}-r_n,|r_n-q_n|\right\}\]</div>
