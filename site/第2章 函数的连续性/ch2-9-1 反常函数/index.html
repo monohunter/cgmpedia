@@ -20,7 +20,7 @@
     
     
       
-        <title>ch2-9-1 一个反常函数 - 数学分析习题项目</title>
+        <title>ch2-9-1 一个反常性质函数 - 数学分析习题项目</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ch2-9-1 一个反常函数
+              ch2-9-1 一个反常性质函数
             
           </span>
         </div>
@@ -408,6 +408,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ch2-9-1 一个反常性质函数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -415,7 +433,7 @@
   <span class="md-ellipsis">
     
   
-    ch2-9-1 一个反常函数
+    ch2-9-1 一个反常性质函数
   
 
     
@@ -424,6 +442,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        备注
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -817,6 +887,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        备注
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -832,7 +943,50 @@
 
 
 
-<h1 id="ch2-9-1">ch2-9-1 一个反常函数</h1>
+<h1 id="ch2-9-1">ch2-9-1 一个反常性质函数</h1>
+<h2 id="_1">题目</h2>
+<p>研究函数的一致连续性：</p>
+<div class="arithmatex">\[
+f(x)=\frac{x}{1+x^2\sin^2x},\quad x\geqslant 0.
+\]</div>
+<p>这一个很不一般的函数，它具有一系列反常的性质。</p>
+<h2 id="_2">证明</h2>
+<p>函数在<span class="arithmatex">\([0,+\infty)\)</span>上不一致连续。取：</p>
+<div class="arithmatex">\[
+s_n = n\pi,\qquad t_n = n\pi + \frac{1}{n}\quad (n\in \mathbf N^*)
+\]</div>
+<p>显然当 <span class="arithmatex">\(n \to \infty\)</span> 时，这两点之间的距离为：</p>
+<div class="arithmatex">\[
+\vert{}s_n - t_n\vert{} = \frac{1}{n} \to 0
+\]</div>
+<p>分别计算这两点上的函数值。首先有<span class="arithmatex">\(f(s_n)=n\pi\)</span>。将 <span class="arithmatex">\(t_n = n\pi + \frac{1}{n}\)</span> 代入函数，得：</p>
+<div class="arithmatex">\[
+f(t_n) = \frac{n\pi + \frac{1}{n}}{1 + \left(n\pi + \frac{1}{n}\right)^2 \sin^2\left(n\pi + \frac{1}{n}\right)}
+\]</div>
+<p>由于<span class="arithmatex">\(\sin ^2 (n\pi + 1/n)=\sin ^2 (1/n)\)</span>，并将分母中<span class="arithmatex">\(\left(n\pi+\frac{1}{n}\right)^2\)</span>展开，分母变为：</p>
+<div class="arithmatex">\[
+1 + \left( n^2\pi^2 + 2\pi + \frac{1}{n^2} \right) \sin^2\left(\frac{1}{n}\right)= 1 + n^2\pi^2 \sin^2\left(\frac{1}{n}\right) + 2\pi \sin^2\left(\frac{1}{n}\right) + \frac{1}{n^2} \sin^2\left(\frac{1}{n}\right)
+\]</div>
+<p>分析当<span class="arithmatex">\(n\to \infty\)</span>时，分母的表现，易知分母的主导项为：<span class="arithmatex">\(\pi^2 \cdot \left[ n \sin\left(\frac{1}{n}\right) \right]^2 \to \pi^2 \cdot 1^2 \to \pi^2\)</span>，而其余两项皆趋于<span class="arithmatex">\(0\)</span>，即整个分母的极限趋近于一个常数<span class="arithmatex">\(1+\pi^2\)</span>。因此当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(f(t_n)\)</span> 的渐近行为是：</p>
+<div class="arithmatex">\[
+f(t_n) \sim \frac{n\pi}{1 + \pi^2}
+\]</div>
+<p>两个函数值的差值为：</p>
+<div class="arithmatex">\[
+\vert{}f(s_n) - f(t_n)\vert{} \sim \left\vert{} n\pi - \frac{n\pi}{1 + \pi^2} \right\vert{} = n\pi \left( 1 - \frac{1}{1 + \pi^2} \right) = n\pi \left( \frac{\pi^2}{1 + \pi^2} \right)
+\]</div>
+<p>显然，当<span class="arithmatex">\(n \to \infty\)</span>时，<span class="arithmatex">\(\vert{}f(s_n)-f(t_n)\vert{} \to +\infty\)</span>。故<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([0,+\infty)\)</span>上不一致连续。</p>
+<h2 id="_3">备注</h2>
+<p>函数<span class="arithmatex">\(\frac{x}{1+x^2\sin ^2 x}\)</span>是数学分析中构造反常性质（如无界但非无穷大、反常积分发散但通项趋于零等）的经典反例函数。它的图像特征表现为随<span class="arithmatex">\(x\)</span>增大而不断升高的尖锐脉冲，这些脉冲位于整数倍的<span class="arithmatex">\(\pi\)</span>附近，而其余区域则平缓地贴近<span class="arithmatex">\(x\)</span>轴。事实上，对于任意<span class="arithmatex">\(\alpha &gt; 0\)</span>，函数：</p>
+<div class="arithmatex">\[
+f(x)=\frac{x}{1+x^{\alpha}\sin ^2 x}
+\]</div>
+<p>在<span class="arithmatex">\([0,+\infty)\)</span>上都是不一致连续的。<span class="arithmatex">\(\alpha\)</span> 越大，波峰坍缩（收缩到<span class="arithmatex">\(0\)</span>）的速度就越快。这意味着当 <span class="arithmatex">\(x \to +\infty\)</span> 时，波峰会变得越来越陡峭，趋近于一条垂直线。这种在无穷远处无限变陡的断崖式落差，破坏了一致连续性。而广义积分</p>
+<div class="arithmatex">\[
+\int_0^{+\infty}\frac{x\,\mathrm dx}{1+x^{\alpha}\sin ^2 x}
+\]</div>
+<p>收敛的充分必要条件是 <span class="arithmatex">\(\alpha &gt; 4\)</span>. 选取<span class="arithmatex">\(\alpha = 2\)</span>和<span class="arithmatex">\(\alpha = 6\)</span>作图如下：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/maichong.svg" data-desc-position="bottom"><img alt="" src="../../images/maichong.svg" style="display: block; margin-left: auto; margin-right: auto;" width="500"></a></p>
 
 
 

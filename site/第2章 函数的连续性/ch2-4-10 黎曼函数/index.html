@@ -380,6 +380,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ch2-4-10 黎曼函数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -396,6 +414,97 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#riemann" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数每一点的极限都是0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riemann函数每一点的极限都是0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每一点都无界的函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反过来的函数不存在
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数处处不可导
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数没有原函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -416,7 +525,7 @@
   <span class="md-ellipsis">
     
   
-    ch2-9-1 一个反常函数
+    ch2-9-1 一个反常性质函数
   
 
     
@@ -817,6 +926,86 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#riemann" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数每一点的极限都是0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riemann函数每一点的极限都是0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每一点都无界的函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反过来的函数不存在
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数处处不可导
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann函数没有原函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -833,6 +1022,163 @@
 
 
 <h1 id="ch2-4-10">ch2-4-10 黎曼函数</h1>
+<h2 id="riemann">Riemann函数定义</h2>
+<p>下面的函数称为Riemann函数</p>
+<div class="arithmatex">\[
+R(x)=\begin{cases}
+1,&amp; x=0;\\
+\frac{1}{q}, &amp; x=\frac{p}{q}\;\left(p, q \in \mathbf{Z}, q &gt; 0, p,q\text{互素}\right);\\
+0,&amp; x\text{是无理数.}
+\end{cases}
+\]</div>
+<h2 id="riemann0">Riemann函数每一点的极限都是0</h2>
+<p><strong>问题：</strong>证明对于任意实数<span class="arithmatex">\(x_0\)</span>，都有<span class="arithmatex">\(\lim\limits_{x\to x_0}R(x)=0\)</span>.</p>
+<p>证明的思路是：分母较小的有理数是非常“稀疏”的。即在任意一个有限区间内，分母小于某个特定值的有理数只有有限个。只要我们在取极限时“避开”这有限个点，函数值就能要多小有多小。</p>
+<p><strong>证明：</strong>对于任意给定的<span class="arithmatex">\(\varepsilon &gt; 0\)</span>，可以取充分大的正整数<span class="arithmatex">\(q_0\)</span>，使得<span class="arithmatex">\(\frac{1}{q_0}&lt;\varepsilon\)</span>.或者取<span class="arithmatex">\(q_0=\left[ \frac{1}{\varepsilon}\right]\)</span>即可。为考察极限，我们只需关注<span class="arithmatex">\(x_0\)</span>点附近的情况，不妨取<span class="arithmatex">\(x_0\)</span>的一个长度为<span class="arithmatex">\(2\)</span>的开邻域：<span class="arithmatex">\((x_0-1,x_0+1)\)</span>，在这个有限区间内，有理点<span class="arithmatex">\(\frac{p}{q}\)</span>中满足分母<span class="arithmatex">\(0&lt;q\leqslant q_0\)</span>的点（可以称其为危险点）只有有限个，这从有理数的排列方法中可以看出来。</p>
+<p>我们将区间<span class="arithmatex">\((x_0-1,x_0)\cup (x_0,x_0+1)\)</span>中所有的分母<span class="arithmatex">\(q\leqslant q_0\)</span>的危险点记为：<span class="arithmatex">\(r_1,r_2,\ldots,r_n\)</span>. 注意<span class="arithmatex">\(r_i\neq x_0\,(i=1,2,\ldots,n)\)</span>，即<span class="arithmatex">\(x_0\)</span>自己是否为危险点无需考虑。因为在求<span class="arithmatex">\(x \to x_0\)</span> 的极限时，<span class="arithmatex">\(x\)</span>不会等于<span class="arithmatex">\(x_0\)</span> 本身。下面我们构造<span class="arithmatex">\(\delta\)</span>来避开这些点，定义<span class="arithmatex">\(\delta\)</span>为<span class="arithmatex">\(x_0\)</span>到所有危险点的最小距离，并且不超过<span class="arithmatex">\(1\)</span>：</p>
+<div class="arithmatex">\[
+\delta = \min \bigl(\{1\} \cup \{\vert{}x_0 - r_i\vert{}: r_i \neq x_0, i = 1, 2, \ldots, n\}\bigr)
+\]</div>
+<p>因为集合中的元素只有有限个，且每一个<span class="arithmatex">\(\vert{}x_0 - r_i\vert{}\)</span>都严格大于 0，所以它们的最小值 <span class="arithmatex">\(\delta\)</span> 必然满足 <span class="arithmatex">\(\delta &gt; 0\)</span>.</p>
+<p>那么当无理数<span class="arithmatex">\(x\)</span>满足<span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span>时，必然有<span class="arithmatex">\(R(x)=0&lt;\varepsilon\)</span>；当有理数<span class="arithmatex">\(x=\dfrac{p}{q}\)</span>满足<span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span>时，必有<span class="arithmatex">\(q&gt;q_0\)</span>，因而</p>
+<div class="arithmatex">\[
+0\leqslant R(x)=\frac{1}{q}&lt;\frac{1}{q_0}&lt;\varepsilon.
+\]</div>
+<p>这样就证明了<span class="arithmatex">\(\lim\limits_{x\to x_0}R(x)=0\)</span>.</p>
+<h3 id="_1">每一点都无界的函数</h3>
+<p>史老师课堂上有这么一个题目：<strong>构造一个函数，使得它在<span class="arithmatex">\((-\infty,+\infty)\)</span>上的每一点的邻域中都无界，也就是说它的每一点都没有极限。</strong></p>
+<p>用相同的证明思路就可以做了：既然分母小于等于某个有限数的有理数只有有限个，那么由有理数稠密性可知，任何区间内都有无限多个有理数，这就意味着任何区间内必然包含分母任意大的有理数。基于这个原理，我们可以构造如下函数（常被称为改进的狄利克雷函数）：</p>
+<div class="arithmatex">\[
+F(x) = \begin{cases} q, &amp; x = \frac{p}{q} \;\left(p, q \in \mathbf{Z}, q &gt; 0, p,q\text{互素}\right) \\ 0, &amp; x \text{ 是无理数} \\ 1, &amp; x = 0 \;\left( 0\text{可以看作}\frac{0}{1}\right) \end{cases}
+\]</div>
+<p><strong>证明：</strong>用反证法。假设函数 <span class="arithmatex">\(F(x)\)</span>在实数<span class="arithmatex">\(x_0\)</span>的任意一个邻域<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>（其中 <span class="arithmatex">\(\delta &gt; 0\)</span>）内是有界的。即存在<span class="arithmatex">\(M &gt; 0\)</span>，使得对于该邻域内的所有<span class="arithmatex">\(x\)</span>，都有 <span class="arithmatex">\(F(x) \leqslant M\)</span>.这意味着在区间<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>内的所有有理数，它们的最简分数形式的分母<span class="arithmatex">\(q\)</span> 都必须满足：<span class="arithmatex">\(q \leqslant M\)</span>.</p>
+<p>而已知在一个有限区间内，分母<span class="arithmatex">\(q\)</span>有上限<span class="arithmatex">\(\left( q \leqslant [M]\right)\)</span>的有理数只有有限个。那么区间<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>内总共只有有限个有理数。这直接违背了实数理论中的有理数稠密性定理（任何两个不相等的实数之间，都存在无限多个有理数）。</p>
+<p>因此假设不成立，<span class="arithmatex">\(F(x)\)</span>在区间<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>内必然无界。具体来说，对于任意给定的正数<span class="arithmatex">\(M&gt;0\)</span>，在这个邻域内一定存在无限多个有理数<span class="arithmatex">\(x^* = \frac{p}{q}\)</span>，它们的分母<span class="arithmatex">\(q &gt; M\)</span>，从而使得<span class="arithmatex">\(F(x^*) = q &gt; M\)</span>.由于 <span class="arithmatex">\(F(x)\)</span> 在任意一点的任意小邻域内都能取到任意大的值，它在任何一点 <span class="arithmatex">\(x_0\)</span> 都不可能收敛到一个有限的常数，因此该函数在 <span class="arithmatex">\((-\infty, +\infty)\)</span> 上的每一点都没有极限。<span class="arithmatex">\(\;\blacksquare\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\(\lim\limits_{x\to x_0}R(x)=0\)</span>说明了<span class="arithmatex">\(R(x)\)</span>在所有的有理点是间断的，而在所有的无理点是连续的。数轴上的有理数的个数与无理数一比，少到可以忽略不计。用测度论的语言说，有理数是一个零测集。在<span class="arithmatex">\((0,1)\)</span>区间上，有理数的测度是<span class="arithmatex">\(0\)</span>，而无理数的测度是<span class="arithmatex">\(1\)</span>。所谓测度就是长度的推广，这意味着，数轴上密密麻麻排满了无理数，而有理数是非常稀疏的（虽然它有无穷多个，且无限稠密）。</p>
+<p><span class="arithmatex">\(R(x)\)</span>是可以积分的（黎曼积分）！且在任何区间上的积分为<span class="arithmatex">\(0\)</span>。这个黎曼函数就是给黎曼积分特殊设计的。这意味着可积的条件很容易就达到了：只要函数不连续的点不要太多就够了，所谓“不要太多”，意思就是<strong>间断点的集合是一个零测集</strong>。</p>
+<p>可积的条件，弱于连续，弱于可导。那么连续函数自然是可积的，所有的初等函数都是可积的。</p>
+</blockquote>
+<h3 id="_2">反过来的函数不存在</h3>
+<p>既然Riemann函数在所有的有理点连续，而在所有的无理点间断，那么我们自然会问一个问题：能否构造出一个函数，让它反过来，在所有的无理点间断，在所有的有理点上连续？</p>
+<p>答案是构造不出来的，因为有以下的定理：</p>
+<p><strong>如果一个函数在所有有理点都连续，那么它在任意非空开区间内，都至少有一个无理点是连续点。</strong></p>
+<p>我们可以用<strong>闭区间套定理</strong>证明，不需要用到拓扑学的知识。</p>
+<p><strong>证明：</strong>设 <span class="arithmatex">\(f:\mathbf R\to\mathbf R\)</span> 在每个有理点都连续。因为有理数是可数/可列的，因此可将所有有理数排列为：</p>
+<div class="arithmatex">\[
+\mathbf Q=\{q_1,q_2,q_3,\ldots\}
+\]</div>
+<p>我们的目标是找到一个点 <span class="arithmatex">\(x_*\)</span>，使它既避开所有 <span class="arithmatex">\(q_n\)</span>（即它是无理数），又是 <span class="arithmatex">\(f\)</span> 的连续点。</p>
+<p>下面使用数学归纳法，从任意一个非退化闭区间 <span class="arithmatex">\(I_0\)</span> 出发，逐次构造闭区间套 <span class="arithmatex">\(\{I_n\}\)</span>，满足以下条件：</p>
+<div class="arithmatex">\[
+\begin{gathered} I_n\subset\operatorname{int}I_{n-1},\; |I_n|\leqslant 2^{-n},\; q_n\notin I_n;\\ \text{且}\forall \,x,y\in I_n\,\text{成立：}|f(x)-f(y)|&lt;\frac1n \quad \end{gathered}
+\]</div>
+<p>这里 <span class="arithmatex">\(\operatorname{int}I\)</span> 表示区间 <span class="arithmatex">\(I\)</span> 的内部（即不取端点值），<span class="arithmatex">\(|I|\)</span> 表示区间长度。</p>
+<p>假设已经构造出：<span class="arithmatex">\(I_{n-1}=[a_{n-1},b_{n-1}]\)</span>，由于退退化区间内部包含无穷多个有理数，因此在它的内部一定可以取到一个有理数 <span class="arithmatex">\(r_n\in (a_{n-1},b_{n-1})\ne q_n\)</span>。由于 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(r_n\)</span> 连续，那么存在 <span class="arithmatex">\(\delta_n&gt;0\)</span>，使得：</p>
+<div class="arithmatex">\[
+|x-r_n|&lt;\delta_n \quad\implies\quad |f(x)-f(r_n)|&lt;\frac1{2n}
+\]</div>
+<p>取半径：</p>
+<div class="arithmatex">\[
+h_n = \frac12\min\left\{ \delta_n, 2^{-n},r_n-a_{n-1},b_{n-1}-r_n,|r_n-q_n|\right\}
+\]</div>
+<p>并定义：</p>
+<div class="arithmatex">\[
+I_n = [r_n - h_n, r_n + h_n]
+\]</div>
+<p>那么易知，<span class="arithmatex">\(I_n\)</span>就是在 <span class="arithmatex">\(r_n\)</span> 附近的足够小的非退化闭区间，且满足：位于 <span class="arithmatex">\(I_{n-1}\)</span> 内部、避开 <span class="arithmatex">\(q_n\)</span>、长度不超过 <span class="arithmatex">\(2^{-n}\)</span>，并且对任意 <span class="arithmatex">\(x,y\in I_n\)</span>，有：</p>
+<div class="arithmatex">\[
+ |f(x)-f(y)| \leqslant |f(x)-f(r_n)|+|f(y)-f(r_n)| &lt;\frac1n. 
+\]</div>
+<p>因此闭区间<span class="arithmatex">\(I_n\)</span>构造成功，易知闭区间套的长度满足 <span class="arithmatex">\(|I_n|\to0\)</span>。那么由闭区间套定理可知，存在唯一的 <span class="arithmatex">\(x_*\)</span>，使得：</p>
+<div class="arithmatex">\[
+\bigcap_{n=0}^{\infty}I_n=x_*
+\]</div>
+<p>对每个 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(x_*\in I_n\)</span>，而 <span class="arithmatex">\(q_n\notin I_n\)</span>，所以<span class="arithmatex">\(x_*\ne q_n\;(n=1,2,\ldots).\)</span>因此，<span class="arithmatex">\(x_*\)</span> 是无理数。现在验证<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(x_*\)</span>处的连续性。</p>
+<p>对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，选取足够大的<span class="arithmatex">\(n\)</span> 使得 <span class="arithmatex">\(1/n&lt;\varepsilon\)</span>。注意到<span class="arithmatex">\(x_*\in I_{n+1}\subset\operatorname{int}I_n\)</span>，这说明<span class="arithmatex">\(x_*\)</span>一定是<span class="arithmatex">\(I_n\)</span>的内点。设<span class="arithmatex">\(I_n=[a_n,b_n]\)</span>，那么必然有：<span class="arithmatex">\(a_n&lt;x_*&lt;b_n\)</span>，因此我们可以取：</p>
+<div class="arithmatex">\[
+\delta = \frac12\min\{x_*-a_n,b_n-x_*\}&gt;0
+\]</div>
+<p>这样便有：</p>
+<div class="arithmatex">\[
+(x_*-\delta,x_*+\delta)\subset(a_n,b_n)=\operatorname{int}I_n
+\]</div>
+<p>即存在<span class="arithmatex">\(\delta &gt; 0\)</span>，对于任意的 <span class="arithmatex">\(|x-x_*|&lt;\delta\)</span> ，都有：<span class="arithmatex">\(x\in I_n\text{，且}x_*\in I_n\)</span>。那么由闭区间 <span class="arithmatex">\(I_n\)</span> 上函数值的差异控制，有：</p>
+<div class="arithmatex">\[
+ |f(x)-f(x_*)|&lt;\frac1n&lt;\varepsilon. 
+\]</div>
+<p>这就从定义上证明了 <span class="arithmatex">\(f\)</span> 在无理点 <span class="arithmatex">\(x_*\)</span> 连续。<span class="arithmatex">\(\;\blacksquare\)</span></p>
+<blockquote>
+<p>非常有意思的是，函数在有理点连续，与在无理点连续，这两者之间竟有这么大的区别！这种不对称性背后的原因是值得深究的。从上面的证明（以及关于极限的证明）中可以看出，有理数的“可数性”起了本质的作用。也就是说，虽然有理数和无理数都“稠密”，但它们的大小、多少、量级还是不同的，“处处都能找到”不代表它们具有相同的大小和结构。有理数虽然稠密，但是它也是“稀疏”的，可以被逐一列出的。</p>
+</blockquote>
+<h2 id="riemann_1">Riemann函数处处不可导</h2>
+<p>它的证明，与极限的思路不同。</p>
+<p><strong>证明<span class="arithmatex">\(R(x)\)</span>在有理点不可导</strong></p>
+<p>设 <span class="arithmatex">\(x_0 = \frac{p}{q} \in \mathbf{Q}\)</span>，则根据定义，此时 <span class="arithmatex">\(R(x_0) = \frac{1}{q} &gt; 0\)</span>。取一无理点列 <span class="arithmatex">\(\{x_n\}\)</span>，使得 <span class="arithmatex">\(\lim\limits_{n \to \infty} x_n = x_0\)</span>。比如取：</p>
+<div class="arithmatex">\[
+x_n=x_0+\frac{\sqrt{2}}{n}\to x_0
+\]</div>
+<p>因为 <span class="arithmatex">\(x_n\)</span> 恒为无理数，根据Riemann函数的定义有 <span class="arithmatex">\(R(x_n) = 0\)</span>。因此：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} R(x_n) = 0 \neq R(x_0)
+\]</div>
+<p>这说明 <span class="arithmatex">\(R(x)\)</span> 在任意有理数点 <span class="arithmatex">\(x_0\)</span> 处是不连续的，故 <span class="arithmatex">\(R(x)\)</span> 在所有有理数点处均不可导。</p>
+<p><strong>2. 证明<span class="arithmatex">\(R(x)\)</span>在无理点不可导</strong></p>
+<p>设 <span class="arithmatex">\(x_0\)</span> 是无理数，则 <span class="arithmatex">\(R(x_0)=0\)</span>。我们构造两类趋于 <span class="arithmatex">\(x_0\)</span> 的点，使差商呈现不同的行为。取无理点列：</p>
+<div class="arithmatex">\[
+t_n = x_0 + \frac{1}{n}\qquad (n \in \mathbf{N}^*)
+\]</div>
+<p>因为 <span class="arithmatex">\(x_0\)</span> 是无理数，<span class="arithmatex">\(\frac{1}{n}\)</span> 是有理数，无理数加有理数必然为无理数，故 <span class="arithmatex">\(t_n \notin \mathbf{Q}\)</span>.根据定义，<span class="arithmatex">\(R(t_n) = 0\)</span>。此时的差商为：</p>
+<div class="arithmatex">\[
+\frac{R(t_n) - R(x_0)}{t_n - x_0} = \frac{0 - 0}{1/n} = 0
+\]</div>
+<p>当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(t_n \to x_0\)</span>，且差商极限为 <span class="arithmatex">\(0\)</span>。因此，若 <span class="arithmatex">\(R'(x_0)\)</span> 存在，则必有 <span class="arithmatex">\(R'(x_0) = 0\)</span>。这是<span class="arithmatex">\(R(x)\)</span>在无理点处可导的必要条件。</p>
+<p>接下来利用向下取整函数构造有理点列。令：</p>
+<div class="arithmatex">\[
+r_n = \frac{\lfloor nx_0 \rfloor}{n}
+\]</div>
+<p>由于 <span class="arithmatex">\(x_0\)</span> 是无理数，所以 <span class="arithmatex">\(nx_0\)</span> 绝不可能是整数，因此成立严格不等式：</p>
+<div class="arithmatex">\[
+\lfloor nx_0 \rfloor &lt; nx_0 &lt; \lfloor nx_0 \rfloor + 1 
+\]</div>
+<p>各项同除以 <span class="arithmatex">\(n\)</span>，可得：</p>
+<div class="arithmatex">\[
+r_n &lt; x_0 &lt; r_n + \frac{1}{n}
+\]</div>
+<p>因此，序列<span class="arithmatex">\(\{r_n\}\)</span>在<span class="arithmatex">\(x_0\)</span>的左侧：<span class="arithmatex">\(r_n&lt;x_0\)</span>，且有距离关系：<span class="arithmatex">\(0 &lt; x_0 - r_n &lt; \frac{1}{n}\)</span>，则由夹逼定理可知，当<span class="arithmatex">\(n\to\infty\)</span>时，有<span class="arithmatex">\(r_n\to x_0\)</span>.</p>
+<p>将 <span class="arithmatex">\(r_n\)</span> 约分为最简分数 <span class="arithmatex">\(\frac{p_n}{q_n}\)</span>，而<span class="arithmatex">\(r_n = \frac{\lfloor nx_0 \rfloor}{n}\)</span>的初始分母为 <span class="arithmatex">\(n\)</span>，约分的过程是分子分母同除以它们的最大公约数，因此最简分数的分母 <span class="arithmatex">\(q_n\)</span> 必然是 <span class="arithmatex">\(n\)</span> 的因数，即成立 <span class="arithmatex">\(1 \leqslant q_n \leqslant n\)</span>，那么取倒数后有：</p>
+<div class="arithmatex">\[
+R(r_n) = \frac{1}{q_n} \geqslant \frac{1}{n}
+\]</div>
+<p>由于 <span class="arithmatex">\(R(x_0) = 0\)</span>，且 <span class="arithmatex">\(x_0 - r_n &gt; 0\)</span>，计算差商的绝对值为：</p>
+<div class="arithmatex">\[
+\left\vert{} \frac{R(r_n) - R(x_0)}{r_n - x_0} \right\vert{} = \frac{R(r_n)}{x_0 - r_n}
+\]</div>
+<p>利用前面的两个不等式<span class="arithmatex">\(R(r_n) \geqslant \frac{1}{n}\)</span>及<span class="arithmatex">\(0 &lt; x_0 - r_n &lt; \frac{1}{n}\implies \frac{1}{x_0-r_n}&gt;n\)</span>可得：</p>
+<div class="arithmatex">\[
+\frac{R(r_n)}{x_0 - r_n} &gt; \frac{1}{n} \cdot n = 1
+\]</div>
+<p>因此，沿有理点列 <span class="arithmatex">\(r_n \to x_0\)</span> 时，差商的绝对值始终严格大于 <span class="arithmatex">\(1\)</span>。那么差商不可能趋于 <span class="arithmatex">\(0\)</span>，这与前面由无理点列得到的必要条件矛盾。所以 <span class="arithmatex">\(R\)</span> 在每个无理点也不可导。</p>
+<p>综合两种情形，可得：Riemann函数处处不可导。</p>
+<h2 id="riemann_2">Riemann函数没有原函数</h2>
+<p>函数可导，那么它一定连续。但是导函数一定连续吗？答案是不一定的。比如</p>
+<div class="arithmatex">\[
+f(x)=\begin{cases}
+x^2\sin{\frac{1}{x^2}}, &amp;x\neq 0\\
+0, &amp; x=0
+\end{cases}
+\]</div>
+<p>其导函数为：</p>
+<div class="arithmatex">\[
+f'(x)=\begin{cases}
+2x\sin{\frac{1}{x^2}}-\frac{2}{x}\cos{\frac{1}{x^2}}, &amp;x\neq 0\\
+0 &amp; x=0
+\end{cases}
+\]</div>
+<p>显然<span class="arithmatex">\(f'(x)\)</span>在<span class="arithmatex">\(x=0\)</span>处不连续。</p>
+<p>但是无论它连续与否，它都在有限闭区间上具备介值性。函数具备介值性需要有一系列前提条件：比如连续函数、有限闭区间。但导函数不需要连续的条件，都具备介值性。这就是导函数区别于一般函数的地方。是谓“金陵岂是池中物”，不是每一个函数都有资格当另外函数的导函数的。换言之，不是每个函数都有原函数。</p>
+<p>因此具备介值性，是导成为函数的必要条件。</p>
+<p>易证：Riemann函数不具备介值性，因此它没有原函数。</p>
 
 
 
