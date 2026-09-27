@@ -1051,9 +1051,12 @@ R(x)=\begin{cases}
 <div class="arithmatex">\[
 F(x) = \begin{cases} q, &amp; x = \frac{p}{q} \;\left(p, q \in \mathbf{Z}, q &gt; 0, p,q\text{互素}\right) \\ 0, &amp; x \text{ 是无理数} \\ 1, &amp; x = 0 \;\left( 0\text{可以看作}\frac{0}{1}\right) \end{cases}
 \]</div>
+<details class="success">
+<summary>阅读详细证明</summary>
 <p><strong>证明：</strong>用反证法。假设函数 <span class="arithmatex">\(F(x)\)</span>在实数<span class="arithmatex">\(x_0\)</span>的任意一个邻域<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>（其中 <span class="arithmatex">\(\delta &gt; 0\)</span>）内是有界的。即存在<span class="arithmatex">\(M &gt; 0\)</span>，使得对于该邻域内的所有<span class="arithmatex">\(x\)</span>，都有 <span class="arithmatex">\(F(x) \leqslant M\)</span>.这意味着在区间<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>内的所有有理数，它们的最简分数形式的分母<span class="arithmatex">\(q\)</span> 都必须满足：<span class="arithmatex">\(q \leqslant M\)</span>.</p>
 <p>而已知在一个有限区间内，分母<span class="arithmatex">\(q\)</span>有上限<span class="arithmatex">\(\left( q \leqslant [M]\right)\)</span>的有理数只有有限个。那么区间<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>内总共只有有限个有理数。这直接违背了实数理论中的有理数稠密性定理（任何两个不相等的实数之间，都存在无限多个有理数）。</p>
 <p>因此假设不成立，<span class="arithmatex">\(F(x)\)</span>在区间<span class="arithmatex">\((x_0 - \delta, x_0 + \delta)\)</span>内必然无界。具体来说，对于任意给定的正数<span class="arithmatex">\(M&gt;0\)</span>，在这个邻域内一定存在无限多个有理数<span class="arithmatex">\(x^* = \frac{p}{q}\)</span>，它们的分母<span class="arithmatex">\(q &gt; M\)</span>，从而使得<span class="arithmatex">\(F(x^*) = q &gt; M\)</span>.由于 <span class="arithmatex">\(F(x)\)</span> 在任意一点的任意小邻域内都能取到任意大的值，它在任何一点 <span class="arithmatex">\(x_0\)</span> 都不可能收敛到一个有限的常数，因此该函数在 <span class="arithmatex">\((-\infty, +\infty)\)</span> 上的每一点都没有极限。<span class="arithmatex">\(\;\blacksquare\)</span></p>
+</details>
 <blockquote>
 <p><span class="arithmatex">\(\lim\limits_{x\to x_0}R(x)=0\)</span>说明了<span class="arithmatex">\(R(x)\)</span>在所有的有理点是间断的，而在所有的无理点是连续的。数轴上的有理数的个数与无理数一比，少到可以忽略不计。用测度论的语言说，有理数是一个零测集。在<span class="arithmatex">\((0,1)\)</span>区间上，有理数的测度是<span class="arithmatex">\(0\)</span>，而无理数的测度是<span class="arithmatex">\(1\)</span>。所谓测度就是长度的推广，这意味着，数轴上密密麻麻排满了无理数，而有理数是非常稀疏的（虽然它有无穷多个，且无限稠密）。</p>
 <p><span class="arithmatex">\(R(x)\)</span>是可以积分的（黎曼积分）！且在任何区间上的积分为<span class="arithmatex">\(0\)</span>。这个黎曼函数就是给黎曼积分特殊设计的。这意味着可积的条件很容易就达到了：只要函数不连续的点不要太多就够了，所谓“不要太多”，意思就是<strong>间断点的集合是一个零测集</strong>。</p>
@@ -1083,11 +1086,11 @@ F(x) = \begin{cases} q, &amp; x = \frac{p}{q} \;\left(p, q \in \mathbf{Z}, q &gt
 <p>因此闭区间<span class="arithmatex">\(I_n\)</span>构造成功，易知闭区间套的长度满足 <span class="arithmatex">\(|I_n|\to0\)</span>。那么由闭区间套定理可知，存在唯一的 <span class="arithmatex">\(x_*\)</span>，使得：</p>
 <div class="arithmatex">\[\bigcap_{n=0}^{\infty}I_n=x_*\]</div>
 <p>对每个 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(x_*\in I_n\)</span>，而 <span class="arithmatex">\(q_n\notin I_n\)</span>，所以<span class="arithmatex">\(x_*\ne q_n\;(n=1,2,\ldots)\)</span>。因此，<span class="arithmatex">\(x_*\)</span> 是无理数。现在验证<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(x_*\)</span>处的连续性。</p>
-<p>对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，选取足够大的<span class="arithmatex">\(n\)</span> 使得 <span class="arithmatex">\(1/n&lt;\varepsilon\)</span>。注意到<span class="arithmatex">\(x_*\in I_{n+1}\subset\operatorname{int}I_n\)</span>，这说明<span class="arithmatex">\(x_*\)</span>一定是<span class="arithmatex">\(I_n\)</span>的内点。设<span class="arithmatex">\(I_n=[a_n,b_n]\)</span>，那么必然有：<span class="arithmatex">\(a_n&lt;x_*&lt;b_n\)</span>，因此我们可以取：</p>
+<p>对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，选取足够大的 <span class="arithmatex">\(n\)</span> 使得 <span class="arithmatex">\(1/n&lt;\varepsilon\)</span>。注意到<span class="arithmatex">\(x_*\in I_{n+1}\subset\operatorname{int}I_n\)</span>，这说明<span class="arithmatex">\(x_*\)</span>一定是<span class="arithmatex">\(I_n\)</span>的内点。设<span class="arithmatex">\(I_n=[a_n,b_n]\)</span>，那么必然有：<span class="arithmatex">\(a_n&lt;x_*&lt;b_n\)</span>，因此我们可以取：</p>
 <div class="arithmatex">\[\delta = \frac12\min\{x_*-a_n,b_n-x_*\}&gt;0\]</div>
 <p>这样便有：</p>
 <div class="arithmatex">\[(x_*-\delta,x_*+\delta)\subset(a_n,b_n)=\operatorname{int}I_n\]</div>
-<p>即存在<span class="arithmatex">\(\delta &gt; 0\)</span>，对于任意的 <span class="arithmatex">\(|x-x_*|&lt;\delta\)</span> ，都有：<span class="arithmatex">\(x\in I_n\text{，且}x_*\in I_n\)</span>。那么根据<span class="arithmatex">\(f\)</span>在闭区间 <span class="arithmatex">\(I_n\)</span> 上函数值的差异性质，有：</p>
+<p>即对于任意的<span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在<span class="arithmatex">\(\delta &gt; 0\)</span>，使得对于任意的<span class="arithmatex">\(|x-x_*|&lt;\delta\)</span>，都有：<span class="arithmatex">\(x\in I_n\text{，且}x_*\in I_n\)</span>。那么根据<span class="arithmatex">\(f\)</span>在闭区间 <span class="arithmatex">\(I_n\)</span> 上函数值的差异性质，有：</p>
 <div class="arithmatex">\[|f(x)-f(x_*)|&lt;\frac1n&lt;\varepsilon. \]</div>
 <p>这就从定义上证明了 <span class="arithmatex">\(f\)</span> 在无理点 <span class="arithmatex">\(x_*\)</span> 连续。<span class="arithmatex">\(\;\blacksquare\)</span></p>
 </details>
