@@ -1064,50 +1064,33 @@ F(x) = \begin{cases} q, &amp; x = \frac{p}{q} \;\left(p, q \in \mathbf{Z}, q &gt
 <p>答案是构造不出来的，因为有以下的定理：</p>
 <p><strong>如果一个函数在所有有理点都连续，那么它在任意非空开区间内，都至少有一个无理点是连续点。</strong></p>
 <p>我们可以用<strong>闭区间套定理</strong>证明，不需要用到拓扑学的知识。</p>
+<details class="success">
+<summary>阅读详细证明</summary>
 <p><strong>证明：</strong>设 <span class="arithmatex">\(f:\mathbf R\to\mathbf R\)</span> 在每个有理点都连续。因为有理数是可数/可列的，因此可将所有有理数排列为：</p>
-<div class="arithmatex">\[
-\mathbf Q=\{q_1,q_2,q_3,\ldots\}
-\]</div>
-<p>我们的目标是找到一个点 <span class="arithmatex">\(x_*\)</span>，使它既避开所有 <span class="arithmatex">\(q_n\)</span>（即它是无理数），又是 <span class="arithmatex">\(f\)</span> 的连续点。</p>
+<div class="arithmatex">\[\mathbf Q=\{q_1,q_2,q_3,\ldots\}\]</div>
+<p>我们的目标是找到一个点 <span class="arithmatex">\(x_*\)</span>，使它既避开所有 <span class="arithmatex">\(q_n\)</span>（即它是无理数），同时又是 <span class="arithmatex">\(f\)</span> 的连续点。</p>
 <p>下面使用数学归纳法，从任意一个非退化闭区间 <span class="arithmatex">\(I_0\)</span> 出发，逐次构造闭区间套 <span class="arithmatex">\(\{I_n\}\)</span>，满足以下条件：</p>
-<div class="arithmatex">\[
-\begin{gathered} I_n\subset\operatorname{int}I_{n-1},\; |I_n|\leqslant 2^{-n},\; q_n\notin I_n;\\ \text{且}\forall \,x,y\in I_n\,\text{成立：}|f(x)-f(y)|&lt;\frac1n \quad \end{gathered}
-\]</div>
+<div class="arithmatex">\[\begin{gathered} I_n\subset\operatorname{int}I_{n-1},\; |I_n|\leqslant 2^{-n},\; q_n\notin I_n;\\ \text{且}\forall \,x,y\in I_n\,\text{成立：}|f(x)-f(y)|&lt;\frac1n \quad \end{gathered}\]</div>
 <p>这里 <span class="arithmatex">\(\operatorname{int}I\)</span> 表示区间 <span class="arithmatex">\(I\)</span> 的内部（即不取端点值），<span class="arithmatex">\(|I|\)</span> 表示区间长度。</p>
 <p>假设已经构造出：<span class="arithmatex">\(I_{n-1}=[a_{n-1},b_{n-1}]\)</span>，由于退退化区间内部包含无穷多个有理数，因此在它的内部一定可以取到一个有理数 <span class="arithmatex">\(r_n\in (a_{n-1},b_{n-1})\ne q_n\)</span>。由于 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(r_n\)</span> 连续，那么存在 <span class="arithmatex">\(\delta_n&gt;0\)</span>，使得：</p>
-<div class="arithmatex">\[
-|x-r_n|&lt;\delta_n \quad\implies\quad |f(x)-f(r_n)|&lt;\frac1{2n}
-\]</div>
+<div class="arithmatex">\[\text{当}\,|x-r_n|&lt;\delta_n \,\text{时，有：}|f(x)-f(r_n)|&lt;\frac1{2n}\]</div>
 <p>取半径：</p>
-<div class="arithmatex">\[
-h_n = \frac12\min\left\{ \delta_n, 2^{-n},r_n-a_{n-1},b_{n-1}-r_n,|r_n-q_n|\right\}
-\]</div>
+<div class="arithmatex">\[h_n = \frac12\min\left\{ \delta_n, 2^{-n},r_n-a_{n-1},b_{n-1}-r_n,|r_n-q_n|\right\}\]</div>
 <p>并定义：</p>
-<div class="arithmatex">\[
-I_n = [r_n - h_n, r_n + h_n]
-\]</div>
+<div class="arithmatex">\[I_n = [r_n - h_n, r_n + h_n]\]</div>
 <p>那么易知，<span class="arithmatex">\(I_n\)</span>就是在 <span class="arithmatex">\(r_n\)</span> 附近的足够小的非退化闭区间，且满足：位于 <span class="arithmatex">\(I_{n-1}\)</span> 内部、避开 <span class="arithmatex">\(q_n\)</span>、长度不超过 <span class="arithmatex">\(2^{-n}\)</span>，并且对任意 <span class="arithmatex">\(x,y\in I_n\)</span>，有：</p>
-<div class="arithmatex">\[
- |f(x)-f(y)| \leqslant |f(x)-f(r_n)|+|f(y)-f(r_n)| &lt;\frac1n. 
-\]</div>
+<div class="arithmatex">\[|f(x)-f(y)| \leqslant |f(x)-f(r_n)|+|f(y)-f(r_n)| &lt;\frac1n. \]</div>
 <p>因此闭区间<span class="arithmatex">\(I_n\)</span>构造成功，易知闭区间套的长度满足 <span class="arithmatex">\(|I_n|\to0\)</span>。那么由闭区间套定理可知，存在唯一的 <span class="arithmatex">\(x_*\)</span>，使得：</p>
-<div class="arithmatex">\[
-\bigcap_{n=0}^{\infty}I_n=x_*
-\]</div>
-<p>对每个 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(x_*\in I_n\)</span>，而 <span class="arithmatex">\(q_n\notin I_n\)</span>，所以<span class="arithmatex">\(x_*\ne q_n\;(n=1,2,\ldots).\)</span>因此，<span class="arithmatex">\(x_*\)</span> 是无理数。现在验证<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(x_*\)</span>处的连续性。</p>
+<div class="arithmatex">\[\bigcap_{n=0}^{\infty}I_n=x_*\]</div>
+<p>对每个 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(x_*\in I_n\)</span>，而 <span class="arithmatex">\(q_n\notin I_n\)</span>，所以<span class="arithmatex">\(x_*\ne q_n\;(n=1,2,\ldots)\)</span>。因此，<span class="arithmatex">\(x_*\)</span> 是无理数。现在验证<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(x_*\)</span>处的连续性。</p>
 <p>对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，选取足够大的<span class="arithmatex">\(n\)</span> 使得 <span class="arithmatex">\(1/n&lt;\varepsilon\)</span>。注意到<span class="arithmatex">\(x_*\in I_{n+1}\subset\operatorname{int}I_n\)</span>，这说明<span class="arithmatex">\(x_*\)</span>一定是<span class="arithmatex">\(I_n\)</span>的内点。设<span class="arithmatex">\(I_n=[a_n,b_n]\)</span>，那么必然有：<span class="arithmatex">\(a_n&lt;x_*&lt;b_n\)</span>，因此我们可以取：</p>
-<div class="arithmatex">\[
-\delta = \frac12\min\{x_*-a_n,b_n-x_*\}&gt;0
-\]</div>
+<div class="arithmatex">\[\delta = \frac12\min\{x_*-a_n,b_n-x_*\}&gt;0\]</div>
 <p>这样便有：</p>
-<div class="arithmatex">\[
-(x_*-\delta,x_*+\delta)\subset(a_n,b_n)=\operatorname{int}I_n
-\]</div>
-<p>即存在<span class="arithmatex">\(\delta &gt; 0\)</span>，对于任意的 <span class="arithmatex">\(|x-x_*|&lt;\delta\)</span> ，都有：<span class="arithmatex">\(x\in I_n\text{，且}x_*\in I_n\)</span>。那么由闭区间 <span class="arithmatex">\(I_n\)</span> 上函数值的差异控制，有：</p>
-<div class="arithmatex">\[
- |f(x)-f(x_*)|&lt;\frac1n&lt;\varepsilon. 
-\]</div>
+<div class="arithmatex">\[(x_*-\delta,x_*+\delta)\subset(a_n,b_n)=\operatorname{int}I_n\]</div>
+<p>即存在<span class="arithmatex">\(\delta &gt; 0\)</span>，对于任意的 <span class="arithmatex">\(|x-x_*|&lt;\delta\)</span> ，都有：<span class="arithmatex">\(x\in I_n\text{，且}x_*\in I_n\)</span>。那么根据<span class="arithmatex">\(f\)</span>在闭区间 <span class="arithmatex">\(I_n\)</span> 上函数值的差异性质，有：</p>
+<div class="arithmatex">\[|f(x)-f(x_*)|&lt;\frac1n&lt;\varepsilon. \]</div>
 <p>这就从定义上证明了 <span class="arithmatex">\(f\)</span> 在无理点 <span class="arithmatex">\(x_*\)</span> 连续。<span class="arithmatex">\(\;\blacksquare\)</span></p>
+</details>
 <blockquote>
 <p>非常有意思的是，函数在有理点连续，与在无理点连续，这两者之间竟有这么大的区别！这种不对称性背后的原因是值得深究的。从上面的证明（以及关于极限的证明）中可以看出，有理数的“可数性”起了本质的作用。也就是说，虽然有理数和无理数都“稠密”，但它们的大小、多少、量级还是不同的，“处处都能找到”不代表它们具有相同的大小和结构。有理数虽然稠密，但是它也是“稀疏”的，可以被逐一列出的。</p>
 </blockquote>
