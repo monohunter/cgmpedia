@@ -519,7 +519,7 @@
   <span class="md-ellipsis">
     
   
-    ch2-9-1 一个反常函数
+    ch2-9-1 一个反常性质函数
   
 
     
@@ -1037,7 +1037,7 @@ a_n-r\cdot a_{n-1}=s\cdot (a_{n-1}-r\cdot a_{n-2})\quad\implies\quad a_n=(r+s)\c
 <p>对比递推式，可知：</p>
 <div class="arithmatex">\[
 \begin{cases} r+s = \frac{1}{2}\\
-r\,s = -\frac{1}{2} 
+rs = -\frac{1}{2}   
 \end{cases}
 \]</div>
 <p>由韦达定理知，<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\(s\)</span>为一元二次方程</p>
@@ -1068,7 +1068,7 @@ a_n=\frac{a+b+c}{3}+\left(-\frac{1}{2}\right)^{n-1}\frac{a_{1}-a_{0}}{3}
 \lim_{n\rightarrow \infty} b_n = \lim_{n\rightarrow \infty} c_n = \frac{1}{3}(a+b+c).
 \]</div>
 <h2 id="2">方法2：初等数学方法二</h2>
-<p>参考PDF版本解答。</p>
+<p>请参考PDF版本解答。</p>
 <h2 id="3">方法3： 线性代数方法</h2>
 <p>将这组递推关系写成矩阵的形式：</p>
 <div class="arithmatex">\[
@@ -1092,17 +1092,17 @@ a_n=\frac{a+b+c}{3}+\left(-\frac{1}{2}\right)^{n-1}\frac{a_{1}-a_{0}}{3}
 <div class="arithmatex">\[
 \mathbf{x}_n = \mathbf A^n \mathbf{x}_0 \quad \text{其中：} \;\mathbf{x}_0 = \begin{bmatrix} a \\ b \\ c \end{bmatrix}
 \]</div>
-<p>求解 <span class="arithmatex">\(\lim\limits_{n \to \infty} \mathbf A^n \mathbf{x}_0\)</span> 的核心在于求矩阵 <span class="arithmatex">\(\mathbf A\)</span> 的特征值和特征向量，并由此将该矩阵对角化。计算特征方程 <span class="arithmatex">\(\vert{}\lambda I - A\vert{} = 0\)</span>，即：</p>
+<p>求解 <span class="arithmatex">\(\lim\limits_{n \to \infty} \mathbf A^n \mathbf{x}_0\)</span> 的核心在于求矩阵 <span class="arithmatex">\(\mathbf A\)</span> 的特征值和特征向量，并由此将该矩阵对角化。计算特征方程 <span class="arithmatex">\(\left|\lambda \mathbf I - \mathbf A\right| = 0\)</span>，即：</p>
 <div class="arithmatex">\[
 \begin{vmatrix} \lambda &amp; -\frac{1}{2} &amp; -\frac{1}{2} \\ -\frac{1}{2} &amp; \lambda &amp; -\frac{1}{2} \\ -\frac{1}{2} &amp; -\frac{1}{2} &amp; \lambda \end{vmatrix} = \lambda^3 - \frac{3}{4}\lambda - \frac{1}{4} = (\lambda - 1)\left(\lambda + \frac{1}{2}\right)^2 = 0
 \]</div>
 <p>可解得特征值<span class="arithmatex">\(\lambda_1 = 1\)</span>，以及二重特征值 <span class="arithmatex">\(\lambda_2 = \lambda_3 = -\frac{1}{2}\)</span>.</p>
 <ol>
 <li>
-<p>对于 <span class="arithmatex">\(\lambda_1 = 1\)</span>，解<span class="arithmatex">\((I - A)\mathbf{v} = 0\)</span>，得到特征向量 <span class="arithmatex">\(\mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\)</span>.</p>
+<p>对于 <span class="arithmatex">\(\lambda_1 = 1\)</span>，解<span class="arithmatex">\((\mathbf I - \mathbf A)\mathbf{v} = 0\)</span>，得到特征向量 <span class="arithmatex">\(\mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\)</span>.</p>
 </li>
 <li>
-<p>对于 <span class="arithmatex">\(\lambda_{2,3} = -\frac{1}{2}\)</span>，解 <span class="arithmatex">\((-\frac{1}{2}I - A)\mathbf{v} = 0\)</span>，化简后方程为 <span class="arithmatex">\(x + y + z = 0\)</span>。这意味着该特征值的几何重数为<span class="arithmatex">\(2\)</span>，根据零空间的解法得：<span class="arithmatex">\(\mathbf{v}_2 = \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix}, \mathbf{v}_3 = \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}\)</span>.</p>
+<p>对于 <span class="arithmatex">\(\lambda_{2,3} = -\frac{1}{2}\)</span>，解 <span class="arithmatex">\(\left(-\frac{1}{2}\mathbf I - \mathbf A\right)\mathbf{v} = 0\)</span>，化简后方程为 <span class="arithmatex">\(x + y + z = 0\)</span>。这意味着该特征值的几何重数为<span class="arithmatex">\(2\)</span>，根据零空间的解法得：<span class="arithmatex">\(\mathbf{v}_2 = \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix}, \mathbf{v}_3 = \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}\)</span>.</p>
 </li>
 </ol>
 <p>则由特征向量组成的变换矩阵 <span class="arithmatex">\(\mathbf P\)</span> 为：<span class="arithmatex">\(\mathbf P = \begin{bmatrix} -1 &amp; -1 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}\)</span>，易求得其逆矩阵<span class="arithmatex">\(\mathbf P^{-1} = \begin{bmatrix} -{1}/{3} &amp; -{1}/{3} &amp; {2}/{3} \\ -{1}/{3} &amp; {2}/{3} &amp; -{1}/{3} \\ {1}/{3} &amp; {1}/{3} &amp; {1}/{3} \end{bmatrix}\)</span>，由特征值组成的对角矩阵<span class="arithmatex">\(\mathbf {\Lambda} = \begin{bmatrix}
@@ -1194,12 +1194,12 @@ a_n=\frac{a+b+c}{3}+\left(-\frac{1}{2}\right)^{n-1}\frac{a_{1}-a_{0}}{3}
 <div class="arithmatex">\[
 \begin{aligned}
     a_n &amp;= \frac{2a_1+a_0}{3}+\left(-\frac{1}{2}\right)^{n-1}\frac{a_{1}-a_{0}}{3}\\
-    &amp; = \frac{a+b+c}{3}+\left(-\frac{1}{2}\right)^{n}\frac{b+c-a}{3}
+    &amp; = \frac{a+b+c}{3}+\left(-\frac{1}{2}\right)^{n}\frac{2a-b-c}{3}
 \end{aligned}
 \]</div>
 <p>因此这与前几个方法得到的<span class="arithmatex">\(a_n\)</span>表达式<span class="arithmatex">\(\eqref{eq12}\)</span>是完全一致的。</p>
 <p><strong>注释.</strong> 事实上，任何 <span class="arithmatex">\(k\)</span> 阶常系数线性递推数列（如 <span class="arithmatex">\(a_n = c_1 a_{n-1} + c_2 a_{n-2} + \dots + c_k a_{n-k}\)</span>），都可以通过构造 <span class="arithmatex">\(k\)</span> 维列向量，将其转化为一个 <span class="arithmatex">\(k \times k\)</span> 矩阵的迭代问题。</p>
-<p>在求解矩阵<span class="arithmatex">\(\mathbf A\)</span>的特征值时，需求解特征方程 <span class="arithmatex">\(\vert{}\lambda I - A\vert{} = 0\)</span>：</p>
+<p>在求解矩阵<span class="arithmatex">\(\mathbf A\)</span>的特征值时，需求解特征方程 <span class="arithmatex">\(\vert{}\lambda \mathbf I - \mathbf A\vert{} = 0\)</span>：</p>
 <div class="arithmatex">\[
 \begin{vmatrix} \lambda - \frac{1}{2} &amp; -\frac{1}{2} \\ -1 &amp; \lambda \end{vmatrix} = \lambda\left(\lambda - \frac{1}{2}\right) - \left(-\frac{1}{2}\right)(-1) = \lambda^2 - \frac{1}{2}\lambda - \frac{1}{2} = 0
 \]</div>
