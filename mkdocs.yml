@@ -2,6 +2,7 @@ site_name: 数学分析习题项目
 
 theme:
   name: material
+  custom_dir: overrides
   icon:
     logo: material/flask-round-bottom
   language: zh
@@ -31,23 +32,18 @@ plugins:
       lang: [en, ja]          # 中文一定要加
       separator: '[\s\-\.]+'  # 优化中文切词
 
-# extra_javascript:
-  # - javascripts/katex.js
-  # - https://unpkg.com/katex@0/dist/katex.min.js
-  # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-  # - javascripts/mathjax.js
-  # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
 
 extra_javascript:
-  # - javascripts/katex.js  # 我们下一步要创建的初始化脚本
-  # - https://unpkg.com/katex@0/dist/katex.min.js
-  # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - javascripts/katex.js  # 我们下一步要创建的初始化脚本
+  # - https://unpkg.com/katex@0/dist/katex.min.js
+  # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 
-copyright: Copyright © by Yangxin Zhang
+# copyright: "Copyright &copy; 2026 by Yangxin Zhang | 持续接受勘误与讨论"
+extra:
+  generator: false

@@ -6,7 +6,7 @@
       
       
       
-        <link rel="prev" href="../ch2-4-10%20%E9%BB%8E%E6%9B%BC%E5%87%BD%E6%95%B0/">
+        <link rel="prev" href="../ch2-9-1%E5%8F%8D%E5%B8%B8%E5%87%BD%E6%95%B0/">
       
       
         <link rel="next" href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-1-7%20%E6%8C%87%E6%95%B0%E5%9E%8B/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>ch2-9-1 一个反常性质函数 - 数学分析习题项目</title>
+        <title>ch2-w9-1 一致连续与极限证明 - 数学分析习题项目</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ch2-9-1" class="md-skip">
+        <a href="#ch2-w9-1" class="md-skip">
           跳转至
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ch2-9-1 一个反常性质函数
+              ch2-w9-1 一致连续与极限证明
             
           </span>
         </div>
@@ -371,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ch2-4-10%20%E9%BB%8E%E6%9B%BC%E5%87%BD%E6%95%B0/" class="md-nav__link">
+      <a href="../ch2-4-10%E9%BB%8E%E6%9B%BC%E5%87%BD%E6%95%B0/" class="md-nav__link">
         
   
   
@@ -379,6 +379,34 @@
     
   
     ch2-4-10 黎曼函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch2-9-1%E5%8F%8D%E5%B8%B8%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ch2-9-1 一个反常性质函数
   
 
     
@@ -415,7 +443,7 @@
   <span class="md-ellipsis">
     
   
-    ch2-9-1 一个反常性质函数
+    ch2-w9-1 一致连续与极限证明
   
 
     
@@ -433,7 +461,7 @@
   <span class="md-ellipsis">
     
   
-    ch2-9-1 一个反常性质函数
+    ch2-w9-1 一致连续与极限证明
   
 
     
@@ -459,10 +487,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#291" class="md-nav__link">
     <span class="md-ellipsis">
       
-        题目
+        问题2.9.1
       
     </span>
   </a>
@@ -470,7 +498,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         证明
@@ -481,10 +509,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        备注
+        思考：一致连续与一致收敛
       
     </span>
   </a>
@@ -894,10 +922,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#291" class="md-nav__link">
     <span class="md-ellipsis">
       
-        题目
+        问题2.9.1
       
     </span>
   </a>
@@ -905,7 +933,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         证明
@@ -916,10 +944,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        备注
+        思考：一致连续与一致收敛
       
     </span>
   </a>
@@ -943,50 +971,48 @@
 
 
 
-<h1 id="ch2-9-1">ch2-9-1 一个反常性质函数</h1>
-<h2 id="_1">题目</h2>
-<p>研究函数的一致连续性：</p>
+<h1 id="ch2-w9-1">ch2-w9-1 一致连续与极限证明</h1>
+<h2 id="291">问题2.9.1</h2>
+<p>函数<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([0,+\infty)\)</span>上一致连续，且对任何<span class="arithmatex">\(x\in [0,1]\)</span>有<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\;(n\in \mathbf N^*)\)</span>,证明：<span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span>.举例说明，仅有<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([0,+\infty)\)</span>上的连续性推不出上述结论。</p>
+<h2 id="_1">证明</h2>
+<p>因为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0, +\infty)\)</span> 上一致连续，那么对于任意给定的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得对于任意 <span class="arithmatex">\(x, y \in [0, +\infty)\)</span>，只要 <span class="arithmatex">\(\vert{}x - y\vert{} &lt; \delta\)</span>，就有 <span class="arithmatex">\(\vert{}f(x) - f(y)\vert{} &lt; \frac{\varepsilon}{2}\)</span>。</p>
+<p>取正整数 <span class="arithmatex">\(k\)</span> 使得 <span class="arithmatex">\(\frac{1}{k} &lt; \delta\)</span>。我们将区间 <span class="arithmatex">\([0,1]\)</span> 进行 <span class="arithmatex">\(k\)</span> 等分，取分点 <span class="arithmatex">\(x_i = \frac{i}{k}\)</span>，其中 <span class="arithmatex">\(i = 0, 1, 2, \dots, k\)</span>。由题设条件已知，对于每一个固定的分点<span class="arithmatex">\(x_i\)</span>，均有 <span class="arithmatex">\(\lim\limits_{n\to\infty} f(x_i + n) = 0\)</span>。因为分点的个数是有限的（共 <span class="arithmatex">\(k+1\)</span> 个），所以必定存在一个正整数 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(n &gt; N\)</span> 时，对于所有的 <span class="arithmatex">\(i = 0, 1, 2, \dots, k\)</span>，同时满足：</p>
 <div class="arithmatex">\[
-f(x)=\frac{x}{1+x^2\sin^2x},\quad x\geqslant 0.
+\vert{}f(x_i + n)\vert{} &lt; \frac{\varepsilon}{2}
 \]</div>
-<p>这一个很不一般的函数，它具有一系列反常的性质。</p>
-<h2 id="_2">证明</h2>
-<p>函数在<span class="arithmatex">\([0,+\infty)\)</span>上不一致连续。取：</p>
+<p>现对任意<span class="arithmatex">\(x &gt; N + 1\)</span>，设其整数部分为 <span class="arithmatex">\(n = [x]\)</span>，那么小数部分为 <span class="arithmatex">\(t = x - n\)</span>。显然 <span class="arithmatex">\(n &gt; N\)</span> 且 <span class="arithmatex">\(t \in [0, 1)\)</span>。由于相邻两个分点之间的距离为 <span class="arithmatex">\(\frac{1}{k}\)</span>，必存在某个 <span class="arithmatex">\(x_i\)</span> 使得 <span class="arithmatex">\(\vert{}t - x_i\vert{} \leqslant \frac{1}{k} &lt; \delta\)</span>。此时，考察点 <span class="arithmatex">\(x\)</span> 与点 <span class="arithmatex">\(x_i + n\)</span> 之间的距离：</p>
 <div class="arithmatex">\[
-s_n = n\pi,\qquad t_n = n\pi + \frac{1}{n}\quad (n\in \mathbf N^*)
+\vert{}x - (x_i + n)\vert{} = \vert{}(n + t) - (x_i + n)\vert{} = \vert{}t - x_i\vert{} &lt; \delta
 \]</div>
-<p>显然当 <span class="arithmatex">\(n \to \infty\)</span> 时，这两点之间的距离为：</p>
+<p>根据一致连续性，可得：</p>
 <div class="arithmatex">\[
-\vert{}s_n - t_n\vert{} = \frac{1}{n} \to 0
+\vert{}f(x) - f(x_i + n)\vert{} &lt; \frac{\varepsilon}{2}
 \]</div>
-<p>分别计算这两点上的函数值。首先有<span class="arithmatex">\(f(s_n)=n\pi\)</span>。将 <span class="arithmatex">\(t_n = n\pi + \frac{1}{n}\)</span> 代入函数，得：</p>
+<p>结合三角不等式，有：</p>
 <div class="arithmatex">\[
-f(t_n) = \frac{n\pi + \frac{1}{n}}{1 + \left(n\pi + \frac{1}{n}\right)^2 \sin^2\left(n\pi + \frac{1}{n}\right)}
+\vert{}f(x)\vert{} \leqslant \vert{}f(x) - f(x_i + n)\vert{} + \vert{}f(x_i + n)\vert{} &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
 \]</div>
-<p>由于<span class="arithmatex">\(\sin ^2 (n\pi + 1/n)=\sin ^2 (1/n)\)</span>，并将分母中<span class="arithmatex">\(\left(n\pi+\frac{1}{n}\right)^2\)</span>展开，分母变为：</p>
+<p>综上，对于任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(X = N + 1 &gt; 0\)</span>，当 <span class="arithmatex">\(x &gt; X\)</span> 时总有 <span class="arithmatex">\(\vert{}f(x)\vert{} &lt; \varepsilon\)</span>。因此，<span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span> 获证。</p>
+<p>构造一个函数，在每个<span class="arithmatex">\([n,n+1]\)</span>区间内都存在一个“尖峰”，且随着<span class="arithmatex">\(n\)</span>的增大，尖峰的高度不衰减，但越来越窄并向整数点 <span class="arithmatex">\(n\)</span> 靠拢，使得任意固定的 <span class="arithmatex">\(x \in [0,1]\)</span> 在平移 <span class="arithmatex">\(n\)</span> 次后，最终都能完美避开这些尖峰。定义函数 <span class="arithmatex">\(f(x)\)</span> 如下：</p>
 <div class="arithmatex">\[
-1 + \left( n^2\pi^2 + 2\pi + \frac{1}{n^2} \right) \sin^2\left(\frac{1}{n}\right)= 1 + n^2\pi^2 \sin^2\left(\frac{1}{n}\right) + 2\pi \sin^2\left(\frac{1}{n}\right) + \frac{1}{n^2} \sin^2\left(\frac{1}{n}\right)
+f(x) = \begin{cases}  1 - n^3 \left\vert{} x - \left(n + \frac{1}{n}\right) \right\vert{}, &amp; x \in \left[n + \frac{1}{n} - \frac{1}{n^3}, n + \frac{1}{n} + \frac{1}{n^3}\right], n \geqslant 2, n \in \mathbf{N}^* \\  0, &amp; \text{其他情况}  \end{cases}
 \]</div>
-<p>分析当<span class="arithmatex">\(n\to \infty\)</span>时，分母的表现，易知分母的主导项为：<span class="arithmatex">\(\pi^2 \cdot \left[ n \sin\left(\frac{1}{n}\right) \right]^2 \to \pi^2 \cdot 1^2 \to \pi^2\)</span>，而其余两项皆趋于<span class="arithmatex">\(0\)</span>，即整个分母的极限趋近于一个常数<span class="arithmatex">\(1+\pi^2\)</span>。因此当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(f(t_n)\)</span> 的渐近行为是：</p>
+<p><span class="arithmatex">\(f(x)\)</span> 由一系列互不重叠的折线尖峰组成（当 <span class="arithmatex">\(n \geqslant 2\)</span> 时，峰底宽度为 <span class="arithmatex">\(\frac{2}{n^3}\)</span>，均完全落在 <span class="arithmatex">\((n, n+1)\)</span> 内），在 <span class="arithmatex">\([0, +\infty)\)</span> 上处处连续。对任意固定的 <span class="arithmatex">\(x \in [0, 1]\)</span>：若 <span class="arithmatex">\(x = 0\)</span>，则 <span class="arithmatex">\(x+n = n\)</span>。因为尖峰都在 <span class="arithmatex">\((n, n+1)\)</span> 内部，所以当 <span class="arithmatex">\(n \geqslant 2\)</span> 时 <span class="arithmatex">\(f(n) = 0\)</span> 恒成立，故 <span class="arithmatex">\(\lim\limits_{n\to\infty} f(n) = 0\)</span>；若 <span class="arithmatex">\(x \in (0, 1]\)</span>，由于 <span class="arithmatex">\(\lim\limits_{n\to\infty} (\frac{1}{n} + \frac{1}{n^3}) = 0\)</span>，当 <span class="arithmatex">\(n\)</span> 足够大时，必定有 <span class="arithmatex">\(x &gt; \frac{1}{n} + \frac{1}{n^3}\)</span>。这意味着点 <span class="arithmatex">\(x+n\)</span> 最终会落在第 <span class="arithmatex">\(n\)</span> 个尖峰的右侧区间，从而对充分大的 <span class="arithmatex">\(n\)</span> 总有 <span class="arithmatex">\(f(x+n) = 0\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to\infty} f(x+n) = 0\)</span> 成立。</p>
+<p>但此时无法推出无穷远处的极限为<span class="arithmatex">\(0\)</span>：在每个尖峰的最高点 <span class="arithmatex">\(x_n = n + \frac{1}{n}\)</span> 处，函数值恒为 <span class="arithmatex">\(f(x_n) = 1\)</span>。因为 <span class="arithmatex">\(x_n \to +\infty\)</span> 且 <span class="arithmatex">\(f(x_n) \equiv 1\)</span>，所以 <span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)\)</span> 显然不可能等于<span class="arithmatex">\(0\)</span>，该极限实际上并不存在。结论得证。</p>
+<h2 id="_2">思考：一致连续与一致收敛</h2>
+<p>如果记：</p>
 <div class="arithmatex">\[
-f(t_n) \sim \frac{n\pi}{1 + \pi^2}
+g_n(t)=f(n+t),\qquad t\in[0,1].
 \]</div>
-<p>两个函数值的差值为：</p>
+<p>这是一个函数列<span class="arithmatex">\(\{g_n(t)\}\)</span>。题设条件<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\)</span> 对于 <span class="arithmatex">\(x \in [0,1]\)</span> 成立，直接等价于函数列 <span class="arithmatex">\(g_n(t) \to 0\)</span> 在 <span class="arithmatex">\(t \in [0,1]\)</span> 上逐点收敛。</p>
+<p>而要证的结论： <span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span> 等价于要求对于任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，当 <span class="arithmatex">\(n &gt; N\)</span> 时，对所有的 <span class="arithmatex">\(t \in [0,1]\)</span>，都有 <span class="arithmatex">\(\vert{}f(n+t)\vert{} &lt; \varepsilon\)</span>。这恰恰就是 <span class="arithmatex">\(g_n(t)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上一致收敛于 <span class="arithmatex">\(0\)</span>（记作 <span class="arithmatex">\(g_n(t) \rightrightarrows 0\)</span>）的严格定义。</p>
+<p>将“逐点收敛”跨越到“一致收敛”的桥梁，正是 <span class="arithmatex">\(f(x)\)</span> 的一致连续性。由于 <span class="arithmatex">\(g_n(t)\)</span> 是从同一个具有全局一致连续性的母体 <span class="arithmatex">\(f(x)\)</span> 上“切”下来的，因此 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0, +\infty)\)</span> 上的一致连续，直接保证了函数列 <span class="arithmatex">\(\{g_n(t)\}\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上是\textbf{等度连续}的。函数列的等度连续的定义是：<span class="arithmatex">\(\forall \,\varepsilon &gt; 0, \exists \,\delta &gt; 0\)</span>，使得 <span class="arithmatex">\(\forall \,n \in \mathbf{N}^*\)</span>，以及 <span class="arithmatex">\(\forall\, t_1, t_2 \in [0,1]\)</span>，只要 <span class="arithmatex">\(\vert{}t_1 - t_2\vert{} &lt; \delta\)</span>，就有：</p>
 <div class="arithmatex">\[
-\vert{}f(s_n) - f(t_n)\vert{} \sim \left\vert{} n\pi - \frac{n\pi}{1 + \pi^2} \right\vert{} = n\pi \left( 1 - \frac{1}{1 + \pi^2} \right) = n\pi \left( \frac{\pi^2}{1 + \pi^2} \right)
+\vert{}g_n(t_1) - g_n(t_2)\vert{} = \vert{}f(n+t_1) - f(n+t_2)\vert{} &lt; \varepsilon
 \]</div>
-<p>显然，当<span class="arithmatex">\(n \to \infty\)</span>时，<span class="arithmatex">\(\vert{}f(s_n)-f(t_n)\vert{} \to +\infty\)</span>。故<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([0,+\infty)\)</span>上不一致连续。</p>
-<h2 id="_3">备注</h2>
-<p>函数<span class="arithmatex">\(\frac{x}{1+x^2\sin ^2 x}\)</span>是数学分析中构造反常性质（如无界但非无穷大、反常积分发散但通项趋于零等）的经典反例函数。它的图像特征表现为随<span class="arithmatex">\(x\)</span>增大而不断升高的尖锐脉冲，这些脉冲位于整数倍的<span class="arithmatex">\(\pi\)</span>附近，而其余区域则平缓地贴近<span class="arithmatex">\(x\)</span>轴。事实上，对于任意<span class="arithmatex">\(\alpha &gt; 0\)</span>，函数：</p>
-<div class="arithmatex">\[
-f(x)=\frac{x}{1+x^{\alpha}\sin ^2 x}
-\]</div>
-<p>在<span class="arithmatex">\([0,+\infty)\)</span>上都是不一致连续的。<span class="arithmatex">\(\alpha\)</span> 越大，波峰坍缩（收缩到<span class="arithmatex">\(0\)</span>）的速度就越快。这意味着当 <span class="arithmatex">\(x \to +\infty\)</span> 时，波峰会变得越来越陡峭，趋近于一条垂直线。这种在无穷远处无限变陡的断崖式落差，破坏了一致连续性。而广义积分</p>
-<div class="arithmatex">\[
-\int_0^{+\infty}\frac{x\,\mathrm dx}{1+x^{\alpha}\sin ^2 x}
-\]</div>
-<p>收敛的充分必要条件是 <span class="arithmatex">\(\alpha &gt; 4\)</span>. 选取<span class="arithmatex">\(\alpha = 2\)</span>和<span class="arithmatex">\(\alpha = 6\)</span>作图如下：</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/maichong.svg" data-desc-position="bottom"><img alt="" src="../../images/maichong.svg" style="display: block; margin-left: auto; margin-right: auto;" width="500"></a></p>
+<p>注意这里的 <span class="arithmatex">\(\delta\)</span> 与 <span class="arithmatex">\(n\)</span> 无关，这是由 <span class="arithmatex">\(f\)</span> 的全局一致连续性所决定的，它们共享了<span class="arithmatex">\(f(x)\)</span>一致连续的那个<span class="arithmatex">\(\delta\)</span>。而在紧致空间（本题中是闭区间<span class="arithmatex">\([0,1]\)</span>）上，有一个经典理论：紧集上的等度连续函数列，若逐点收敛，则必一致收敛。保证从“逐点收敛”提升到“一致收敛”的最底层物理机制，是紧区间上的有限覆盖。</p>
+<p>等度连续保证了在任意一点的某个小邻域内，函数列中的所有函数都没有剧烈震荡。这意味着，只要函数在邻域的中心点收敛，那么被等度连续性“绑”在一起的周围点也会跟着收敛。逐点收敛在这里获得了局部的一致性。而闭区间 <span class="arithmatex">\([0,1]\)</span> 上有无穷多个点，对于每一个点，我们都能找到上述的一个局部收敛邻域，从而形成该区间的一个无限开覆盖。紧集（闭区间）的核心威力在于有限覆盖定理：因为 <span class="arithmatex">\([0,1]\)</span> 是紧致的，我们可以用有限个点 <span class="arithmatex">\(x_i\)</span> 及其半径为 <span class="arithmatex">\(\delta\)</span> 的开覆盖来覆盖整个 <span class="arithmatex">\([0,1]\)</span>。对于 <span class="arithmatex">\([0,1]\)</span> 中的任意一点 <span class="arithmatex">\(t\)</span>，它必然落在某个网格节点 <span class="arithmatex">\(x_i\)</span> 的 <span class="arithmatex">\(\delta\)</span> 邻域内。由等度连续性，<span class="arithmatex">\(g_n(t)\)</span> 的值被“钉”在了 <span class="arithmatex">\(g_n(x_i)\)</span> 的附近，绝不可能产生剧烈震荡从而逃脱 <span class="arithmatex">\(\varepsilon\)</span> 的控制。</p>
+<p>整个物理图像是：等度连续把点变成了“块”（邻域），而有限覆盖定理确保我们只需有限个“块”就能铺满整个空间。</p>
 
 
 
