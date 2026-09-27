@@ -4,7 +4,7 @@
 
 全书共$20$章，每一章的习题解答单独输出一个PDF，现已发布前两章，共计$133$页解答，请在下面的目录单独下载文件。
 
-![shufen](./images/shufen.jpg)
+![shufen](./images/shufen.jpg){ width="350" style="display: block; margin-left: auto; margin-right: auto;"}
 
 第$2$版（上图）是比较老的教材，里面有一些被后续第$3$版删除的章节，但大部分题目并没有过时。在B站上也有与该版本教材配套的史济怀老师的课堂录像。
 
