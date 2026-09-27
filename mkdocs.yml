@@ -47,8 +47,7 @@ extra_javascript:
   # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js
-  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
 copyright: Copyright © by Yangxin Zhang
