@@ -1018,17 +1018,13 @@ J =\int_0^{\pi}\mathrm e^{-x}\sin x\,\mathrm dx
 \]</div>
 <p>则：</p>
 <div class="arithmatex">\[
-I = \mathrm e^{\pi}(I-J)\implies I = \frac{\mathrm e^{\pi}}{\mathrm e^{\pi}-1}\, J
+I = \mathrm e^{\pi}(I-J)\implies I = \frac{\mathrm e^{\pi}}{\mathrm e^{\pi}-1}\cdot J
 \]</div>
-<p>利用两次分部积分法计算<span class="arithmatex">\(J\)</span>，或直接使用公式：</p>
-<div class="arithmatex">\[
-\int \mathrm{e}^{at}\sin(bt)\,\mathrm{d}t = \frac{\mathrm{e}^{at}}{a^2+b^2}(a\sin bt - b\cos bt)
-\]</div>
-<p>其中 <span class="arithmatex">\(a=-1, b=1\)</span>，可得：</p>
+<p>两次利用分部积分法计算 <span class="arithmatex">\(J\)</span>，或直接使用公式<span class="arithmatex">\(\displaystyle \int \mathrm{e}^{at}\sin(bt)\,\mathrm{d}t = \frac{\mathrm{e}^{at}}{a^2+b^2}(a\sin bt - b\cos bt)\)</span>，其中令 <span class="arithmatex">\(a=-1, b=1\)</span>，可得：</p>
 <div class="arithmatex">\[
 J = \frac{\mathrm e^{-\pi}+1}{2}
 \]</div>
-<p>因此，原积分</p>
+<p>因此，原积分：</p>
 <div class="arithmatex">\[
 I =\frac{\mathrm e^{\pi}}{\mathrm e^{\pi}-1}\cdot \frac{\mathrm e^{-\pi}+1}{2} = \frac{1}{2}\cdot \frac{\mathrm e^{\pi}+1}{\mathrm e^{\pi}-1}  
 \]</div>
@@ -1073,7 +1069,7 @@ I =\frac{1}{2}\cdot \frac{\mathrm e^{\pi/2}+\mathrm e^{-\pi/2}}{\mathrm e^{\pi/2
 <div class="arithmatex">\[
 I = \mathscr{L}{\vert{}\sin x\vert{}}(1) = \frac{1}{1 - \mathrm{e}^{-\pi}} \cdot \frac{\mathrm{e}^{-\pi} + 1}{1^2 + 1} = \frac{1}{2} \cdot \frac{1 + \mathrm{e}^{-\pi}}{1 - \mathrm{e}^{-\pi}} = \frac{1}{2} \coth\left(\frac{\pi}{2}\right) 
 \]</div>
-<p>这与我们之前得到的结论完全一致。</p>
+<p>这与之前得到的结论完全一致。</p>
 <blockquote>
 <p>使用拉普拉斯变换的好处在于，它将<strong>无穷区间的积分问题</strong>直接转化为了<strong>代数运算和有限区间的积分问题</strong>，这是一种非常系统化的工具。</p>
 </blockquote>
