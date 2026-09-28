@@ -502,10 +502,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注：一个失败的反例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         思考：一致连续与一致收敛
@@ -965,10 +982,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注：一个失败的反例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         思考：一致连续与一致收敛
@@ -1025,7 +1059,29 @@ f(x) = \begin{cases}  1 - n^3 \left\vert{} x - \left(n + \frac{1}{n}\right) \rig
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/fxchap2.svg" data-desc-position="bottom"><img alt="" src="../../images/fxchap2.svg" style="display: block; margin-left: auto; margin-right: auto;" width="600"></a></p>
 <p>从示意图中可以看到，<span class="arithmatex">\(f(x)\)</span> 由一系列互不重叠的折线尖峰组成（当 <span class="arithmatex">\(n \geqslant 2\)</span> 时，峰底宽度为 <span class="arithmatex">\(\frac{2}{n^3}\)</span>，均完全落在 <span class="arithmatex">\((n, n+1)\)</span> 内），在 <span class="arithmatex">\([0, +\infty)\)</span> 上处处连续。对任意固定的 <span class="arithmatex">\(x \in [0, 1]\)</span>：若 <span class="arithmatex">\(x = 0\)</span>，则 <span class="arithmatex">\(x+n = n\)</span>。因为尖峰都在 <span class="arithmatex">\((n, n+1)\)</span> 内部，所以当 <span class="arithmatex">\(n \geqslant 2\)</span> 时 <span class="arithmatex">\(f(n) = 0\)</span> 恒成立，故 <span class="arithmatex">\(\lim\limits_{n\to\infty} f(n) = 0\)</span>；若 <span class="arithmatex">\(x \in (0, 1]\)</span>，由于 <span class="arithmatex">\(\lim\limits_{n\to\infty} (\frac{1}{n} + \frac{1}{n^3}) = 0\)</span>，当 <span class="arithmatex">\(n\)</span> 足够大时，必定有 <span class="arithmatex">\(x &gt; \frac{1}{n} + \frac{1}{n^3}\)</span>。这意味着点 <span class="arithmatex">\(x+n\)</span> 最终会落在第 <span class="arithmatex">\(n\)</span> 个尖峰的右侧区间，从而对充分大的 <span class="arithmatex">\(n\)</span> 总有 <span class="arithmatex">\(f(x+n) = 0\)</span>。因此 <span class="arithmatex">\(\lim\limits_{n\to\infty} f(x+n) = 0\)</span> 成立。</p>
 <p>但此时无法推出无穷远处的极限为<span class="arithmatex">\(0\)</span>：在每个尖峰的最高点 <span class="arithmatex">\(x_n = n + \frac{1}{n}\)</span> 处，函数值恒为 <span class="arithmatex">\(f(x_n) = 1\)</span>。因为 <span class="arithmatex">\(x_n \to +\infty\)</span> 且 <span class="arithmatex">\(f(x_n) \equiv 1\)</span>，所以 <span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)\)</span> 显然不可能等于<span class="arithmatex">\(0\)</span>，该极限实际上并不存在。结论得证。</p>
-<h2 id="_2">思考：一致连续与一致收敛</h2>
+<h3 id="_2">注：一个失败的反例</h3>
+<p>考虑那个 <a href="../ch2-9-1%E5%8F%8D%E5%B8%B8%E5%87%BD%E6%95%B0/">反常性质</a> 的函数：<span class="arithmatex">\(f(x)=\frac{x}{1+x^2\sin^2 x},\; (x\geqslant 0)\)</span>，因为它在 <span class="arithmatex">\([0,+\infty)\)</span> 上连续，但是不一致连续。整体图像有一系列无限拔高、无限变窄的“尖刺”组成，这些尖刺位于整数倍的 <span class="arithmatex">\(\pi\)</span> 处。因此它似乎是满足题意的，因为对于数列 <span class="arithmatex">\(x_n = n\pi\)</span>，函数值 <span class="arithmatex">\(f(x_n)=n\pi \to +\infty,\;(n\to \infty)\)</span>；而对于其他的地方函数值则趋于<span class="arithmatex">\(0\)</span>。</p>
+<p>我们可以改进一下这个函数，让它的尖峰出现在 <span class="arithmatex">\(x_n=n\)</span> 的位置。定义：</p>
+<div class="arithmatex">\[
+g(x) = \frac{x}{1+x^2\sin^2{(\pi x)}}
+\]</div>
+<p>它是否能组成本题的反例？答案值<strong>不能</strong>的。因为这些尖峰“不能移动”，不能无限得向整数点靠近，而是固定在 <span class="arithmatex">\(x_n=n\)</span> 的位置！因此不能满足对任何 <span class="arithmatex">\(x\in [0,1]\)</span> 有 <span class="arithmatex">\(\lim\limits_{n\to \infty}f(x+n)=0\)</span> 这个条件，因为当 <span class="arithmatex">\(x=0,1\)</span> 时，这个极限是 <span class="arithmatex">\(+\infty\)</span>。</p>
+<details class="success">
+<summary>查阅详细推证</summary>
+<p>对平移之后的函数值进行化简：</p>
+<div class="arithmatex">\[g(x+n) = \frac{x+n}{1+(x+n)^2\sin^2(\pi(x+n))}\]</div>
+<p>由于 <span class="arithmatex">\(n\)</span> 是整数，则有：<span class="arithmatex">\(\sin(\pi(x+n)) = \sin(\pi x + n\pi) = (-1)^n \sin(\pi x)\)</span>，平方后负号号消除：</p>
+<div class="arithmatex">\[g(x+n) = \frac{x+n}{1+(x+n)^2\sin^2(\pi x)}\]</div>
+<p>分情况讨论区间 <span class="arithmatex">\([0,1]\)</span> 内的点：</p>
+<p><strong>当 <span class="arithmatex">\(x \in (0, 1)\)</span> 时：</strong> <span class="arithmatex">\(\sin^2(\pi x)\)</span> 是一个严格大于 0 的常数，记为 <span class="arithmatex">\(c\)</span>。当 <span class="arithmatex">\(n \to \infty\)</span> 时，分子是关于 <span class="arithmatex">\(n\)</span> 的一次项，分母是二次项，因此：</p>
+<div class="arithmatex">\[\lim_{n\to\infty} g(x+n) = \lim_{n\to\infty} \frac{x+n}{1+c(x+n)^2} = 0\]</div>
+<p>在开区间内，极限条件满足。</p>
+<p><strong>当 <span class="arithmatex">\(x = 0\)</span>（或 <span class="arithmatex">\(x = 1\)</span>）时：</strong> 此时 <span class="arithmatex">\(\sin^2(0) = 0\)</span>。代入表达式计算整数点序列的值：</p>
+<div class="arithmatex">\[g(0+n) = g(n) = \frac{n}{1+n^2\sin^2(n\pi)} = \frac{n}{1+0} = n\]</div>
+<p>对该序列求极限：</p>
+<div class="arithmatex">\[\lim_{n\to\infty} g(n) = \lim_{n\to\infty} n = +\infty\]</div>
+</details>
+<h2 id="_3">思考：一致连续与一致收敛</h2>
 <p>如果记：</p>
 <div class="arithmatex">\[
 g_n(t)=f(n+t),\qquad t\in[0,1].
