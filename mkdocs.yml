@@ -2,7 +2,7 @@ site_name: 数学分析习题项目
 
 theme:
   name: material
-  custom_dir: overrides
+  # custom_dir: overrides
   icon:
     logo: material/flask-round-bottom
   language: zh
@@ -44,6 +44,6 @@ extra_javascript:
   # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 
-# copyright: "Copyright &copy; 2026 by Yangxin Zhang | 持续接受勘误与讨论"
+copyright: "Copyright &copy; 2026 Yangxin Zhang | 持续接受勘误与讨论"
 extra:
   generator: false
