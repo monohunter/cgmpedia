@@ -1,4 +1,6 @@
 site_name: 数学分析习题项目
+site_url: https://monohunter.github.io/cgmpedia/
+site_description: 中科大《数学分析》第2版习题解答、精选证明与延伸思考
 
 theme:
   name: material
@@ -41,7 +43,7 @@ extra_javascript:
   # - https://unpkg.com/katex@0/dist/katex.min.js
   # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
-
 copyright: "Copyright &copy; 2026 Yangxin Zhang | 持续接受勘误与讨论"
+
 extra:
   generator: false
