@@ -1083,7 +1083,7 @@
 <p>原命题得证。</p>
 </details>
 <h2 id="pisot">Pisot 数</h2>
-<p>这种“虽然本身趋于无穷大，但越来越逼近整数，小数部分无限趋近于1（即.999…9）”的现象，在数学中属于一个非常优美且专门的数论分支。这类数字被称为 <strong>Pisot-Vijayaraghavan 数</strong>。</p>
+<p>这种“虽然本身趋于无穷大，但越来越逼近整数，小数部分无限趋近于1（即.999…9）”的现象，在数学中属于一个非常优美且专门的数论分支，这类数字被称为 <strong>Pisot-Vijayaraghavan 数</strong>。</p>
 <p>Pisot数完美的解释了上述现象！一个实数 <span class="arithmatex">\(\alpha\)</span> 如果要成为 Pisot 数，必须满足三个条件：</p>
 <ol>
 <li><strong>它是代数整数</strong>：即它是某个最高次项系数为1、其余系数均为整数的代数多项式的根。</li>
@@ -1105,7 +1105,7 @@
 </ol>
 <p>正是由于 <span class="arithmatex">\(2+\sqrt 2\)</span> 的共轭数 <span class="arithmatex">\(2-\sqrt 2&gt;0\)</span>，所以所以 <span class="arithmatex">\((2+\sqrt{2})^n\)</span> 总是比那个最近的整数稍微小一点点（从左侧逼近于整数）。</p>
 <h3 id="_5">另外的例子</h3>
-<p>由斐波那契数列得到的黄金比例 <span class="arithmatex">\(\phi = \frac{1+\sqrt{5}}{2}\)</span> 就是标准的Pisot数！因为它是二次代数方程 <span class="arithmatex">\(x^2-x-1=0\)</span> 的正根。它具有唯一的共轭根，是该方程的另外一个根 <span class="arithmatex">\(\psi = \frac{1-\sqrt{5}}{2} \approx -0.618\)</span>，且满足 <span class="arithmatex">\(|\psi|&lt;1\)</span>。既然是Pisot数，那么我们可以利用它的共轭根来分析其 <span class="arithmatex">\(n\)</span> 次方的状态，就像分析 <span class="arithmatex">\((2+\sqrt 2)^n\)</span> 的状态一样，将它的两个根的 <span class="arithmatex">\(n\)</span> 次方相加：</p>
+<p>由 <a href="../%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">斐波那契数列</a> 得到的黄金比例 <span class="arithmatex">\(\phi = \frac{1+\sqrt{5}}{2}\)</span> 就是标准的Pisot数！因为它是二次代数方程 <span class="arithmatex">\(x^2-x-1=0\)</span> 的正根。它具有唯一的共轭根，是该方程的另外一个根 <span class="arithmatex">\(\psi = \frac{1-\sqrt{5}}{2} \approx -0.618\)</span>，且满足 <span class="arithmatex">\(|\psi|&lt;1\)</span>。既然是Pisot数，那么我们可以利用它的共轭根来分析其 <span class="arithmatex">\(n\)</span> 次方的状态，就像分析 <span class="arithmatex">\((2+\sqrt 2)^n\)</span> 的状态一样，将它的两个根的 <span class="arithmatex">\(n\)</span> 次方相加：</p>
 <div class="arithmatex">\[
 \left(\frac{1+\sqrt{5}}{2}\right)^n + \left(\frac{1-\sqrt{5}}{2}\right)^n = L_n
 \]</div>
@@ -1115,8 +1115,8 @@
 \]</div>
 <p>此时因为共轭根 <span class="arithmatex">\(\psi \approx -0.618\)</span> 是一个<strong>负数</strong>，当它被不断乘方时，它的符号会随着 <span class="arithmatex">\(n\)</span> 的奇偶性发生正负交替，同时其绝对值会以指数级速度迅速衰减到 <span class="arithmatex">\(0\)</span>。这导致 <span class="arithmatex">\(\phi^n\)</span> 在无穷远处展现出一种独特的<strong>交替逼近</strong>现象：</p>
 <ol>
-<li><strong>当 <span class="arithmatex">\(n\)</span> 为偶数时：</strong> <span class="arithmatex">\(\psi^n\)</span> 是一个极小的正数。此时 <span class="arithmatex">\(\phi^n = L_n - \text{（极小正数）}\)</span>，它的值会稍微小于整数 <span class="arithmatex">\(L_n\)</span>，小数部分呈现出 <span class="arithmatex">\(0.999\dots9\)</span> 的形式。</li>
-<li><strong>当 <span class="arithmatex">\(n\)</span> 为奇数时：</strong> <span class="arithmatex">\(\psi^n\)</span> 是一个极小的负数。此时 <span class="arithmatex">\(\phi^n = L_n - \text{（极小负数）} = L_n + \left|\psi^n\right|\)</span>，它的值会稍微大于整数 <span class="arithmatex">\(L_n\)</span>，小数部分呈现出 <span class="arithmatex">\(0.000\dots1\)</span> 的形式。</li>
+<li><strong>当 <span class="arithmatex">\(n\)</span> 为偶数时：</strong> <span class="arithmatex">\(\psi^n\)</span> 是一个极小的正数。此时 <span class="arithmatex">\(\phi^n = L_n \;- \text{（极小正数）}\)</span>，它的值会稍微小于整数 <span class="arithmatex">\(L_n\)</span>，小数部分呈现出 <span class="arithmatex">\(0.999\dots9\)</span> 的形式。</li>
+<li><strong>当 <span class="arithmatex">\(n\)</span> 为奇数时：</strong> <span class="arithmatex">\(\psi^n\)</span> 是一个极小的负数。此时 <span class="arithmatex">\(\phi^n = L_n \;- \text{（极小负数）} = L_n + \left|\psi^n\right|\)</span>，它的值会稍微大于整数 <span class="arithmatex">\(L_n\)</span>，小数部分呈现出 <span class="arithmatex">\(0.000\dots1\)</span> 的形式。</li>
 </ol>
 <p>总之，在 <span class="arithmatex">\(n \to \infty\)</span> 的过程中，黄金比例的 <span class="arithmatex">\(n\)</span> 次方并没有像 <span class="arithmatex">\((2+\sqrt{2})^n\)</span> 那样始终从单侧逼近整数，而是像一个振幅无限衰减的钟摆，随着 <span class="arithmatex">\(n\)</span> 的递增，在<code>整数.9999...9</code>和 <code>整数.0000...1</code> 之间来回穿梭横跳，最终在无穷远处无限贴合于正整数。</p>
 
