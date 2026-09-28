@@ -2,6 +2,9 @@
 // 本文件只声明配置，由随后加载的 MathJax 主库自动完成首次排版。
 // 不提前调用 typesetPromise，也不重复重置、排版整个页面。
 window.MathJax = {
+  loader: {
+    load: ['[tex]/ams', 'ui/lazy'] // 关键1：加载 lazy 扩展库
+  },
   tex: {
     inlineMath: [["\\(", "\\)"], ["$", "$"]],
     displayMath: [["\\[", "\\]"], ["$$", "$$"]],
