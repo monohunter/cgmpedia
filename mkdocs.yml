@@ -4,7 +4,7 @@ theme:
   name: material
   # custom_dir: overrides
   icon:
-    logo: material/flask-round-bottom
+    logo: material/math-integral-box
   language: zh
   palette:
     primary: blue-grey
