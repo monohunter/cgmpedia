@@ -973,7 +973,7 @@
 
   <h1>斐波那契数列</h1>
 
-<p>斐波那契数列(Fibonacci)是一个递归数列(recursive sequence)，递推关系是：<span class="arithmatex">\(a_n =a_{n-1}+a_{n-2},~n\geqslant 2\)</span>. 规定<span class="arithmatex">\(a_0=1,a_1=1\)</span>（这2个值就相当于微分方程中的初始条件）。</p>
+<p>斐波那契数列(Fibonacci)是一个递归数列(recursive sequence)，递推关系是：<span class="arithmatex">\(a_n =a_{n-1}+a_{n-2},~n\geqslant 2\)</span>. 规定<span class="arithmatex">\(a_0=1,a_1=1\)</span>（这 <span class="arithmatex">\(2\)</span> 个值就相当于微分方程中的初始条件）。</p>
 <p>这个数列写下来就是：</p>
 <div class="arithmatex">\[
 \begin{matrix}
@@ -981,7 +981,7 @@ a_0 &amp; a_1 &amp; a_2 &amp; a_3 &amp; a_4 &amp; a_5 &amp; a_6 &amp; a_7 &amp; 
 1 &amp; 1 &amp; 2 &amp; 3 &amp; 5 &amp; 8 &amp; 13 &amp; 21 &amp; \cdots
 \end{matrix}
 \]</div>
-<p>这个数列的通项公式如何求？</p>
+<p>问：这个数列的通项公式如何求？</p>
 <h2 id="1">方法1：初等数学的方法</h2>
 <p>对递推式构造等比数列，设常数<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\(s\)</span>满足</p>
 <div class="arithmatex">\[
@@ -997,20 +997,20 @@ r\cdot s = -1
 <p>此时，<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\(s\)</span>为一元二次方程<span class="arithmatex">\(x^2-x-1=0\)</span>的两个根，解得：<span class="arithmatex">\(r=\dfrac{1-\sqrt{5}}{2}\)</span>或<span class="arithmatex">\(r=\dfrac{1+\sqrt{5}}{2}\)</span>.</p>
 <p>同样地，可以构造<span class="arithmatex">\(2\)</span>个等比数列如下：</p>
 <div class="arithmatex">\[
-\begin{split}
+\begin{aligned}
         a_n-\left(\frac{1-\sqrt{5}}{2}\right)a_{n-1} &amp;=\frac{1+\sqrt{5}}{2}\left[a_{n-1}-\left(\frac{1-\sqrt{5}}{2}\right)a_{n-2}\right] =\cdots \\
          &amp;= \left(\frac{1+\sqrt{5}}{2}\right)^{n-1}\left[a_1-\left(\frac{1-\sqrt{5}}{2}\right)a_0\right] \\
          &amp;= \left(\frac{1+\sqrt{5}}{2}\right)^{n-1}\left[1-\left(\frac{1-\sqrt{5}}{2}\right)\right]=\left(\frac{1+\sqrt{5}}{2}\right)^{n}
-    \end{split}\label{eq1}
+    \end{aligned}\label{fib_eq1}tag{1}
 \]</div>
 <div class="arithmatex">\[
-\begin{split}
+\begin{aligned}
         a_n-\left(\frac{1+\sqrt{5}}{2}\right)a_{n-1} &amp;=\frac{1-\sqrt{5}}{2}\left[a_{n-1}-\left(\frac{1+\sqrt{5}}{2}\right)a_{n-2}\right] =\cdots \\
          &amp;= \left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\left[a_1-\left(\frac{1+\sqrt{5}}{2}\right)a_0\right]\\
         &amp;= \left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\left[1-\left(\frac{1+\sqrt{5}}{2}\right)\right]=\left(\frac{1-\sqrt{5}}{2}\right)^{n}
-    \end{split} \label{eq2}
+    \end{aligned}\label{fib_eq2}\tag{2}
 \]</div>
-<p>由方程(4)<span class="arithmatex">\(-\)</span>方程(5)得：</p>
+<p>由方程<span class="arithmatex">\(\eqref{fib_eq1}-\)</span>方程<span class="arithmatex">\(\eqref{fib_eq2}\)</span>得：</p>
 <div class="arithmatex">\[
 \left(\frac{1+\sqrt{5}}{2}-\frac{1-\sqrt{5}}{2}\right)a_{n-1}=\sqrt{5}a_{n-1}
 =\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}
