@@ -1276,7 +1276,11 @@ x_n=\left( 1+ \frac{1}{n^2}\right)\left( 1+ \frac{2}{n^2}\right)\cdots\left(1+ \
 \]</div>
 <p>计算极限<span class="arithmatex">\(\lim\limits_{n\to \infty}x_n\)</span>. 【这是原书问题1.7.3】</p>
 <h4 id="_3">解答</h4>
-<p><strong>（方法一 泰勒级数）</strong> 当 <span class="arithmatex">\(x \geqslant 0\)</span> 时，根据对数函数的泰勒展开，存在以下经典不等式：</p>
+<p><strong>（方法一 泰勒级数）</strong> 为求其极限，先取自然对数：</p>
+<div class="arithmatex">\[
+\ln x_n = \sum_{k=1}^{n}{\ln \left(1+\frac{k}{n^2}\right)}
+\]</div>
+<p>当 <span class="arithmatex">\(x \geqslant 0\)</span> 时，根据对数函数 <span class="arithmatex">\(\ln(1+x)\)</span> 的泰勒展开，存在以下不等式：</p>
 <div class="arithmatex">\[x - \frac{x^2}{2} \leqslant \ln(1+x) \leqslant x\]</div>
 <details class="success">
 <summary>然后如何用它完成放缩？</summary>
@@ -1289,11 +1293,8 @@ x_n=\left( 1+ \frac{1}{n^2}\right)\left( 1+ \frac{2}{n^2}\right)\cdots\left(1+ \
 <p>因此原极限：</p>
 <div class="arithmatex">\[\lim_{n\rightarrow \infty}{\left( 1+ \frac{1}{n^2}\right)\left( 1+ \frac{2}{n^2}\right)\cdots\left(1+ \frac{n}{n^2}\right)}=\sqrt{\mathrm e}.\;\blacksquare \]</div>
 </details>
-<p><strong>（方法二 代数放缩）</strong> 为求其极限，先取自然对数：</p>
-<div class="arithmatex">\[
-\ln x_n = \sum_{k=1}^{n}{\ln \left(1+\frac{k}{n^2}\right)}
-\]</div>
-<p>由经典不等式 </p>
+<p><strong>（方法二 代数放缩）</strong> </p>
+<p>由经典不等式：</p>
 <div class="arithmatex">\[\frac{x}{1+x} &lt; \ln(1+x) &lt; x\]</div>
 <details class="success">
 <summary>接下来如何做？</summary>
@@ -1330,18 +1331,19 @@ x-\frac{x^3}{6} \leqslant \sin x \leqslant x
 <p>那么由夹逼定理，可知：</p>
 <div class="arithmatex">\[\lim_{n\to\infty}\left(\sin \frac{1}{n^2}+\sin \frac{2}{n^2}+\cdots+\sin \frac{n}{n^2}\right)=\frac12.\]</div>
 </details>
+<p>我没有通过初等数学找到什么关于 <span class="arithmatex">\(\sin x\)</span> 的绝妙不等式来进行放缩，只能使用泰勒级数的办法找到不等式。</p>
 <h3 id="_6">习题三</h3>
 <p>设：</p>
 <div class="arithmatex">\[
 x_n = \sum_{k=1}^{n}{\left(\sqrt{1+\frac{k}{n^2}}-1\right)}
 \]</div>
-<p>求<span class="arithmatex">\(\displaystyle\lim_{n\rightarrow \infty}{x_n}\)</span>.</p>
+<p>求<span class="arithmatex">\(\displaystyle\lim_{n\rightarrow \infty}{x_n}\)</span>. 【这是原书习题1.4.12】</p>
 <h4 id="_7">解答</h4>
-<p><strong>（方法一）</strong>这是原书习题1.4.12，课本给出的提示是：先进行分子有理化，得：</p>
+<p><strong>（方法一 代数放缩）</strong> 课本给出的提示是：先进行分子有理化，即：</p>
 <div class="arithmatex">\[
 \sqrt{1+\frac{k}{n^2}}-1=\frac{1+\frac{k}{n^2}-1}{\sqrt{1+\frac{k}{n^2}}+1}=\frac{k}{n^2}\frac{1}{\sqrt{1+\frac{k}{n^2}}+1}
 \]</div>
-<p>由此对<span class="arithmatex">\(x_n\)</span>进行放缩，得到有理表达式的夹逼。很明显这是基于初等数学的“散打”套路。</p>
+<p>然后对<span class="arithmatex">\(x_n\)</span>进行放缩，得到有理表达式的夹逼。很明显这是基于初等数学的“散打”套路。</p>
 <details class="success">
 <summary>如何对<span class="arithmatex">\(x_n\)</span>进行放缩？</summary>
 <div class="arithmatex">\[\left(\sum_{k=1}^{n}{\frac{k}{n^2}}\right)\frac{1}{1+\sqrt{1+\frac{1}{n}}} \leqslant \left(\sum_{k=1}^{n}{\frac{k}{n^2}}\right)\frac{1}{1+\sqrt{1+\frac{k}{n^2}}}\leqslant \left(\sum_{k=1}^{n}{\frac{k}{n^2}}\right)\frac{1}{1+\sqrt{1+\frac{1}{n^2}}}\]</div>
@@ -1349,7 +1351,7 @@ x_n = \sum_{k=1}^{n}{\left(\sqrt{1+\frac{k}{n^2}}-1\right)}
 <div class="arithmatex">\[\left(\frac{n(n+1)}{2n^2}\right)\frac{1}{1+\sqrt{1+\frac{1}{n}}} \leqslant x_n \leqslant \left(\frac{n(n+1)}{2n^2}\right)\frac{1}{1+\sqrt{1+\frac{1}{n^2}}} \]</div>
 <p>分别对左右两端求极限，易知两侧极限都是 <span class="arithmatex">\(\dfrac14\)</span>，那么根据夹逼定理得：<span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty}x_n=\frac{1}{4}\)</span>.</p>
 </details>
-<p><strong>（方法二 泰勒）</strong> 如果用泰勒展开来做，思路非常直接，完全不需要上述凑代数放缩的技巧。以下是正规军所用的”套路“了。</p>
+<p><strong>（方法二 泰勒级数）</strong> 如果用泰勒展开来做，思路非常直接，完全不需要上述凑代数放缩的技巧。以下是正规军所用的”套路“了。</p>
 <p>令<span class="arithmatex">\(f(x)=\sqrt{1+x}-1\)</span>，当 <span class="arithmatex">\(x\to 0\)</span> 时，泰勒展开给出：</p>
 <div class="arithmatex">\[
 \sqrt{1+x} = 1 +\frac12 x-\frac18x^2 + o(x^2)
@@ -1359,7 +1361,7 @@ x_n = \sum_{k=1}^{n}{\left(\sqrt{1+\frac{k}{n^2}}-1\right)}
 \frac12 x - \frac18x^2\leqslant \sqrt{1+x}-1\leqslant \frac12x
 \]</div>
 <details class="success">
-<summary>下面的步骤，你已经明白了吧</summary>
+<summary>下面的步骤，已经非常清晰了</summary>
 <p>同样令 <span class="arithmatex">\(x = \frac{k}{n^2}\)</span>（其中 <span class="arithmatex">\(k = 1, 2, \dots, n\)</span>），代入上述不等式中：</p>
 <div class="arithmatex">\[\frac{k}{2n^2} - \frac{k^2}{8n^4} \leqslant \sqrt{1+\frac{k}{n^2}} - 1 \leqslant \frac{k}{2n^2}\]</div>
 <p>将 <span class="arithmatex">\(k\)</span> 从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 进行连加求和，得：</p>
@@ -1367,8 +1369,7 @@ x_n = \sum_{k=1}^{n}{\left(\sqrt{1+\frac{k}{n^2}}-1\right)}
 <p>分别计算两端的极限，两端都趋于<span class="arithmatex">\(\frac14\)</span>，因此由夹逼定理可知结果。</p>
 </details>
 <h3 id="_8">问题四</h3>
-<p>Check this out! 这道题只能用泰勒展开才能得到放缩结果，从而找到一阶有理式来夹逼它。</p>
-<p>求以下极限：</p>
+<p><strong>Check this out! 这道题只能用泰勒展开才能得到放缩结果。</strong>求以下极限：</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \prod_{k=1}^{n} \cos\left(\frac{k}{n\sqrt{n}}\right)
 \]</div>
