@@ -763,6 +763,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-w2-1%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9%E6%9E%81%E9%99%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ch3-w2-1可导函数的零点极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1143,8 +1171,11 @@ g(x) = \frac{x}{1+x^2\sin^2{(\pi x)}}
 g_n(t)=f(n+t),\qquad t\in[0,1].
 \]</div>
 <p>这是一个函数列<span class="arithmatex">\(\{g_n(t)\}\)</span>。题设条件<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\)</span> 对于 <span class="arithmatex">\(x \in [0,1]\)</span> 成立，直接等价于函数列 <span class="arithmatex">\(g_n(t) \to 0\)</span> 在 <span class="arithmatex">\(t \in [0,1]\)</span> 上逐点收敛。</p>
-<p>而要证的结论： <span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span> 等价于要求对于任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，当 <span class="arithmatex">\(n &gt; N\)</span> 时，对所有的 <span class="arithmatex">\(t \in [0,1]\)</span>，都有 <span class="arithmatex">\(\vert{}f(n+t)\vert{} &lt; \varepsilon\)</span>。这恰恰就是 <span class="arithmatex">\(g_n(t)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上一致收敛于 <span class="arithmatex">\(0\)</span>（记作 <span class="arithmatex">\(g_n(t) \rightrightarrows 0\)</span>）的严格定义。</p>
-<p>将“逐点收敛”跨越到“一致收敛”的桥梁，正是 <span class="arithmatex">\(f(x)\)</span> 的一致连续性。由于 <span class="arithmatex">\(g_n(t)\)</span> 是从同一个具有全局一致连续性的母体 <span class="arithmatex">\(f(x)\)</span> 上“切”下来的，因此 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0, +\infty)\)</span> 上的一致连续，直接保证了函数列 <span class="arithmatex">\(\{g_n(t)\}\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上是\textbf{等度连续}的。函数列的等度连续的定义是：<span class="arithmatex">\(\forall \,\varepsilon &gt; 0, \exists \,\delta &gt; 0\)</span>，使得 <span class="arithmatex">\(\forall \,n \in \mathbf{N}^*\)</span>，以及 <span class="arithmatex">\(\forall\, t_1, t_2 \in [0,1]\)</span>，只要 <span class="arithmatex">\(\vert{}t_1 - t_2\vert{} &lt; \delta\)</span>，就有：</p>
+<p>而要证的结论： <span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span> 等价于要求：</p>
+<p>对于任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，当 <span class="arithmatex">\(n &gt; N\)</span> 时，对所有的 <span class="arithmatex">\(t \in [0,1]\)</span>，都有： <span class="arithmatex">\(\vert{}f(n+t)\vert{} &lt; \varepsilon\)</span>。</p>
+<p>这恰恰就是 <span class="arithmatex">\(g_n(t)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上一致收敛于 <span class="arithmatex">\(0\)</span> 的严格定义，记作 <span class="arithmatex">\(g_n(t) \rightrightarrows 0\)</span>。</p>
+<p>将“逐点收敛”跨越到“一致收敛”的桥梁，正是 <span class="arithmatex">\(f(x)\)</span> 的一致连续性。由于 <span class="arithmatex">\(g_n(t)\)</span> 是从同一个具有全局一致连续性的母体 <span class="arithmatex">\(f(x)\)</span> 上“切”下来的，因此 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0, +\infty)\)</span> 上的一致连续，直接保证了函数列 <span class="arithmatex">\(\{g_n(t)\}\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上是 <strong>等度连续</strong> 的。函数列的等度连续的定义是：</p>
+<p><span class="arithmatex">\(\forall \,\varepsilon &gt; 0, \exists \,\delta &gt; 0\)</span>，使得 <span class="arithmatex">\(\forall \,n \in \mathbf{N}^*\)</span>，以及 <span class="arithmatex">\(\forall\, t_1, t_2 \in [0,1]\)</span>，只要 <span class="arithmatex">\(\vert{}t_1 - t_2\vert{} &lt; \delta\)</span>，就有：</p>
 <div class="arithmatex">\[
 \vert{}g_n(t_1) - g_n(t_2)\vert{} = \vert{}f(n+t_1) - f(n+t_2)\vert{} &lt; \varepsilon
 \]</div>
