@@ -785,6 +785,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-w2-1%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9%E6%9E%81%E9%99%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ch3-w2-1可导函数的零点极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1171,7 +1199,7 @@ F(x) = \begin{cases} q, &amp; x = \frac{p}{q} \;\left(p, q \in \mathbf{Z}, q &gt
 <p>可积的条件，弱于连续，弱于可导。那么连续函数自然是可积的，所有的初等函数都是可积的。</p>
 </blockquote>
 <h3 id="_2">反过来的函数不存在</h3>
-<p>既然Riemann函数在所有的有理点连续，而在所有的无理点间断，那么我们自然会问一个问题：能否构造出一个函数，让它反过来，在所有的无理点间断，在所有的有理点上连续？</p>
+<p>既然Riemann函数在所有的有理点间断，而在所有的无理点连续，那么我们自然会问一个问题：能否构造出一个函数，让它反过来，在所有的无理点间断，而在所有的有理点上连续？</p>
 <p>答案是构造不出来的，因为有以下的定理：</p>
 <p><strong>如果一个函数在所有有理点都连续，那么它在任意非空开区间内，都至少有一个无理点是连续点。</strong></p>
 <p>我们可以用<strong>闭区间套定理</strong>证明，不需要用到拓扑学的知识。</p>
@@ -1227,32 +1255,25 @@ t_n = x_0 + \frac{1}{n}\qquad (n \in \mathbf{N}^*)
 \frac{R(t_n) - R(x_0)}{t_n - x_0} = \frac{0 - 0}{1/n} = 0
 \]</div>
 <p>当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(t_n \to x_0\)</span>，且差商极限为 <span class="arithmatex">\(0\)</span>。因此，若 <span class="arithmatex">\(R'(x_0)\)</span> 存在，则必有 <span class="arithmatex">\(R'(x_0) = 0\)</span>。这是<span class="arithmatex">\(R(x)\)</span>在无理点处可导的必要条件。</p>
-<p>接下来利用向下取整函数构造有理点列。令：</p>
+<p>接下来利用 <a href="../../%E7%AC%AC1%E7%AB%A0%20%E6%9E%81%E9%99%90/ch1-4-6%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/">向下取整函数</a> 构造有理点列。令：</p>
 <div class="arithmatex">\[
 r_n = \frac{\lfloor nx_0 \rfloor}{n}
 \]</div>
+<details class="success">
+<summary>接下来，如何证明这一部分？</summary>
 <p>由于 <span class="arithmatex">\(x_0\)</span> 是无理数，所以 <span class="arithmatex">\(nx_0\)</span> 绝不可能是整数，因此成立严格不等式：</p>
-<div class="arithmatex">\[
-\lfloor nx_0 \rfloor &lt; nx_0 &lt; \lfloor nx_0 \rfloor + 1 
-\]</div>
+<div class="arithmatex">\[\lfloor nx_0 \rfloor &lt; nx_0 &lt; \lfloor nx_0 \rfloor + 1 \]</div>
 <p>各项同除以 <span class="arithmatex">\(n\)</span>，可得：</p>
-<div class="arithmatex">\[
-r_n &lt; x_0 &lt; r_n + \frac{1}{n}
-\]</div>
+<div class="arithmatex">\[r_n &lt; x_0 &lt; r_n + \frac{1}{n}\]</div>
 <p>因此，序列<span class="arithmatex">\(\{r_n\}\)</span>在<span class="arithmatex">\(x_0\)</span>的左侧：<span class="arithmatex">\(r_n&lt;x_0\)</span>，且有距离关系：<span class="arithmatex">\(0 &lt; x_0 - r_n &lt; \frac{1}{n}\)</span>，则由夹逼定理可知，当<span class="arithmatex">\(n\to\infty\)</span>时，有<span class="arithmatex">\(r_n\to x_0\)</span>.</p>
 <p>将 <span class="arithmatex">\(r_n\)</span> 约分为最简分数 <span class="arithmatex">\(\frac{p_n}{q_n}\)</span>，而<span class="arithmatex">\(r_n = \frac{\lfloor nx_0 \rfloor}{n}\)</span>的初始分母为 <span class="arithmatex">\(n\)</span>，约分的过程是分子分母同除以它们的最大公约数，因此最简分数的分母 <span class="arithmatex">\(q_n\)</span> 必然是 <span class="arithmatex">\(n\)</span> 的因数，即成立 <span class="arithmatex">\(1 \leqslant q_n \leqslant n\)</span>，那么取倒数后有：</p>
-<div class="arithmatex">\[
-R(r_n) = \frac{1}{q_n} \geqslant \frac{1}{n}
-\]</div>
+<div class="arithmatex">\[R(r_n) = \frac{1}{q_n} \geqslant \frac{1}{n}\]</div>
 <p>由于 <span class="arithmatex">\(R(x_0) = 0\)</span>，且 <span class="arithmatex">\(x_0 - r_n &gt; 0\)</span>，计算差商的绝对值为：</p>
-<div class="arithmatex">\[
-\left\vert{} \frac{R(r_n) - R(x_0)}{r_n - x_0} \right\vert{} = \frac{R(r_n)}{x_0 - r_n}
-\]</div>
+<div class="arithmatex">\[\left\vert{} \frac{R(r_n) - R(x_0)}{r_n - x_0} \right\vert{} = \frac{R(r_n)}{x_0 - r_n}\]</div>
 <p>利用前面的两个不等式<span class="arithmatex">\(R(r_n) \geqslant \frac{1}{n}\)</span>及<span class="arithmatex">\(0 &lt; x_0 - r_n &lt; \frac{1}{n}\implies \frac{1}{x_0-r_n}&gt;n\)</span>可得：</p>
-<div class="arithmatex">\[
-\frac{R(r_n)}{x_0 - r_n} &gt; \frac{1}{n} \cdot n = 1
-\]</div>
+<div class="arithmatex">\[\frac{R(r_n)}{x_0 - r_n} &gt; \frac{1}{n} \cdot n = 1\]</div>
 <p>因此，沿有理点列 <span class="arithmatex">\(r_n \to x_0\)</span> 时，差商的绝对值始终严格大于 <span class="arithmatex">\(1\)</span>。那么差商不可能趋于 <span class="arithmatex">\(0\)</span>，这与前面由无理点列得到的必要条件矛盾。所以 <span class="arithmatex">\(R\)</span> 在每个无理点也不可导。</p>
+</details>
 <p>综合两种情形，可得：Riemann函数处处不可导。</p>
 <h2 id="riemann_2">Riemann函数没有原函数</h2>
 <p>函数可导，那么它一定连续。但是导函数一定连续吗？答案是不一定的。比如</p>
