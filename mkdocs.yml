@@ -15,6 +15,7 @@ theme:
   features:
     #- navigation.tabs
     - navigation.top
+    - navigation.expand
     - search.highlight
 
 markdown_extensions:
