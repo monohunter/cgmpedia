@@ -244,7 +244,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -382,7 +384,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -548,7 +552,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1113,9 +1119,9 @@
 <div class="arithmatex">\[
 I=\int_0^{+\infty}\mathrm e^{-x}|\sin x|\,\mathrm dx
 \]</div>
-<p><strong>分析：</strong>被积函数的图像如下所示：它总体是以指数的趋势衰减，但同时又具备周期性。请参考 <a href="../../%E7%AC%AC2%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/ch2-w3-2%E5%87%BD%E6%95%B0%E6%96%B9%E7%A8%8B%E8%AF%81%E6%98%8E%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/">函数方程证明周期函数</a>，它属于函数方程 <span class="arithmatex">\(f(x+T) = kf(x)\)</span> 所决定的函数家族。 </p>
+<p><strong>分析：</strong>被积函数的图像如下所示：它整体以指数的趋势衰减，但同时又遵循某种固定周期的重复。请参考 <a href="../../%E7%AC%AC2%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/ch2-w3-2%E5%87%BD%E6%95%B0%E6%96%B9%E7%A8%8B%E8%AF%81%E6%98%8E%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/">函数方程证明周期函数</a>，它属于函数方程 <span class="arithmatex">\(f(x+T) = kf(x)\)</span> 所决定的函数家族。 </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0.svg" data-desc-position="bottom"><img alt="" src="../../images/%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0.svg" style="display: block; margin-left: auto; margin-right: auto;" width="500"></a></p>
-<p>因为被积函数是个周期函数，同时积分区间是无穷大，因此利用分部积分的时候，会得到一个无穷级数，这是本积分的难点。</p>
+<p>因为被积函数具备某种周期重复（可称为绝对值周期，不是严格意义的周期函数），同时积分区间是无穷大，因此利用分部积分的时候，会得到一个无穷级数，这正是本积分的难点。</p>
 <h2 id="_3">一个很不错的解法</h2>
 <p>令 <span class="arithmatex">\(x+\pi=t\)</span>，则 <span class="arithmatex">\(x=t-\pi\)</span> 及 <span class="arithmatex">\(\mathrm d x = \mathrm dt\)</span>，积分上下限变为 <span class="arithmatex">\(\pi\)</span> 和 <span class="arithmatex">\(+\infty\)</span>。原积分变为：</p>
 <div class="arithmatex">\[
@@ -1237,7 +1243,7 @@ I = \mathscr{L}{\vert{}\sin x\vert{}}(1) = \frac{1}{1 - \mathrm{e}^{-\pi}} \cdot
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.expand", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
