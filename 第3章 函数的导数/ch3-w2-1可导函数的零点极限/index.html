@@ -1130,7 +1130,7 @@ f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
     &amp; = f'(0) \frac{n(n+1)}{2n^2} + \sum_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}
 \end{aligned}
 \]</div>
-<p>即 <span class="arithmatex">\(x_n\)</span> 可以写成主部 <span class="arithmatex">\(f'(0) \frac{n(n+1)}{2n^2}\)</span> 和误差项 <span class="arithmatex">\(\sum_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}\)</span> 两个部分，主部的极限非常清晰：</p>
+<p>即 <span class="arithmatex">\(x_n\)</span> 可以写成主部 <span class="arithmatex">\(f'(0) \frac{n(n+1)}{2n^2}\)</span> 和误差项 <span class="arithmatex">\(\sum\limits_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}\)</span> 两个部分，主部的极限非常清晰：</p>
 <div class="arithmatex">\[
 \lim_{n\to\infty}f'(0) \frac{n(n+1)}{2n^2}=\frac{f'(0)}{2}
 \]</div>
@@ -1157,7 +1157,7 @@ f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
 <div class="arithmatex">\[\left|\frac{f(x)}{x}-f'(0)\right|&lt;\varepsilon\]</div>
 <p>即：</p>
 <div class="arithmatex">\[x\left(f'(0)-\varepsilon\right)&lt;f(x)&lt;x\left(f'(0)+\varepsilon\right)\]</div>
-<p><strong>由于当 <span class="arithmatex">\(n\to\infty\)</span> 时，所有的分点 <span class="arithmatex">\({k}/{n^2}\to 0\;(k=1,2,\ldots,n)\)</span>，也就是当<span class="arithmatex">\(n\)</span>足够大时，所有的分点都会进入区间 <span class="arithmatex">\((0,\delta)\)</span> 之内</strong>，即最大的分点 <span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>，所以此时在所有的分点上成立：</p>
+<p>由于当 <span class="arithmatex">\(n\to\infty\)</span> 时，所有的分点 <span class="arithmatex">\({k}/{n^2}\to 0\;(k=1,2,\ldots,n)\)</span>，也就是当 <span class="arithmatex">\(n\)</span> 足够大时，所有的分点都会进入区间 <span class="arithmatex">\((0,\delta)\)</span> 之内，即最大的分点 <span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>，所以此时在所有的分点上成立：</p>
 <div class="arithmatex">\[\begin{gathered}\frac{1}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{1}{n^2}\right)&lt;\frac{1}{n^2}\left(f'(0)+\varepsilon\right) \\ \frac{2}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{2}{n^2}\right)&lt;\frac{2}{n^2}\left(f'(0)+\varepsilon\right) \\
 \vdots \\ \frac{n}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{n}{n^2}\right)&lt;\frac{n}{n^2}\left(f'(0)+\varepsilon\right)\end{gathered}\]</div>
 <p>将这 <span class="arithmatex">\(n\)</span> 个不等式加起来，可得：</p>
@@ -1192,14 +1192,14 @@ f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
 <div class="arithmatex">\[
 \varepsilon_n = \max_{1 \leqslant k \leqslant n} \left\vert{} \eta\left(\frac{k}{n^2}\right) \right\vert{}
 \]</div>
-<p>这样所有取样点都被压缩在 <span class="arithmatex">\((0, 1/n]\)</span> 区间内，当 <span class="arithmatex">\(n \to \infty\)</span> 时，整个区间向 0 坍缩。在<span class="arithmatex">\(\varepsilon-\delta\)</span> 证明中所说的：“当 <span class="arithmatex">\(n\)</span> 足够大时，所有的分点都可以进入区间 <span class="arithmatex">\((0,\delta)\)</span> 之内，即最大的分点 <span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>” 就是对这种误差界限的朴素表达。</p>
+<p>这样所有取样点都被压缩在 <span class="arithmatex">\((0, 1/n]\)</span> 区间内，当 <span class="arithmatex">\(n \to \infty\)</span> 时，整个区间向 <span class="arithmatex">\(0\)</span> 坍缩。在 <span class="arithmatex">\(\varepsilon-\delta\)</span> 证明中所说的：“当 <span class="arithmatex">\(n\)</span> 足够大时，所有的分点都可以进入区间 <span class="arithmatex">\((0,\delta)\)</span> 之内，即最大的分点 <span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>” 就是对这种误差界限的朴素表达。</p>
 <p>因此，误差最大值的极限 <span class="arithmatex">\(\lim\limits_{n \to \infty} \varepsilon_n = 0\)</span>，关键在于：这个极限只与 <span class="arithmatex">\(n\)</span> 有关，<strong>与 <span class="arithmatex">\(k\)</span> 完全脱钩</strong>，这在数学上被称为：这 <span class="arithmatex">\(n\)</span> 个点处的误差序列 <span class="arithmatex">\(\left\{\eta\left(\frac{k}{n^2}\right)\right\}\)</span> 关于下标 <span class="arithmatex">\(k\)</span> 是 <strong>一致有界</strong> 的，且其一致上界随着 <span class="arithmatex">\(n\to \infty\)</span> 而趋于 <span class="arithmatex">\(0\)</span>。也就是说它的一致上界是一个无穷小量。</p>
-<p>利用这种关于 <span class="arithmatex">\(k\)</span> 的一致有界性，我们成功找到一个与 <span class="arithmatex">\(k\)</span> 无关的无穷小量 <span class="arithmatex">\(\varepsilon _n\)</span> 作为统一的上界，这使得我们可以将它作为公因子，直接提取到求和号外：</p>
+<p>利用这种关于 <span class="arithmatex">\(k\)</span> 的一致有界性，我们成功找到一个与 <span class="arithmatex">\(k\)</span> 无关的无穷小量 <span class="arithmatex">\(\varepsilon _n\)</span> 作为统一的上界，这使得我们可以将它作为公因子，直接提到求和号外：</p>
 <div class="arithmatex">\[
 \sum_{k=1}^n \varepsilon_n \frac{k}{n^2} = \varepsilon_n \left( \sum_{k=1}^n \frac{k}{n^2} \right) = \varepsilon_n \frac{n(n+1)}{2n^2}
 \]</div>
 <p>从而将“无限个无穷小相加”转化为“一个无穷小量 <span class="arithmatex">\(\times\)</span> 一个有界宏观量”的问题。</p>
-<p>所谓“一致（Uniform）”即意味着 <strong>寻找到一个统一的界限，它不依赖于变化的局部参数（如本题中的 <span class="arithmatex">\(k\)</span>）的变化</strong>。</p>
+<p>所谓“一致（Uniform）”即意味着 <strong>寻找到一个统一的界限，它不依赖于局部参数（如本题中的 <span class="arithmatex">\(k\)</span>）的变化</strong>。</p>
 
 
 
