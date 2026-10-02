@@ -538,6 +538,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="数学实质分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理一
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理二
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1274,6 +1302,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="数学实质分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理一
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理二
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1403,7 +1459,7 @@ x_n = \prod_{k=1}^{n} \cos\left(\frac{k}{n\sqrt{n}}\right)
 \]</div>
 <p>求：<span class="arithmatex">\(\lim\limits_{n\to \infty}x_n.\)</span></p>
 <h4 id="_9">分析与解答</h4>
-<p>刚才的问题一、二、三中的 <span class="arithmatex">\(\ln (1+x)\)</span> 及 <span class="arithmatex">\(\sin x\)</span> 及 <span class="arithmatex">\(\sqrt{1+x}-1\)</span> 都是一阶其主导作用，就是泰勒展开的第一项就是<span class="arithmatex">\(x\)</span>，所以很容易找到像 <span class="arithmatex">\(\frac{x}{1+x}\)</span> 这样的一阶初等有理式去夹逼它。<span class="arithmatex">\(\cos x\)</span> 在 <span class="arithmatex">\(x \to 0\)</span> 时的第一项是常数 <span class="arithmatex">\(1\)</span>，真正产生微小变化的主导项在<strong>二次项（二阶导数）</strong>。要使用高中数学的技巧凭空生凑出一个不带泰勒影子的<strong>二次初等不等式</strong>去夹逼它，实在太困难了。</p>
+<p>刚才的问题一、二、三中的 <span class="arithmatex">\(\ln (1+x)\)</span> 及 <span class="arithmatex">\(\sin x\)</span> 及 <span class="arithmatex">\(\sqrt{1+x}-1\)</span> 都是一阶起主导作用，就是泰勒展开的第一项就是<span class="arithmatex">\(x\)</span>，所以很容易找到像 <span class="arithmatex">\(\frac{x}{1+x}\)</span> 这样的一阶初等有理式去夹逼它。<span class="arithmatex">\(\cos x\)</span> 在 <span class="arithmatex">\(x \to 0\)</span> 时的第一项是常数 <span class="arithmatex">\(1\)</span>，真正产生微小变化的主导项在<strong>二次项（二阶导数）</strong>。要使用高中数学的技巧凭空生凑出一个 <strong>二次初等不等式</strong> 去夹逼它，实在太困难了。</p>
 <p>依然先取自然对数，将连乘转化为连加：</p>
 <div class="arithmatex">\[
 \ln x_n = \sum_{k=1}^{n}\ln \cos \left(\frac{k}{n^{3/2}}\right)
@@ -1416,11 +1472,11 @@ x_n = \prod_{k=1}^{n} \cos\left(\frac{k}{n\sqrt{n}}\right)
 <p><strong>上限确定</strong> 观察到对于 <span class="arithmatex">\(x \in (0, \pi/2)\)</span>，成立 <span class="arithmatex">\(\tan x &gt; x\)</span></p>
 <details class="success">
 <summary>原因解释</summary>
-<p>令<span class="arithmatex">\(g(x)=\tan x-x\)</span>，那么 <span class="arithmatex">\(g'(x)=\sec ^2 x -1 = \tan ^2 x &gt;0,\;x\in (0,\pi/2)\)</span>，即 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([0, \pi/2)\)</span> 上严格递增。（包含 <span class="arithmatex">\(0\)</span> 点是由于连续性：如果函数 <span class="arithmatex">\(f(x)\)</span> 在连续区间 <span class="arithmatex">\(I\)</span> 的内部可导且导数大于 <span class="arithmatex">\(0\)</span>，那么 <span class="arithmatex">\(f(x)\)</span> 在整个连续区间 <span class="arithmatex">\(I\)</span>（包含端点）上都是严格递增的。）由于 <span class="arithmatex">\(g(0)=0\)</span>，则有 <span class="arithmatex">\(\tan x &gt; x\)</span>，因此 <span class="arithmatex">\(-\tan x &lt; -x\)</span>。即对于任意的 <span class="arithmatex">\(t\in (0,x)\)</span>，其中 <span class="arithmatex">\(x\in (0,\pi/2)\)</span>，成立严格不等式：</p>
+<p>令 <span class="arithmatex">\(g(x)=\tan x-x\)</span>，那么 <span class="arithmatex">\(g'(x)=\sec ^2 x -1 = \tan ^2 x &gt;0,\;x\in (0,\pi/2)\)</span>，即 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([0, \pi/2)\)</span> 上严格递增。（包含 <span class="arithmatex">\(0\)</span> 点是由于连续性：如果函数 <span class="arithmatex">\(f(x)\)</span> 在连续区间 <span class="arithmatex">\(I\)</span> 的内部可导且导数大于 <span class="arithmatex">\(0\)</span>，那么 <span class="arithmatex">\(f(x)\)</span> 在整个连续区间 <span class="arithmatex">\(I\)</span>（包含端点）上都是严格递增的。）由于 <span class="arithmatex">\(g(0)=0\)</span>，则有 <span class="arithmatex">\(\tan x &gt; x\)</span>，因此 <span class="arithmatex">\(-\tan x &lt; -x\)</span>。即对于任意的 <span class="arithmatex">\(t\in (0,x)\)</span>，其中 <span class="arithmatex">\(x\in (0,\pi/2)\)</span>，成立严格不等式：</p>
 <div class="arithmatex">\[-\tan t &lt; -t\]</div>
 <p>在区间 <span class="arithmatex">\([0,x]\)</span> 上对两边同时取定积分，可得：</p>
 <div class="arithmatex">\[\int_0^x -\tan t\,\mathrm dt &lt; \int_0^x -t\,\mathrm dt\]</div>
-<p>积分后得到严格不等式： <span class="arithmatex">\(\ln \cos x &lt; -\frac12x^2\)</span>，当然也能写成 <span class="arithmatex">\(\leqslant\)</span> 号。</p>
+<p>由此得到严格不等式： <span class="arithmatex">\(\ln \cos x &lt; -\frac12x^2\)</span>，当然也能写成 <span class="arithmatex">\(\leqslant\)</span> 号。</p>
 </details>
 <p>因此 <span class="arithmatex">\(\left(\ln \cos x\right)' = -\tan x &lt; -x = \left(-\frac12x^2\right)'\)</span>，积分后可得一个非常漂亮的不等式：</p>
 <div class="arithmatex">\[
@@ -1446,11 +1502,12 @@ x_n = \prod_{k=1}^{n} \cos\left(\frac{k}{n\sqrt{n}}\right)
 <p>将这 <span class="arithmatex">\(n\)</span> 项连加起来：</p>
 <div class="arithmatex">\[\sum_{k=1}^{n} \left( -\frac{k^2}{2n^3} - \frac{k^4}{n^6} \right) \leqslant \ln x_n \leqslant \sum_{k=1}^{n} \left( -\frac{k^2}{2n^3} \right)\]</div>
 <p>计算不等式两端的极限，通过讨论可知，夹逼不等式右端是主导项；左端是主导项<span class="arithmatex">\(+\)</span>误差项。</p>
-<p>利用前 <span class="arithmatex">\(n\)</span> 项平方和公式 <span class="arithmatex">\(\sum\limits_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span> 易知右端极限为 <span class="arithmatex">\(-\frac16\)</span>；同时，由于 <span class="arithmatex">\(\sum\limits_{k=1}^{n} k^4\)</span> 的最高次幂是 <span class="arithmatex">\(\frac{n^5}{5}\)</span>，因此误差项 <span class="arithmatex">\(\sum\limits_{k=1}^{n} \frac{k^4}{n^6} \to 0\)</span>，它是可以被忽略的高阶误差。不等式两端的极限都是 <span class="arithmatex">\(-\frac16\)</span>，那么根据夹逼定理：</p>
+<p>利用前 <span class="arithmatex">\(n\)</span> 项平方和公式 <span class="arithmatex">\(\sum\limits_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span> 易知右端极限为 <span class="arithmatex">\(-\frac16\)</span>；同时，由于 <span class="arithmatex">\(\sum\limits_{k=1}^{n} k^4\)</span> 的最高次幂是 <span class="arithmatex">\(\frac{n^5}{5}\)</span>，因此误差项 <span class="arithmatex">\(\sum\limits_{k=1}^{n} \frac{k^4}{n^6} \to 0\)</span>，它是可以被忽略的高阶误差。因此不等式两端的极限都是 <span class="arithmatex">\(-\frac16\)</span>，那么根据夹逼定理，得：</p>
 <div class="arithmatex">\[\lim_{n\to \infty}\ln x_n = -\frac{1}{6} \implies \lim_{n\to \infty}x_n = \mathrm e^{-1/6}\]</div>
 <p>问题解决。若不使用泰勒展开，我们很难得到准确的误差估计。</p>
 <h2 id="_10">数学实质分析</h2>
-<p>它的数学实质是：函数数在某一点附近（本题中是 <span class="arithmatex">\(0\)</span> 点附近）局部的线性化，因此泰勒展开在这里一定是有效的。题目 <a href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-w2-1%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9%E6%9E%81%E9%99%90/">可导函数的零点极限</a> 中有更详细的分析，问题一、二、三都是以下结论的特例。</p>
+<p>它的数学实质是：函数数在某一点附近（本题中是 <span class="arithmatex">\(0\)</span> 点附近）局部的线性化，因此泰勒展开在这里一定是有效的。题目 <a href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-w2-1%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9%E6%9E%81%E9%99%90/">可导函数的零点极限</a> 中有如下结论：</p>
+<h3 id="_11">定理一</h3>
 <p>设<span class="arithmatex">\(f(0)=0,f'(0)\)</span>存在且有限，令：</p>
 <div class="arithmatex">\[
 x_n=f\left(\frac{1}{n^2}\right)+f\left(\frac{2}{n^2}\right)+\cdots +f\left(\frac{n}{n^2}\right),\quad n\in \mathbf N^*,
@@ -1459,6 +1516,33 @@ x_n=f\left(\frac{1}{n^2}\right)+f\left(\frac{2}{n^2}\right)+\cdots +f\left(\frac
 <div class="arithmatex">\[
 \lim\limits_{n\rightarrow \infty}x_n = \frac{f'(0)}{2}
 \]</div>
+<p>问题一、二、三都是以上结论的特例。</p>
+<p>对于问题四，仅仅用一阶线性近似就不够了。对于 <span class="arithmatex">\(f(x)=\ln \cos x\)</span>，有如下性质：</p>
+<ul>
+<li><span class="arithmatex">\(f(0)=0\)</span>；</li>
+<li><span class="arithmatex">\(f'(x)=-\tan x\)</span>，因此 <span class="arithmatex">\(f'(0)=0\)</span>；</li>
+<li><span class="arithmatex">\(f''(x) = - \sec^2 x\)</span>，因此 <span class="arithmatex">\(f''(0)=-1\)</span>。</li>
+</ul>
+<p>当自变量变成 <span class="arithmatex">\(x_k = \frac{k}{n^{3/2}}\)</span> 时，我们依然对其进行求和近似。如果只用到一阶导数，则有：</p>
+<div class="arithmatex">\[\sum_{k=1}^{n} f'(0) \cdot x_k = 0 \cdot \sum_{k=1}^{n} \frac{k}{n^{3/2}} = 0\]</div>
+<p>但是，我们必须检查此时的误差项是否能被忽略，代入二阶导数对应的泰勒展开：</p>
+<div class="arithmatex">\[f(x_k) \approx f(0) + f'(0)x_k + \frac{f''(0)}{2}x_k^2\]</div>
+<p>对二阶项进行求和：</p>
+<div class="arithmatex">\[\begin{aligned}\sum_{k=1}^{n} \frac{f''(0)}{2} x_k^2 &amp;= \frac{-1}{2} \sum_{k=1}^{n} \left(\frac{k}{n^{3/2}}\right)^2 = \frac{-1}{2n^3} \sum_{k=1}^{n} k^2\\
+&amp; = \frac{-1}{2n^3} \cdot \frac{2n^3 + 3n^2 + n}{6} \\
+&amp; = \frac{-(2n^3 + 3n^2 + n)}{12n^3} = -\frac16 \end{aligned}\]</div>
+<h3 id="_12">定理二</h3>
+<p>当分母为 <span class="arithmatex">\(n^2\)</span> 时，极限由一阶导数 <span class="arithmatex">\(f'(0)\)</span> 决定（二阶及以上全部退化为 <span class="arithmatex">\(0\)</span>）。
+当分母降阶为 <span class="arithmatex">\(n^{3/2}\)</span> 时（即 <span class="arithmatex">\(n\sqrt{n}\)</span>），由于 <span class="arithmatex">\(x_k\)</span> 变大了，一阶导数 <span class="arithmatex">\(f'(0)\)</span> 不足以覆盖变化，极限由二阶导数 <span class="arithmatex">\(f''(0)\)</span> 决定。本质上，这里的求和极限等于 <span class="arithmatex">\(\frac{f''(0)}{6}\)</span>。可以证明以下的结论：</p>
+<p>如果令：</p>
+<div class="arithmatex">\[
+y_n = f\left(\frac{1}{n^{3/2}}\right) + f\left(\frac{2}{n^{3/2}}\right) + \cdots + f\left(\frac{n}{n^{3/2}}\right),\qquad n\in \mathbf N^*,
+\]</div>
+<p>那么：</p>
+<div class="arithmatex">\[
+\lim_{n\to \infty}y_n = \frac{f''(0)}{6}
+\]</div>
+<p>问题四就是以上结论的特例。</p>
 
 
 
