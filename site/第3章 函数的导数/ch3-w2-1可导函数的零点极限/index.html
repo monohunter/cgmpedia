@@ -754,6 +754,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学本质的思考
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1040,6 +1051,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学本质的思考
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1059,11 +1081,11 @@
 
 <h1 id="ch3-w2-1">ch3-w2-1可导函数的零点极限</h1>
 <h2 id="_1">题目</h2>
-<p>设<span class="arithmatex">\(f(0)=0,f'(0)\)</span>存在且有限，令：</p>
+<p>设 <span class="arithmatex">\(f(0)=0,\,f'(0)\)</span> 存在且有限，令：</p>
 <div class="arithmatex">\[
 x_n=f\left(\frac{1}{n^2}\right)+f\left(\frac{2}{n^2}\right)+\cdots +f\left(\frac{n}{n^2}\right),\quad n\in \mathbf N^*,
 \]</div>
-<p>试求<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}x_n\)</span>,并利用以上结果计算：</p>
+<p>试求<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}x_n\)</span>，并利用以上结果计算：</p>
 <ol>
 <li><span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty}\sum_{i=1}^{n}{\sin \frac{i}{n^2}}\)</span>;</li>
 <li><span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty}\prod _{i=1}^{n}{\left(1+\frac{i}{n^2}\right)}\)</span>.</li>
@@ -1114,10 +1136,12 @@ x\left(f'(0)-\varepsilon\right)
 <div class="arithmatex">\[
 \lim_{n\to\infty}\prod_{i=1}^n\left(1+\frac{i}{n^2}\right)=\sqrt{\mathrm e}
 \]</div>
-<p>第一章的习题\eqref{chap1-s6}即是本题的一个特例！它可以用来求数列的极限。这道题的数学实质是：函数在某一点附近的局部线性化。将<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处做一阶泰勒展开：</p>
-<div class="arithmatex">\[
+<p>我们遇到的几个 <a href="../../%E7%AC%AC1%E7%AB%A0%20%E6%9E%81%E9%99%90/ch1-w7-3%E8%BF%9E%E5%8A%A0%E5%9E%8B%E6%9E%81%E9%99%90/">连加型极限</a> 中的问题三和一，即是本题的一个特例！</p>
+<h2 id="_3">数学本质的思考</h2>
+<p>它可以用来求数列的极限。这道题的数学实质是：函数在某一点附近的局部线性化。将<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处做一阶泰勒展开：
+$$
 f(x) = f(0) + f'(0)x + o(x) = f'(0)x + o(x) \qquad (x \to 0)
-\]</div>
+$$</p>
 <p>为了估计在求和过程中的误差项<span class="arithmatex">\(o(x)\)</span>，我们可以将<span class="arithmatex">\(o(x)\)</span>写成<span class="arithmatex">\(\eta(x)x\)</span>，其中<span class="arithmatex">\(\eta(x)\)</span>是无穷小量：</p>
 <div class="arithmatex">\[
 f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0

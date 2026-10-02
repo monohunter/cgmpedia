@@ -1397,20 +1397,60 @@ x_n = \sum_{k=1}^{n}{\left(\sqrt{1+\frac{k}{n^2}}-1\right)}
 <p>分别计算两端的极限，两端都趋于<span class="arithmatex">\(\frac14\)</span>，因此由夹逼定理可知结果。</p>
 </details>
 <h3 id="_8">问题四</h3>
-<p><strong>Check this out! 这道题只能用泰勒展开才能得到放缩结果。</strong>求以下极限：</p>
+<p><strong>Check this out! 这道题只能用泰勒展开才能得到放缩结果。</strong>令：</p>
 <div class="arithmatex">\[
-\lim_{n \to \infty} \prod_{k=1}^{n} \cos\left(\frac{k}{n\sqrt{n}}\right)
+x_n = \prod_{k=1}^{n} \cos\left(\frac{k}{n\sqrt{n}}\right)
 \]</div>
+<p>求：<span class="arithmatex">\(\lim\limits_{n\to \infty}x_n.\)</span></p>
 <h4 id="_9">分析与解答</h4>
 <p>刚才的问题一、二、三中的 <span class="arithmatex">\(\ln (1+x)\)</span> 及 <span class="arithmatex">\(\sin x\)</span> 及 <span class="arithmatex">\(\sqrt{1+x}-1\)</span> 都是一阶其主导作用，就是泰勒展开的第一项就是<span class="arithmatex">\(x\)</span>，所以很容易找到像 <span class="arithmatex">\(\frac{x}{1+x}\)</span> 这样的一阶初等有理式去夹逼它。<span class="arithmatex">\(\cos x\)</span> 在 <span class="arithmatex">\(x \to 0\)</span> 时的第一项是常数 <span class="arithmatex">\(1\)</span>，真正产生微小变化的主导项在<strong>二次项（二阶导数）</strong>。要使用高中数学的技巧凭空生凑出一个不带泰勒影子的<strong>二次初等不等式</strong>去夹逼它，实在太困难了。</p>
 <p>依然先取自然对数，将连乘转化为连加：</p>
 <div class="arithmatex">\[
 \ln x_n = \sum_{k=1}^{n}\ln \cos \left(\frac{k}{n^{3/2}}\right)
 \]</div>
-<p>【正在思考。。。】</p>
+<p>为了获得合适的不等式边界，即找到：<span class="arithmatex">\(\triangle \leqslant \ln \cos x \leqslant \square\)</span>​ 这种表达，要用初等代数放缩，实在难以实现！利用 <span class="arithmatex">\(\cos x = 1 - \frac{x^2}{2} + \frac{x^4}{24} + o(x^4)\)</span>，以及 <span class="arithmatex">\(\ln(1+u) = u - \frac{u^2}{2} + o(u^2)\)</span>，复合后可得 <span class="arithmatex">\(\ln \cos x\)</span> 的展开式为：</p>
+<div class="arithmatex">\[
+\ln \cos x = -\frac{1}{2}x^2 - \frac{1}{12}x^4 + o(x^4)
+\]</div>
+<p>那么上下限 <span class="arithmatex">\(\triangle\)</span> 和 <span class="arithmatex">\(\square\)</span> 的表达应该是与 <span class="arithmatex">\(-\frac12x^2\)</span> 相关的。</p>
+<p><strong>上限确定</strong> 观察到对于 <span class="arithmatex">\(x \in (0, \pi/2)\)</span>，成立 <span class="arithmatex">\(\tan x &gt; x\)</span></p>
+<details class="success">
+<summary>原因解释</summary>
+<p>令<span class="arithmatex">\(g(x)=\tan x-x\)</span>，那么 <span class="arithmatex">\(g'(x)=\sec ^2 x -1 = \tan ^2 x &gt;0,\;x\in (0,\pi/2)\)</span>，即 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([0, \pi/2)\)</span> 上严格递增。（包含 <span class="arithmatex">\(0\)</span> 点是由于连续性：如果函数 <span class="arithmatex">\(f(x)\)</span> 在连续区间 <span class="arithmatex">\(I\)</span> 的内部可导且导数大于 <span class="arithmatex">\(0\)</span>，那么 <span class="arithmatex">\(f(x)\)</span> 在整个连续区间 <span class="arithmatex">\(I\)</span>（包含端点）上都是严格递增的。）由于 <span class="arithmatex">\(g(0)=0\)</span>，则有 <span class="arithmatex">\(\tan x &gt; x\)</span>，因此 <span class="arithmatex">\(-\tan x &lt; -x\)</span>。即对于任意的 <span class="arithmatex">\(t\in (0,x)\)</span>，其中 <span class="arithmatex">\(x\in (0,\pi/2)\)</span>，成立严格不等式：</p>
+<div class="arithmatex">\[-\tan t &lt; -t\]</div>
+<p>在区间 <span class="arithmatex">\([0,x]\)</span> 上对两边同时取定积分，可得：</p>
+<div class="arithmatex">\[\int_0^x -\tan t\,\mathrm dt &lt; \int_0^x -t\,\mathrm dt\]</div>
+<p>积分后得到严格不等式： <span class="arithmatex">\(\ln \cos x &lt; -\frac12x^2\)</span>，当然也能写成 <span class="arithmatex">\(\leqslant\)</span> 号。</p>
+</details>
+<p>因此 <span class="arithmatex">\(\left(\ln \cos x\right)' = -\tan x &lt; -x = \left(-\frac12x^2\right)'\)</span>，积分后可得一个非常漂亮的不等式：</p>
+<div class="arithmatex">\[
+\ln \cos x \leqslant -\frac{1}{2}x^2
+\]</div>
+<p><strong>下限确定</strong> 由于展开式的下一项是 <span class="arithmatex">\(-x^4\)</span> 级别，因此在 <span class="arithmatex">\(0\leqslant x \leqslant 1\)</span> 的范围内，如果直接成立 <span class="arithmatex">\(\ln \cos x \geqslant -\frac{1}{2}x^2 - \frac{1}{12} x^4\)</span>，则夹逼它的二次不等式就找到了。这件事是成立的，事实上可以找到正数 <span class="arithmatex">\(M\geqslant \frac{1}{12}\)</span>（为了方便可以取 <span class="arithmatex">\(M=1\)</span>）使得：</p>
+<div class="arithmatex">\[\ln \cos x \geqslant -\frac{1}{2}x^2 - M x^4\]</div>
+<details class="success">
+<summary>上式的详细推证步骤</summary>
+<p>这需要估计函数和主导项之间的误差，它是 <span class="arithmatex">\(-x^4\)</span> 的量级，我们只要看 <span class="arithmatex">\(-x^4\)</span> 前面的系数是否可以是 <span class="arithmatex">\(\frac{1}{12}\)</span> 即可，定义误差函数：</p>
+<div class="arithmatex">\[R(x) = \ln \cos x - \left(-\frac12x^2\right) = \ln \cos x + \frac12x^2\]</div>
+<p>那么只要证明：</p>
+<div class="arithmatex">\[R(x) \geqslant -\frac{1}{12} x^4 \iff \frac{R(x)}{x^4} \geqslant -\frac{1}{12}\]</div>
+<p>定义新的函数 <span class="arithmatex">\(h(x)=\frac{R(x)}{x^4}\)</span>，那么它在区间 <span class="arithmatex">\((0,1]\)</span> 上是连续的；当 <span class="arithmatex">\(x\to 0^+\)</span> 时，易知：</p>
+<div class="arithmatex">\[\lim\limits_{x\to 0^+}h(x)=\lim\limits_{x\to 0^+}\frac{R(x)}{x^4}=\lim\limits_{x\to 0^+}\frac{-\frac{1}{12}x^4+o(x^4)}{x^4}=-\frac{1}{12}\]</div>
+<p>即 <span class="arithmatex">\(h(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处有右极限，补充定义 <span class="arithmatex">\(h(0)=-\frac{1}{12}\)</span>，则 <span class="arithmatex">\(h(x)\)</span> 可以连续延拓到闭区间 <span class="arithmatex">\([0,1]\)</span> 上。于是连续函数在有限闭区间上一定可以取到最小值，设最小值为 <span class="arithmatex">\(-M\)</span>，对于区间内的任意 <span class="arithmatex">\(x\)</span>，都有 <span class="arithmatex">\(h(x)\geqslant -M\)</span>，而且 <span class="arithmatex">\(M\)</span> 至少是 <span class="arithmatex">\(\frac{1}{12}\)</span>，为了方便可以直接取 <span class="arithmatex">\(M=1\)</span>，即：</p>
+<div class="arithmatex">\[\ln \cos x \geqslant -\frac{1}{2}x^2 - \frac{1}{12} x^4 \geqslant -\frac{1}{2}x^2 - x^4\]</div>
+</details>
+<p>放缩的上下限已经找到：</p>
+<div class="arithmatex">\[-\frac{1}{2}x^2 - x^4 \leqslant \ln \cos x \leqslant -\frac{1}{2}x^2\]</div>
+<p>令 <span class="arithmatex">\(x = \frac{k}{n^{3/2}}\)</span>，因为 <span class="arithmatex">\(1 \leqslant k \leqslant n\)</span>，所以 <span class="arithmatex">\(x\)</span> 的最大值为 <span class="arithmatex">\(\frac{1}{\sqrt{n}}\)</span>。那么当 <span class="arithmatex">\(n\)</span> 较大时，<span class="arithmatex">\(x\)</span> 显然落在我们讨论的微小区间内。将 <span class="arithmatex">\(x\)</span> 代入上述不等式，得到通项的放缩：</p>
+<div class="arithmatex">\[-\frac{k^2}{2n^3} - \frac{k^4}{n^6} \leqslant \ln \cos\left(\frac{k}{n^{3/2}}\right) \leqslant -\frac{k^2}{2n^3}\]</div>
+<p>将这 <span class="arithmatex">\(n\)</span> 项连加起来：</p>
+<div class="arithmatex">\[\sum_{k=1}^{n} \left( -\frac{k^2}{2n^3} - \frac{k^4}{n^6} \right) \leqslant \ln x_n \leqslant \sum_{k=1}^{n} \left( -\frac{k^2}{2n^3} \right)\]</div>
+<p>计算不等式两端的极限，通过讨论可知，夹逼不等式右端是主导项；左端是主导项<span class="arithmatex">\(+\)</span>误差项。</p>
+<p>利用前 <span class="arithmatex">\(n\)</span> 项平方和公式 <span class="arithmatex">\(\sum\limits_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span> 易知右端极限为 <span class="arithmatex">\(-\frac16\)</span>；同时，由于 <span class="arithmatex">\(\sum\limits_{k=1}^{n} k^4\)</span> 的最高次幂是 <span class="arithmatex">\(\frac{n^5}{5}\)</span>，因此误差项 <span class="arithmatex">\(\sum\limits_{k=1}^{n} \frac{k^4}{n^6} \to 0\)</span>，它是可以被忽略的高阶误差。不等式两端的极限都是 <span class="arithmatex">\(-\frac16\)</span>，那么根据夹逼定理：</p>
+<div class="arithmatex">\[\lim_{n\to \infty}\ln x_n = -\frac{1}{6} \implies \lim_{n\to \infty}x_n = \mathrm e^{-1/6}\]</div>
+<p>问题解决。若不使用泰勒展开，我们很难得到准确的误差估计。</p>
 <h2 id="_10">数学实质分析</h2>
-<p>它和函数在局部的线性化有关系。</p>
-<p>参考题目 <a href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-w2-1%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9%E6%9E%81%E9%99%90/">可导函数的零点极限</a> 可知如下定理：</p>
+<p>它的数学实质是：函数数在某一点附近（本题中是 <span class="arithmatex">\(0\)</span> 点附近）局部的线性化，因此泰勒展开在这里一定是有效的。题目 <a href="../../%E7%AC%AC3%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0/ch3-w2-1%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9%E6%9E%81%E9%99%90/">可导函数的零点极限</a> 中有更详细的分析，问题一、二、三都是以下结论的特例。</p>
 <p>设<span class="arithmatex">\(f(0)=0,f'(0)\)</span>存在且有限，令：</p>
 <div class="arithmatex">\[
 x_n=f\left(\frac{1}{n^2}\right)+f\left(\frac{2}{n^2}\right)+\cdots +f\left(\frac{n}{n^2}\right),\quad n\in \mathbf N^*,
@@ -1419,7 +1459,6 @@ x_n=f\left(\frac{1}{n^2}\right)+f\left(\frac{2}{n^2}\right)+\cdots +f\left(\frac
 <div class="arithmatex">\[
 \lim\limits_{n\rightarrow \infty}x_n = \frac{f'(0)}{2}
 \]</div>
-<p>而上述问题一、二、三只是这个问题的特例。</p>
 
 
 
