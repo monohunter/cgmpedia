@@ -747,7 +747,18 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        证明
+        分析：如何解决这个问题？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varepsilon-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        \(\varepsilon - \delta\) 证明
       
     </span>
   </a>
@@ -758,7 +769,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学本质的思考
+        对本质的思考：一致性
       
     </span>
   </a>
@@ -1044,7 +1055,18 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        证明
+        分析：如何解决这个问题？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varepsilon-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        \(\varepsilon - \delta\) 证明
       
     </span>
   </a>
@@ -1055,7 +1077,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学本质的思考
+        对本质的思考：一致性
       
     </span>
   </a>
@@ -1090,59 +1112,13 @@ x_n=f\left(\frac{1}{n^2}\right)+f\left(\frac{2}{n^2}\right)+\cdots +f\left(\frac
 <li><span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty}\sum_{i=1}^{n}{\sin \frac{i}{n^2}}\)</span>;</li>
 <li><span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty}\prod _{i=1}^{n}{\left(1+\frac{i}{n^2}\right)}\)</span>.</li>
 </ol>
-<h2 id="_2">证明</h2>
-<p>由于<span class="arithmatex">\(f'(0)\)</span>存在且有限，同时有<span class="arithmatex">\(f(0)=0\)</span>，因此：</p>
+<h2 id="_2">分析：如何解决这个问题？</h2>
+<p>这正是我们在第1章遇到的 <a href="../../%E7%AC%AC1%E7%AB%A0%20%E6%9E%81%E9%99%90/ch1-w7-3%E8%BF%9E%E5%8A%A0%E5%9E%8B%E6%9E%81%E9%99%90/">连加型极限问题</a> 中的问题三和一！当时已经分析出来，这取决于函数采样点的位置，函数是否可以用线性函数很好的逼近，这需要分析非线性的误差是否能被忽略，即误差的累加是否可以趋于 <span class="arithmatex">\(0\)</span>。所以这是一个典型的“无限个无穷小量相加”的问题。无限个无穷小相加不一定是无穷小（比如定积分的情况）！接下来分析本题中无穷小误差相加后的情况。</p>
+<p>将 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处做一阶泰勒展开：</p>
 <div class="arithmatex">\[
-f'(0)=\lim_{x\to 0}\frac{f(x)-f(0)}{x}=\lim_{x\to 0}\frac{f(x)}{x}
-\]</div>
-<p>那么根据极限的定义，对于任意的<span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在<span class="arithmatex">\(\delta&gt;0\)</span>，使得当<span class="arithmatex">\(0&lt;x&lt;\delta\)</span>时，有：</p>
-<div class="arithmatex">\[
-\left|\frac{f(x)}{x}-f'(0)\right|&lt;\varepsilon
-\]</div>
-<p>即：</p>
-<div class="arithmatex">\[
-x\left(f'(0)-\varepsilon\right)
-\]</div>
-<p>由于当<span class="arithmatex">\(n\to\infty\)</span>时，所有的分点<span class="arithmatex">\({k}/{n^2}\to 0\;(k=1,2,\ldots,n)\)</span>，也就是当<span class="arithmatex">\(n\)</span>足够大时，所有的分点都会进入区间<span class="arithmatex">\((0,\delta)\)</span>之内，即最大的分点<span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>，所以此时在所有的分点上成立：</p>
-<div class="arithmatex">\[
-\begin{gathered}
-    \frac{1}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{1}{n^2}\right)&lt;\frac{1}{n^2}\left(f'(0)+\varepsilon\right) \\
-    \frac{2}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{2}{n^2}\right)&lt;\frac{2}{n^2}\left(f'(0)+\varepsilon\right) \\
-    \vdots \\
-    \frac{n}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{n}{n^2}\right)&lt;\frac{n}{n^2}\left(f'(0)+\varepsilon\right)
-\end{gathered}
-\]</div>
-<p>将这<span class="arithmatex">\(n\)</span>个不等式加起来，可得：</p>
-<div class="arithmatex">\[
-\frac{n(n+1)}{2n^2}\left(f'(0)-\varepsilon\right)
-\]</div>
-<p>让<span class="arithmatex">\(n\to \infty\)</span>，对上述不等式的两端取上下极限，有：</p>
-<div class="arithmatex">\[
-\frac{1}{2}\left(f'(0)-\varepsilon\right)\leqslant\liminf_{n\to\infty}x_n\leqslant\limsup_{n\to\infty}x_n\leqslant\frac{1}{2}\left(f'(0)+\varepsilon\right)
-\]</div>
-<p>由<span class="arithmatex">\(\varepsilon\)</span>的任意性，令<span class="arithmatex">\(\varepsilon \to 0\)</span>，即得：</p>
-<div class="arithmatex">\[
-\lim\limits_{n\to \infty}x_0=\frac{f'(0)}{2}
-\]</div>
-<p>(1) 令<span class="arithmatex">\(f(x)=\sin x\)</span>，则有<span class="arithmatex">\(f'(0)=1\)</span>，因此：</p>
-<div class="arithmatex">\[
-\lim_{n\to\infty}\sum_{i=1}^n\sin\frac{i}{n^2}=\lim_{n\to \infty}\sum_{i=1}^{n}f\left(\frac{i}{n^2}\right)=\frac12
-\]</div>
-<p>(2) 令<span class="arithmatex">\(f(x)=\ln (1+x)\)</span>，则有<span class="arithmatex">\(f'(0)=1\)</span>，因此：</p>
-<div class="arithmatex">\[
-\lim_{n\to \infty}\sum_{i=1}^n\ln\left(1+\frac{i}{n^2}\right)=\lim_{n\to \infty}\ln \left[\prod_{i=1}^n\left(1+\frac{i}{n^2}\right)\right]=\frac{1}{2}
-\]</div>
-<p>从而得到原极限：</p>
-<div class="arithmatex">\[
-\lim_{n\to\infty}\prod_{i=1}^n\left(1+\frac{i}{n^2}\right)=\sqrt{\mathrm e}
-\]</div>
-<p>我们遇到的几个 <a href="../../%E7%AC%AC1%E7%AB%A0%20%E6%9E%81%E9%99%90/ch1-w7-3%E8%BF%9E%E5%8A%A0%E5%9E%8B%E6%9E%81%E9%99%90/">连加型极限</a> 中的问题三和一，即是本题的一个特例！</p>
-<h2 id="_3">数学本质的思考</h2>
-<p>它可以用来求数列的极限。这道题的数学实质是：函数在某一点附近的局部线性化。将<span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处做一阶泰勒展开：
-$$
 f(x) = f(0) + f'(0)x + o(x) = f'(0)x + o(x) \qquad (x \to 0)
-$$</p>
-<p>为了估计在求和过程中的误差项<span class="arithmatex">\(o(x)\)</span>，我们可以将<span class="arithmatex">\(o(x)\)</span>写成<span class="arithmatex">\(\eta(x)x\)</span>，其中<span class="arithmatex">\(\eta(x)\)</span>是无穷小量：</p>
+\]</div>
+<p>为方便估计在求和过程中的误差项 <span class="arithmatex">\(o(x)\)</span>，我们可以将 <span class="arithmatex">\(o(x)\)</span> 写成 <span class="arithmatex">\(\eta(x)x\)</span>，其中 <span class="arithmatex">\(\eta(x)\)</span> 是无穷小量：</p>
 <div class="arithmatex">\[
 f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
 \]</div>
@@ -1154,24 +1130,76 @@ f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
     &amp; = f'(0) \frac{n(n+1)}{2n^2} + \sum_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}
 \end{aligned}
 \]</div>
-<p>即<span class="arithmatex">\(x_n\)</span>可以写成主部和余项两个部分，主部的极限非常清晰：</p>
+<p>即 <span class="arithmatex">\(x_n\)</span> 可以写成主部 <span class="arithmatex">\(f'(0) \frac{n(n+1)}{2n^2}\)</span> 和误差项 <span class="arithmatex">\(\sum_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}\)</span> 两个部分，主部的极限非常清晰：</p>
 <div class="arithmatex">\[
 \lim_{n\to\infty}f'(0) \frac{n(n+1)}{2n^2}=\frac{f'(0)}{2}
 \]</div>
-<p>我们需要评估余部<span class="arithmatex">\(E_n=\sum\limits_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}\)</span>是不是无穷小。 由 <span class="arithmatex">\(\lim\limits_{x \to 0} \eta(x) = 0\)</span>，根据极限的定义，对于任意给定的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得当 <span class="arithmatex">\(0 &lt; x &lt; \delta\)</span> 时，恒有 <span class="arithmatex">\(\vert{}\alpha(x)\vert{} &lt; \varepsilon\)</span>。对于固定的<span class="arithmatex">\(\delta\)</span>，存在正整数<span class="arithmatex">\(N\)</span>，当<span class="arithmatex">\(n&gt;N\)</span>时，由<span class="arithmatex">\(1/n&lt;\delta\)</span>，因此对每一个<span class="arithmatex">\(k=1,2,\ldots,n\)</span>，自变量<span class="arithmatex">\(k/n^2\)</span>均满足：</p>
+<p>我们需要评估余部 <span class="arithmatex">\(E_n=\sum\limits_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2}\)</span> 是不是无穷小。 由 <span class="arithmatex">\(\lim\limits_{x \to 0} \eta(x) = 0\)</span>，根据极限的定义，对于任意给定的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得当 <span class="arithmatex">\(0 &lt; x &lt; \delta\)</span> 时，恒有 <span class="arithmatex">\(\vert{}\eta(x)\vert{} &lt; \varepsilon\)</span>。对于固定的 <span class="arithmatex">\(\delta\)</span>，存在正整数 <span class="arithmatex">\(N=\left[\frac{1}{\delta}\right]+1\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时，由 <span class="arithmatex">\(1/n&lt;\delta\)</span>，因此对每一个 <span class="arithmatex">\(k=1,2,\ldots,n\)</span>，自变量 <span class="arithmatex">\(k/n^2\)</span> 均满足：</p>
 <div class="arithmatex">\[
 0&lt;\frac{k}{n^2}\leqslant \frac{n}{n^2}=\frac{1}{n}&lt;\delta
 \]</div>
-<p>即所有的分点都落入<span class="arithmatex">\((0,\delta)\)</span>之内，因此对于所有的<span class="arithmatex">\(k\leqslant n\)</span>，都有<span class="arithmatex">\(\left|\eta\left(\frac{k}{n^2}\right)\right|&lt;\varepsilon\)</span>，因此余部：</p>
+<p>即所有的分点都落入 <span class="arithmatex">\((0,\delta)\)</span> 之内，因此对于所有的 <span class="arithmatex">\(k\leqslant n\)</span>，都有 <span class="arithmatex">\(\left|\eta\left(\frac{k}{n^2}\right)\right|&lt;\varepsilon\)</span>，因此误差项之和：</p>
 <div class="arithmatex">\[
 \left|E_n\right|=\left\vert{} \sum_{k=1}^n \alpha\left(\frac{k}{n^2}\right)\frac{k}{n^2} \right\vert{} \leqslant \sum_{k=1}^n \left\vert{} \alpha\left(\frac{k}{n^2}\right) \right\vert{} \frac{k}{n^2} &lt; \varepsilon \sum_{k=1}^n \frac{k}{n^2} = \varepsilon \frac{n(n+1)}{2n^2}
 \]</div>
-<p>又因为当<span class="arithmatex">\(n\geqslant 1\)</span>时，有<span class="arithmatex">\(\frac{n(n+1)}{2n^2}\leqslant 1\)</span>，即<span class="arithmatex">\(|E_n|&lt;\varepsilon\)</span>。以上逻辑链总结一下：对于任意的<span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在<span class="arithmatex">\(N\in \mathbf N^*\)</span>，使得当<span class="arithmatex">\(n&gt;N\)</span>时，恒有<span class="arithmatex">\(|E_n|&lt;\varepsilon\)</span>，因此<span class="arithmatex">\(\lim\limits_{n\to \infty}E_n = 0\)</span>。</p>
-<p>这就推证了：</p>
+<p>又因为当 <span class="arithmatex">\(n\geqslant 1\)</span> 时，有 <span class="arithmatex">\(\frac{n(n+1)}{2n^2}\leqslant 1\)</span>，代入上式记得 <span class="arithmatex">\(|E_n|&lt;\varepsilon\)</span>。以上逻辑链总结一下就是：对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在 <span class="arithmatex">\(N\in \mathbf N^*\)</span>，使得当 <span class="arithmatex">\(n&gt;N\)</span> 时，恒有 <span class="arithmatex">\(|E_n|&lt;\varepsilon\)</span>，因此 <span class="arithmatex">\(\lim\limits_{n\to \infty}E_n = 0\)</span>。</p>
+<p>也就是无穷多个无穷小的高阶误差相加，极限为 <span class="arithmatex">\(0\)</span>，因此可以放心忽略掉它，那么 <span class="arithmatex">\(x_n\)</span> 的确是由线性主部，也就是 <span class="arithmatex">\(x=0\)</span> 处的切线斜率 <span class="arithmatex">\(f'(0)\)</span> 决定。这就推证了：</p>
 <div class="arithmatex">\[
 \lim\limits_{n\to \infty}x_n = \frac{f'(0)}{2}
 \]</div>
-<p>由于当<span class="arithmatex">\(n\to\infty\)</span>时，所有的分点<span class="arithmatex">\({k}/{n^2}\to 0\;(k=1,2,\ldots,n)\)</span>，也就是当<span class="arithmatex">\(n\)</span>足够大时，所有的分点都会进入区间<span class="arithmatex">\((0,\delta)\)</span>之内，</p>
+<p>以上部分精简一下就可以做为完整的证明。但以上的证明，是直接动用了“泰勒展开”这一大杀器，从更高的维度上直接解决的，它在分析问题图景、指明方向的时候有用，但在刚学习可导函数的时候，我们还是从最基础的定义出发，通过不等式放缩的办法进行误差分析。</p>
+<h2 id="varepsilon-delta"><span class="arithmatex">\(\varepsilon - \delta\)</span> 证明</h2>
+<details class="success">
+<summary>阅读详细证明</summary>
+<p>由于 <span class="arithmatex">\(f'(0)\)</span> 存在且有限，同时有 <span class="arithmatex">\(f(0)=0\)</span>，因此：</p>
+<div class="arithmatex">\[f'(0)=\lim_{x\to 0}\frac{f(x)-f(0)}{x}=\lim_{x\to 0}\frac{f(x)}{x}\]</div>
+<p>那么根据极限的定义，对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得当 <span class="arithmatex">\(0&lt;x&lt;\delta\)</span> 时，有：</p>
+<div class="arithmatex">\[\left|\frac{f(x)}{x}-f'(0)\right|&lt;\varepsilon\]</div>
+<p>即：</p>
+<div class="arithmatex">\[x\left(f'(0)-\varepsilon\right)&lt;f(x)&lt;x\left(f'(0)+\varepsilon\right)\]</div>
+<p><strong>由于当 <span class="arithmatex">\(n\to\infty\)</span> 时，所有的分点 <span class="arithmatex">\({k}/{n^2}\to 0\;(k=1,2,\ldots,n)\)</span>，也就是当<span class="arithmatex">\(n\)</span>足够大时，所有的分点都会进入区间 <span class="arithmatex">\((0,\delta)\)</span> 之内</strong>，即最大的分点 <span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>，所以此时在所有的分点上成立：</p>
+<div class="arithmatex">\[\begin{gathered}\frac{1}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{1}{n^2}\right)&lt;\frac{1}{n^2}\left(f'(0)+\varepsilon\right) \\ \frac{2}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{2}{n^2}\right)&lt;\frac{2}{n^2}\left(f'(0)+\varepsilon\right) \\
+\vdots \\ \frac{n}{n^2}\left(f'(0)-\varepsilon\right)&lt;f\left(\frac{n}{n^2}\right)&lt;\frac{n}{n^2}\left(f'(0)+\varepsilon\right)\end{gathered}\]</div>
+<p>将这 <span class="arithmatex">\(n\)</span> 个不等式加起来，可得：</p>
+<div class="arithmatex">\[\frac{n(n+1)}{2n^2}\left(f'(0)-\varepsilon\right)\]</div>
+<p>让 <span class="arithmatex">\(n\to \infty\)</span>，对上述不等式的两端取上下极限，有：</p>
+<div class="arithmatex">\[\frac{1}{2}\left(f'(0)-\varepsilon\right)\leqslant\liminf_{n\to\infty}x_n\leqslant\limsup_{n\to\infty}x_n\leqslant\frac{1}{2}\left(f'(0)+\varepsilon\right)\]</div>
+<p>由 <span class="arithmatex">\(\varepsilon\)</span> 的任意性，令 <span class="arithmatex">\(\varepsilon \to 0\)</span>，即得：</p>
+<div class="arithmatex">\[\lim\limits_{n\to \infty}x_0=\frac{f'(0)}{2}\]</div>
+</details>
+<p>(1) 令 <span class="arithmatex">\(f(x)=\sin x\)</span>，则有 <span class="arithmatex">\(f'(0)=1\)</span>，因此：</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\sum_{i=1}^n\sin\frac{i}{n^2}=\lim_{n\to \infty}\sum_{i=1}^{n}f\left(\frac{i}{n^2}\right)=\frac12
+\]</div>
+<p>(2) 令 <span class="arithmatex">\(f(x)=\ln (1+x)\)</span>，则有 <span class="arithmatex">\(f'(0)=1\)</span>，因此：</p>
+<div class="arithmatex">\[
+\lim_{n\to \infty}\sum_{i=1}^n\ln\left(1+\frac{i}{n^2}\right)=\lim_{n\to \infty}\ln \left[\prod_{i=1}^n\left(1+\frac{i}{n^2}\right)\right]=\frac{1}{2}
+\]</div>
+<p>从而得到原极限：</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\prod_{i=1}^n\left(1+\frac{i}{n^2}\right)=\sqrt{\mathrm e}
+\]</div>
+<h2 id="_3">对本质的思考：一致性</h2>
+<p>一致性（Uniformity）正是决定无限个无穷小相加是否依然是无穷小的根本原因！</p>
+<p>题目的本质是在求一个极限和：</p>
+<div class="arithmatex">\[\lim_{n \to \infty} \sum_{k=1}^n \left[ f'(0) \frac{k}{n^2} + \eta\left(\frac{k}{n^2}\right) \frac{k}{n^2} \right]\]</div>
+<p>【注：如同定积分是黎曼和的极限一样，直接研究这类带有变动项数的极限和通常是很困难的。】</p>
+<p>证明的核心难点在于严格论证其后半部分（误差项）的累加极限为 <span class="arithmatex">\(0\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_{k=1}^n \eta\left(\frac{k}{n^2}\right) \frac{k}{n^2} = 0
+\]</div>
+<p>其中 <span class="arithmatex">\(\eta(x)\)</span> 是一个在 <span class="arithmatex">\(x\to 0\)</span> 时趋于 <span class="arithmatex">\(0\)</span> 的函数，在这个级数中，自变量是 <span class="arithmatex">\(x_{n,k} = k/n^2\)</span> 与 <span class="arithmatex">\(n\)</span> 和分点位置 <span class="arithmatex">\(k\)</span> 都有关系。对于任意给定的 <span class="arithmatex">\(n\)</span>，这 <span class="arithmatex">\(n\)</span> 个取样点中最大的一个是 <span class="arithmatex">\(n/n^2 = 1/n\)</span>。为了控制整体的误差，我们可以定义这 <span class="arithmatex">\(n\)</span> 个取样点处的误差的最大值为：</p>
+<div class="arithmatex">\[
+\varepsilon_n = \max_{1 \leqslant k \leqslant n} \left\vert{} \eta\left(\frac{k}{n^2}\right) \right\vert{}
+\]</div>
+<p>这样所有取样点都被压缩在 <span class="arithmatex">\((0, 1/n]\)</span> 区间内，当 <span class="arithmatex">\(n \to \infty\)</span> 时，整个区间向 0 坍缩。在<span class="arithmatex">\(\varepsilon-\delta\)</span> 证明中所说的：“当 <span class="arithmatex">\(n\)</span> 足够大时，所有的分点都可以进入区间 <span class="arithmatex">\((0,\delta)\)</span> 之内，即最大的分点 <span class="arithmatex">\(n/n^2=1/n&lt;\delta\)</span>” 就是对这种误差界限的朴素表达。</p>
+<p>因此，误差最大值的极限 <span class="arithmatex">\(\lim\limits_{n \to \infty} \varepsilon_n = 0\)</span>，关键在于：这个极限只与 <span class="arithmatex">\(n\)</span> 有关，<strong>与 <span class="arithmatex">\(k\)</span> 完全脱钩</strong>，这在数学上被称为：这 <span class="arithmatex">\(n\)</span> 个点处的误差序列 <span class="arithmatex">\(\left\{\eta\left(\frac{k}{n^2}\right)\right\}\)</span> 关于下标 <span class="arithmatex">\(k\)</span> 是 <strong>一致有界</strong> 的，且其一致上界随着 <span class="arithmatex">\(n\to \infty\)</span> 而趋于 <span class="arithmatex">\(0\)</span>。也就是说它的一致上界是一个无穷小量。</p>
+<p>利用这种关于 <span class="arithmatex">\(k\)</span> 的一致有界性，我们成功找到一个与 <span class="arithmatex">\(k\)</span> 无关的无穷小量 <span class="arithmatex">\(\varepsilon _n\)</span> 作为统一的上界，这使得我们可以将它作为公因子，直接提取到求和号外：</p>
+<div class="arithmatex">\[
+\sum_{k=1}^n \varepsilon_n \frac{k}{n^2} = \varepsilon_n \left( \sum_{k=1}^n \frac{k}{n^2} \right) = \varepsilon_n \frac{n(n+1)}{2n^2}
+\]</div>
+<p>从而将“无限个无穷小相加”转化为“一个无穷小量 <span class="arithmatex">\(\times\)</span> 一个有界宏观量”的问题。</p>
+<p>所谓“一致（Uniform）”即意味着 <strong>寻找到一个统一的界限，它不依赖于变化的局部参数（如本题中的 <span class="arithmatex">\(k\)</span>）的变化</strong>。</p>
 
 
 
