@@ -10,8 +10,22 @@ theme:
     logo: material/math-integral-box
   language: zh
   palette:
-    primary: blue-grey
-    accent: teal
+  # 浅色模式配置
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+
+    # 深色模式配置
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
   features:
     #- navigation.tabs
     - navigation.top
