@@ -20,7 +20,7 @@ theme:
 
     # 深色模式配置
     - scheme: slate
-      primary: indigo
+      primary: blue grey
       accent: indigo
       toggle:
         icon: material/brightness-4
