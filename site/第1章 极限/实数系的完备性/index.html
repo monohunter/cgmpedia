@@ -429,6 +429,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义辨析
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#61-5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1159,6 +1170,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义辨析
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#61-5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1251,22 +1273,47 @@
 <p>此开卷第一回也。</p>
 <p>实数系的连续性（又称完备性）是整个微积分的基础，直观地说，它意味着实数轴上“没有空隙”，一维空间被实数铺满了。它通常由以下七个定理来刻画。在实数理论框架下，这七个定理是完全等价的，它们只是从不同侧面描述了实数系“完备、没有漏洞”这一事实。下文所说的收敛，均指收敛于有限的实数。</p>
 <ol>
-<li><strong>（确界定理）</strong>任何非空集 <span class="arithmatex">\(E\in \mathbb R\)</span>，若它有上界，则必有上确界 <span class="arithmatex">\(\sup E\in \mathbb R\)</span>。等价地，若有下界，则必有下确界。</li>
-<li><strong>（单调有界定理）</strong>任意单调递增且有上界的数列 <span class="arithmatex">\(\{x_n\}\subset \mathbb R\)</span>，必有极限  <span class="arithmatex">\(\lim\limits_{n\to\infty}x_n \in \mathbb R\)</span>。等价地，任意单调递减且有下界的实数列也必有极限。</li>
-<li><strong>（柯西收敛准则）</strong>数列 <span class="arithmatex">\(\{x_n\}\subset \mathbb R\)</span> 收敛的充分必要条件是：它是柯西列，即：<span class="arithmatex">\(\forall\,\varepsilon &gt;0\)</span>，<span class="arithmatex">\(\exists\,N&gt;0\)</span>，当 <span class="arithmatex">\(m,n&gt;N\)</span> 时，恒有 <span class="arithmatex">\(|x_n-x_m|&lt;\varepsilon\)</span>。其中，必要性易证，由三角形不等式即可直接得出；体现实数系完备性的是充分性：每个实数柯西列都收敛于某个实数。</li>
-<li><strong>（列紧性，Bolzano-Weierstrass定理的数列形式）</strong>任何有界无穷实数列必有收敛的子列。</li>
-<li><strong>（聚点定理，Bolzano-Weierstrass定理的集合形式）</strong>任意有界无穷集 <span class="arithmatex">\(E\subset\mathbb R\)</span> 至少有一个聚点 <span class="arithmatex">\(\xi\in\mathbb R\)</span>，即 <span class="arithmatex">\(\xi\)</span> 的任意邻域都包含 <span class="arithmatex">\(E\)</span> 中异于 <span class="arithmatex">\(\xi\)</span> 的点，而聚点不一定属于 <span class="arithmatex">\(E\)</span>。这一结论与定理 4 分别用集合语言和数列语言表达同一性质。</li>
-<li><strong>（区间套定理）</strong>任何闭区间套必存在唯一的公共点。设非空闭区间列满足 <span class="arithmatex">\([a_{n+1},b_{n+1}]\subseteq[a_n,b_n]\)</span>，且 <span class="arithmatex">\(b_n-a_n\to 0,\,(n\to \infty)\)</span>，则 <span class="arithmatex">\(\{[a_n,b_n]\}\)</span> 称为闭区间套，这时必存在唯一的 <span class="arithmatex">\(\xi \in \mathbb R\)</span>，使得 <span class="arithmatex">\(a_n \leqslant \xi \leqslant b_n\,(\forall\,n\in \mathbb N^*)\)</span>。嵌套的非空闭区间保证公共点存在，区间长度趋于零进一步保证其唯一性。</li>
+<li><strong>（确界定理）</strong>任何非空集 <span class="arithmatex">\(E\in \mathbf R\)</span>，若它有上界，则必有上确界 <span class="arithmatex">\(\sup E\in \mathbf R\)</span>。等价地，若有下界，则必有下确界。</li>
+<li><strong>（单调有界定理）</strong>任意单调递增且有上界的数列 <span class="arithmatex">\(\{x_n\}\subset \mathbf R\)</span>，必有极限  <span class="arithmatex">\(\lim\limits_{n\to\infty}x_n \in \mathbf R\)</span>。等价地，任意单调递减且有下界的实数列也必有极限。</li>
+<li><strong>（柯西收敛准则）</strong>数列 <span class="arithmatex">\(\{x_n\}\subset \mathbf R\)</span> 收敛的充分必要条件是：它是柯西列，即：<span class="arithmatex">\(\forall\,\varepsilon &gt;0\)</span>，<span class="arithmatex">\(\exists\,N&gt;0\)</span>，当 <span class="arithmatex">\(m,n&gt;N\)</span> 时，恒有 <span class="arithmatex">\(|x_n-x_m|&lt;\varepsilon\)</span>。其中，必要性易证，由三角形不等式即可直接得出；体现实数系完备性的是充分性：每个实数柯西列都收敛于某个实数。</li>
+<li><strong>（列紧性，Bolzano-Weierstrass定理的数列形式）</strong>任何有界无穷实数列必有收敛的子列。更严谨地说：任意闭有界区间都是列紧的，即其中的任意数列都有一个子列收敛于该区间内的某个点。</li>
+<li><strong>（聚点定理，Bolzano-Weierstrass定理的集合形式）</strong>任意有界无穷集 <span class="arithmatex">\(E\subset\mathbf R\)</span> 至少有一个聚点 <span class="arithmatex">\(\xi\in\mathbf R\)</span>，即 <span class="arithmatex">\(\xi\)</span> 的任意邻域都包含 <span class="arithmatex">\(E\)</span> 中异于 <span class="arithmatex">\(\xi\)</span> 的点，而聚点不一定属于 <span class="arithmatex">\(E\)</span>。这一结论与定理 4 分别用集合语言和数列语言表达同一性质。</li>
+<li><strong>（区间套定理）</strong>任何闭区间套必存在唯一的公共点。设非空闭区间列满足 <span class="arithmatex">\([a_{n+1},b_{n+1}]\subseteq[a_n,b_n]\)</span>，且 <span class="arithmatex">\(b_n-a_n\to 0,\,(n\to \infty)\)</span>，则 <span class="arithmatex">\(\{[a_n,b_n]\}\)</span> 称为闭区间套，这时必存在唯一的 <span class="arithmatex">\(\xi \in \mathbf R\)</span>，使得 <span class="arithmatex">\(a_n \leqslant \xi \leqslant b_n\,(\forall\,n\in \mathbf N^*)\)</span>。嵌套的非空闭区间保证公共点存在，区间长度趋于零进一步保证其唯一性。</li>
 <li><strong>（紧致性，Heine-Borel有限覆盖定理）</strong>有限闭区间的任一开覆盖必存在有限子覆盖。也就是说，只要一族开集覆盖了整个有界区间 <span class="arithmatex">\([a,b]\)</span> ，就能从这族开集中选出有限个，仍然覆盖整个区间。</li>
 </ol>
 <p>从表述形式看，定理1-6属于同一类型，它们都断言某种实数点的存在，分别是：确界点（定理1），极限点（定理2和3），某子列的收敛点（定理4），聚点（定理5），公共点（定理6）。定理7是另外一种等价刻画，它体现了一种“拓扑上的有限性”，就是“把无穷的困难归结为有限”的能力：需要无限个开区间才能做到的，使用有限个子集也能做到。</p>
-<p>这七个定理是可以互相推导的，它们之间的相互推导是理解实数连续性的极好练习。</p>
+<p>这七个定理是可以互相推导的，它们之间的互相推导是理解实数连续性的极好练习。</p>
+<h2 id="_2">定义辨析</h2>
+<p><strong>列紧性</strong> 和 <strong>紧致性</strong> 是不同的两个概念。两者分别从数列和开覆盖出发来定义，它们在实数空间中是等价的，但在更一般的拓扑空间（比如未必能由距离描述的空间）中不一定等价。</p>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>列紧性</td>
+<td><strong>sequential compactness</strong></td>
+<td>集合中的每个数列都有子列收敛于该集合内的点</td>
+</tr>
+<tr>
+<td>紧致性，简称紧性</td>
+<td><strong>compactness</strong></td>
+<td>集合的每个开覆盖都有有限子覆盖</td>
+</tr>
+</tbody>
+</table>
+<p>至于<strong>“致密性”</strong>，应该就是compactness的翻译，它是一些中文数学分析教材对 Bolzano–Weierstrass 定理的传统称呼。更多是用来表达“任意有界实数列都有收敛子列”，也就是Bolzano–Weierstrass 定理的数列形式（定理4），但我更喜欢用<strong>“列紧性”</strong>这个词来对应sequential compactness，它包含了“用数列来描述”的意思。</p>
+<p>不要把它与有理数的 <strong>稠密性（density）</strong>混淆，这是两个完全不同的概念。</p>
 <h2 id="61-5">用闭区间套定理6证明定理1-5</h2>
-<p>它们都可以用二分法证明。以 <span class="arithmatex">\(6 \to 4\)</span>：区间套定理 <span class="arithmatex">\(\Rightarrow\)</span> 列紧性定理（Bolzano-Weierstrass 定理）为例说明。</p>
-<p><strong>证明：</strong> 既然数列 <span class="arithmatex">\(\{x_n\}\)</span> 有界，则它全部的项必然全部落入某个大的闭区间 <span class="arithmatex">\(I_1 = [a_1, b_1]\)</span> 内。通过二分法构造闭区间套：用 <span class="arithmatex">\([a_1,b_1]\)</span> 的中点 <span class="arithmatex">\(\frac{a_1+b_1}{2}\)</span> 将区间一分为二，先看右边的区间是否具有 <span class="arithmatex">\(\{x_n\}\)</span> 中无穷多项，若它具有 <span class="arithmatex">\(\{x_n\}\)</span> 中的无穷多项，将这个区间记为 <span class="arithmatex">\([a_2,b_2]\)</span>，否则将左边那个区间记为 <span class="arithmatex">\([a_2,b_2]\)</span>。接着再把 <span class="arithmatex">\([a_2,b_2]\)</span> 用其中点一分为二，先看右边那个小区间，若其中有 <span class="arithmatex">\(\{x_n\}\)</span> 中的无穷多项，就把它记为 <span class="arithmatex">\([a_3,b_3]\)</span>，否则把左边的那个小区间记作 <span class="arithmatex">\([a_3,b_3]\)</span>。如此这般继续下去，我们得出了一个闭区间套 <span class="arithmatex">\(I_n=[a_n,b_n],\,n\in \mathbb N^*\)</span>。各闭区间满足 <span class="arithmatex">\(I_1 \supset I_2 \supset I_3 \supset \cdots\)</span> 并且 <span class="arithmatex">\(|I_n|=\frac{b_1-a_1}{2^{n-1}}\to 0\)</span>。其中每个 <span class="arithmatex">\(I_n\)</span>均包含 <span class="arithmatex">\(\{x_n\}\)</span>中的无穷多项。根据闭区间套定理，存在唯一实数</p>
-<div class="arithmatex">\[
+<p>它们都可以用二分法证明。以 <span class="arithmatex">\(6 \to 4\)</span>：闭区间套定理 <span class="arithmatex">\(\Rightarrow\)</span> 列紧性定理（Bolzano-Weierstrass 定理的数列形式）为例说明。</p>
+<p><strong>证明：</strong> 既然数列 <span class="arithmatex">\(\{x_n\}\)</span> 有界，则它全部的项必然全部落入某个大的闭区间 <span class="arithmatex">\(I_1 = [a_1, b_1]\)</span> 内。通过二分法构造闭区间套：用 <span class="arithmatex">\([a_1,b_1]\)</span> 的中点 <span class="arithmatex">\(\frac{a_1+b_1}{2}\)</span> 将区间一分为二，先看右边的区间是否具有 <span class="arithmatex">\(\{x_n\}\)</span> 中无穷多项，若它具有 <span class="arithmatex">\(\{x_n\}\)</span> 中的无穷多项，将这个区间记为 <span class="arithmatex">\([a_2,b_2]\)</span>，否则将左边那个区间记为 <span class="arithmatex">\([a_2,b_2]\)</span>。接着再把 <span class="arithmatex">\([a_2,b_2]\)</span> 用其中点一分为二，先看右边那个小区间，若其中有 <span class="arithmatex">\(\{x_n\}\)</span> 中的无穷多项，就把它记为 <span class="arithmatex">\([a_3,b_3]\)</span>，否则把左边的那个小区间记作 <span class="arithmatex">\([a_3,b_3]\)</span>。如此这般继续下去，我们得出了一个闭区间套 <span class="arithmatex">\(I_n=[a_n,b_n],\,n\in \mathbf N^*\)</span>。各闭区间满足 <span class="arithmatex">\(I_1 \supset I_2 \supset I_3 \supset \cdots\)</span> 并且 <span class="arithmatex">\(|I_n|=\frac{b_1-a_1}{2^{n-1}}\to 0\)</span>。其中每个 <span class="arithmatex">\(I_n\)</span>均包含 <span class="arithmatex">\(\{x_n\}\)</span>中的无穷多项。根据闭区间套定理，存在唯一实数
+$$
 \beta \in \bigcap_{n=1}^{\infty} I_n
-\]</div>
+$$</p>
 <p>在 <span class="arithmatex">\(I_1\)</span> 中任取数列的一项，记为 <span class="arithmatex">\(x_{k_1}\)</span>；假设已在 <span class="arithmatex">\(I_{n-1}\)</span> 中取定 <span class="arithmatex">\(x_{k_{n-1}}\)</span>，由于 <span class="arithmatex">\(I_n\)</span> 中包含<span class="arithmatex">\(\{x_n\}\)</span>的无穷多项，必然存在严格大于前一下标的整数 <span class="arithmatex">\(k_n &gt; k_{n-1}\)</span>，使得 <span class="arithmatex">\(x_{k_n} \in I_n\)</span>。由此递推，必然可以提取出 <strong>下标严格递增 </strong>的子列 <span class="arithmatex">\(\{x_{k_n}\}\)</span>。因 <span class="arithmatex">\(x_{k_n} \in I_n\)</span> 且公共点 <span class="arithmatex">\(\beta \in I_n\)</span>，两者距离必然受制于当前区间的长度边界：</p>
 <div class="arithmatex">\[
 \vert{}x_{k_n} - \beta\vert{} \leqslant b_n - a_n = \frac{b_1-a_1}{2^{n-1}}
@@ -1276,11 +1323,11 @@
 \lim_{n \to \infty} x_{k_n} = \beta
 \]</div>
 <p>那么我们就从有界无穷数列中找到了收敛的子列。<span class="arithmatex">\(\;\blacksquare\)</span></p>
-<p>那么 <span class="arithmatex">\(6 \to 5\)</span>：区间套定理 <span class="arithmatex">\(\Rightarrow\)</span> 列紧性定理的证明就简单了，上个证明中<span class="arithmatex">\(\beta\)</span>就是有界数列的一个聚点。</p>
+<p>那么 <span class="arithmatex">\(6 \to 5\)</span>：区间套定理 <span class="arithmatex">\(\Rightarrow\)</span> 聚点定理（Bolzano-Weierstrass 定理的集合形式）的证明就简单了，上个证明中 <span class="arithmatex">\(\beta\)</span> 就是有界数列的一个聚点。</p>
 <h2 id="1-56">用定理1-5证明闭区间套定理6</h2>
 <p>以 <span class="arithmatex">\(2\to 6\)</span>：单调有界定理 <span class="arithmatex">\(\Rightarrow\)</span> 闭区间套定理为例说明。</p>
 <p><strong>证明：Step 1. 确立极限的存在性与相对顺序</strong></p>
-<p>设有一系列闭区间 <span class="arithmatex">\(\{[a_n, b_n]\}\)</span> 满足包含关系：<span class="arithmatex">\([a_{n+1}, b_{n+1}] \subseteq [a_n, b_n]\)</span> 对所有 <span class="arithmatex">\(n \in \mathbb{N}^*\)</span> 成立。那么考察闭区间的左端点<span class="arithmatex">\(a_n\)</span>组成的数列<span class="arithmatex">\(\{a_n\}\)</span>，以及右端点<span class="arithmatex">\(b_n\)</span>组成的数列<span class="arithmatex">\(\{b_n\}\)</span>，可知：</p>
+<p>设有一系列闭区间 <span class="arithmatex">\(\{[a_n, b_n]\}\)</span> 满足包含关系：<span class="arithmatex">\([a_{n+1}, b_{n+1}] \subseteq [a_n, b_n]\)</span> 对所有 <span class="arithmatex">\(n \in \mathbf{N}^*\)</span> 成立。那么考察闭区间的左端点<span class="arithmatex">\(a_n\)</span>组成的数列<span class="arithmatex">\(\{a_n\}\)</span>，以及右端点<span class="arithmatex">\(b_n\)</span>组成的数列<span class="arithmatex">\(\{b_n\}\)</span>，可知：</p>
 <ol>
 <li>数列 <span class="arithmatex">\(\{a_n\}\)</span> 单调递增，即 <span class="arithmatex">\(a_1 \leqslant a_2 \leqslant \dots \leqslant a_n \leqslant \dots\)</span></li>
 <li>数列 <span class="arithmatex">\(\{b_n\}\)</span> 单调递减，即 <span class="arithmatex">\(b_1 \geqslant b_2 \geqslant \dots \geqslant b_n \geqslant \dots\)</span></li>
@@ -1294,7 +1341,7 @@
 </ol>
 <p>因此，<span class="arithmatex">\(a_m\leqslant b_n\)</span> 是成立的。在不等式中固定 <span class="arithmatex">\(n\)</span> 并令 <span class="arithmatex">\(m \to \infty\)</span>，由极限的保不等号性得：<span class="arithmatex">\(c_1 \leqslant b_n\)</span>；再对上式令 <span class="arithmatex">\(n \to \infty\)</span>，同样由极限的保不等号性得出：<span class="arithmatex">\(c_1 \leqslant c_2\)</span>。</p>
 <p><strong>Step 2.证明公共点的存在性</strong></p>
-<p>由上述不等式链可知，对于所有的 <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>，都有：</p>
+<p>由上述不等式链可知，对于所有的 <span class="arithmatex">\(n \in \mathbf{N}^*\)</span>，都有：</p>
 <div class="arithmatex">\[
 a_n \leqslant c_1 \leqslant c_2 \leqslant b_n
 \]</div>
@@ -1312,7 +1359,7 @@ c_2 - c_1 = \lim_{n \to \infty} b_n - \lim_{n \to \infty} a_n = \lim_{n \to \inf
 <p>综上所述，存在唯一的实数 <span class="arithmatex">\(c\)</span>，属于所有的闭区间 <span class="arithmatex">\([a_n, b_n]\)</span>。 这正是闭区间套定理。<span class="arithmatex">\(\;\blacksquare\)</span></p>
 <h2 id="1-5">定理1-5之间的互相推证</h2>
 <p>以 <span class="arithmatex">\(4\to 3\)</span>：列紧性定理 <span class="arithmatex">\(\Rightarrow\)</span> 柯西收敛准则（充分性）为例</p>
-<p><strong>证明：</strong>设 <span class="arithmatex">\(\{x_n\}\)</span> 是一个柯西列。取 <span class="arithmatex">\(\varepsilon_0 = 1\)</span>，那么存在 <span class="arithmatex">\(N_0 \in \mathbb N^*\)</span>，使得当 <span class="arithmatex">\(n, m \geqslant N_0\)</span> 时，有<span class="arithmatex">\(\vert{}x_n - x_m\vert{} &lt; 1\)</span>。固定<span class="arithmatex">\(m=N_0\)</span>，即得：</p>
+<p><strong>证明：</strong>设 <span class="arithmatex">\(\{x_n\}\)</span> 是一个柯西列。取 <span class="arithmatex">\(\varepsilon_0 = 1\)</span>，那么存在 <span class="arithmatex">\(N_0 \in \mathbf N^*\)</span>，使得当 <span class="arithmatex">\(n, m \geqslant N_0\)</span> 时，有<span class="arithmatex">\(\vert{}x_n - x_m\vert{} &lt; 1\)</span>。固定<span class="arithmatex">\(m=N_0\)</span>，即得：</p>
 <div class="arithmatex">\[
 \left|x_n-x_{N_0} \right|&lt;1,\quad n\geqslant N_0.
 \]</div>
@@ -1320,12 +1367,12 @@ c_2 - c_1 = \lim_{n \to \infty} b_n - \lim_{n \to \infty} a_n = \lim_{n \to \inf
 <div class="arithmatex">\[
 |x_n|=\left|x_n-x_{N_0}+x_{N_0}\right|\leqslant \left|x_n-x_{N_0}\right|+\left|x_{N_0}\right|&lt; 1+\left|x_{N_0}\right|
 \]</div>
-<p>令 <span class="arithmatex">\(M = \max \left\{|x_1|,|x_2|,\ldots,\left|x_{{N_0}-1}\right|,1+\left|x_{N_0}\right|\right\}\)</span>，则对所有的 <span class="arithmatex">\(n\in \mathbb N^*\)</span> 均有 <span class="arithmatex">\(|x_n|\leqslant M\)</span>，即数列 <span class="arithmatex">\(\{x_n\}\)</span> 是有界的。那么根据列紧性定理，该数列必存在收敛子列 <span class="arithmatex">\(\{x_{k_n}\}\)</span>。设 <span class="arithmatex">\(\lim\limits_{n \to \infty} x_{k_n} = l\)</span>.
-任取 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，由于 <span class="arithmatex">\(x_{k_n} \to l\)</span>，则一定存在 <span class="arithmatex">\(N'\in \mathbb N^*\)</span>，使得当 <span class="arithmatex">\(n &gt; N'\)</span> 时，有：</p>
+<p>令 <span class="arithmatex">\(M = \max \left\{|x_1|,|x_2|,\ldots,\left|x_{{N_0}-1}\right|,1+\left|x_{N_0}\right|\right\}\)</span>，则对所有的 <span class="arithmatex">\(n\in \mathbf N^*\)</span> 均有 <span class="arithmatex">\(|x_n|\leqslant M\)</span>，即数列 <span class="arithmatex">\(\{x_n\}\)</span> 是有界的。那么根据列紧性定理，该数列必存在收敛子列 <span class="arithmatex">\(\{x_{k_n}\}\)</span>。设 <span class="arithmatex">\(\lim\limits_{n \to \infty} x_{k_n} = l\)</span>.
+任取 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，由于 <span class="arithmatex">\(x_{k_n} \to l\)</span>，则一定存在 <span class="arithmatex">\(N'\in \mathbf N^*\)</span>，使得当 <span class="arithmatex">\(n &gt; N'\)</span> 时，有：</p>
 <div class="arithmatex">\[
 \left| x_{k_n}-l\right| &lt;\frac{\varepsilon}{2}
 \]</div>
-<p>同时因为数列 <span class="arithmatex">\(\{x_n\}\)</span> 是柯西列，那么存在 <span class="arithmatex">\(N''\in \mathbb N^*\)</span>，当 <span class="arithmatex">\(n,m &gt; N''\)</span> 时，有：</p>
+<p>同时因为数列 <span class="arithmatex">\(\{x_n\}\)</span> 是柯西列，那么存在 <span class="arithmatex">\(N''\in \mathbf N^*\)</span>，当 <span class="arithmatex">\(n,m &gt; N''\)</span> 时，有：</p>
 <div class="arithmatex">\[
 \left|x_n-x_{m}\right|&lt;\frac{\varepsilon}{2}
 \]</div>
