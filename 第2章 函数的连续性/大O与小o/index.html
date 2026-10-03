@@ -630,24 +630,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    大O与小o
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -664,58 +646,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        介绍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        几个初等函数的渐进等式
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        常用等价无穷小量
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1169,47 +1099,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        介绍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        几个初等函数的渐进等式
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        常用等价无穷小量
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1226,7 +1115,6 @@
 
 
 <h1 id="oo">大O与小o</h1>
-<h2 id="_1">介绍</h2>
 <p>设函数 <span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 点的某个去心邻域 <span class="arithmatex">\(\check{U}(x_0)\)</span>上有定义，并设在 <span class="arithmatex">\(\check{U}(x_0)\)</span> 上 <span class="arithmatex">\(g(x) \neq 0\)</span>。常用记号“<span class="arithmatex">\(\mathcal{O}\)</span>”、“<span class="arithmatex">\(o\)</span>”和“<span class="arithmatex">\(\sim\)</span>”来表示 <span class="arithmatex">\(f(x)\)</span> 与 <span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\(x_0\)</span> 点近旁的相对量级关系：</p>
 <ol>
 <li><span class="arithmatex">\(f(x) = o(g(x)), \; (x \rightarrow x_0)\)</span> 表示：<span class="arithmatex">\(\frac{f(x)}{g(x)}\)</span> 是 <span class="arithmatex">\(x \to x_0\)</span> 时的无穷小量，即 <span class="arithmatex">\(\lim\limits_{x \rightarrow x_0} \frac{f(x)}{g(x)} = 0\)</span>。若 <span class="arithmatex">\(x \rightarrow x_0\)</span> 时 <span class="arithmatex">\(f\)</span> 和 <span class="arithmatex">\(g\)</span> 都是无穷小量，则称 <span class="arithmatex">\(f(x)\)</span> 是比 <span class="arithmatex">\(g(x)\)</span> 更高阶的无穷小。</li>
@@ -1237,30 +1125,6 @@
 <li><span class="arithmatex">\(\textcolor{mypink}{f(x) \sim g(x), \; (x \rightarrow x_0)}\)</span> 表示：<span class="arithmatex">\(\lim\limits_{x \rightarrow x_0} \frac{f(x)}{g(x)} = 1\)</span>。若当 <span class="arithmatex">\(x \rightarrow x_0\)</span> 时 <span class="arithmatex">\(f\)</span> 和 <span class="arithmatex">\(g\)</span> 都是无穷小量（或无穷大量），则称 <span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(g(x)\)</span> 是等价的无穷小量（或等价的无穷大量）。</li>
 </ol>
 <p>这些含有渐近记号 <span class="arithmatex">\(o\)</span>、<span class="arithmatex">\(\mathcal{O}\)</span> 以及 <span class="arithmatex">\(\sim\)</span> 的等式称为 <strong>渐近等式</strong>，它刻画了函数在某个极限过程中的 <strong>渐近性态</strong> 之间的关系。它们极大简化了对复杂函数的估算，使用它们在处理函数极限时非常有用，因为在很多情形下，我们并不需要知道某些量的十分具体的表达式，只需知道这个量的动态就已足够。这种等式不是量的相等，而是代表在极限过程中的关系。</p>
-<h2 id="_2">几个初等函数的渐进等式</h2>
-<ol>
-<li><span class="arithmatex">\(\sin {x}=x+o\left( x \right)\)</span>, <span class="arithmatex">\(\tan{x}=x+o\left( x \right)\)</span>;</li>
-<li><span class="arithmatex">\(\cos{x}=1-\frac { 1 }{ 2 } { x }^{ 2 }+o\left({x}^{2}\right)=1+\mathcal{O}\left(x^2\right)\)</span>;</li>
-<li><span class="arithmatex">\(\mathrm{e}^{x}=1+x+o\left( x \right)\)</span>;</li>
-<li><span class="arithmatex">\(\ln(1+x)=x+o\left( x \right)=x-\frac{x^2}{2}+o\left(x^2\right)\)</span>;</li>
-<li><span class="arithmatex">\((1+x)^{\mu}=1+{\mu}x+o\left(x \right)=1+{\mu}x+\mathcal{O}\left(x^2 \right)\)</span>；</li>
-<li><span class="arithmatex">\(\ln x=o(x^{-\alpha})~\left(x \rightarrow 0^{+}\right)~(\alpha &gt;0)\)</span>;</li>
-<li><span class="arithmatex">\(x^k=o\left(a^x\right)~\left(x\rightarrow +\infty\right)~(a&gt;1)\)</span>.</li>
-</ol>
-<h2 id="_3">常用等价无穷小量</h2>
-<ol>
-<li><span class="arithmatex">\(x \sim \sin{x} \sim \tan{x} ~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(x \sim \arcsin{x} \sim \arctan{x}~(x \rightarrow 0)\)</span>; <span class="arithmatex">\(x \sim \mathrm{e}^{x}-1~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(x \sim  \ln{\left( 1+x \right)}~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(\frac{1}{2}x \sim \sqrt{1+x}-1~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(\frac{1}{2}{x}^{2} \sim 1-\cos{x}~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(-\frac { 1 }{ 2 } { x }^{ 2 } \sim \ln { \cos { x }  }~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(\frac { 1 }{ 2 } { x }^{ 3 } \sim (\tan { x } -\sin { x }) ~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(\frac { 1 }{ 2 } { x }^{ 3 } \sim \left(\sin{x}-\arctan{x} \right) ~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\({ a }^{ x } - 1 \sim { x }{ \ln { a }  }~\left(x \rightarrow 0^{+}\right)~(a &gt;0)\)</span>;</li>
-<li><span class="arithmatex">\((1+x)^{\alpha}-1 \sim \alpha x~(x \rightarrow 0)\)</span>;</li>
-<li><span class="arithmatex">\(\log _{ a }{ \left( 1+x \right)} \sim \frac { x }{ \ln { a }  } ~(x \rightarrow 0)\)</span>.</li>
-</ol>
 
 
 
