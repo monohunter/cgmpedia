@@ -1343,7 +1343,7 @@ x \frac{\mathrm d}{\mathrm dx} \bigl(S(x)\bigr) = x + 2x^2 + 3x^3 + \cdots + n x
 \begin{split}\sum_{k=1}^{n}k^2 &amp; = 1^2+2^2+\cdots+n^2 = \lim_{x\to 1}\sum_{k=1}^n k^2 x^{k} \\
 &amp; = \lim_{x\to 1}\frac{x+x^2-(n+1)^2x^{n+1}+\left(2n^2+2n-1\right)x^{n+2}-n^2x^{n+3}}{(1-x)^3} \\
 &amp; = \lim_{x\to 1}\frac{\left[x+x^2-(n+1)^2x^{n+1}+\left(2n^2+2n-1\right)x^{n+2}-n^2x^{n+3}\right]'''}{\left[(1-x)^3\right]'''} \\
-&amp; = \frac{-n(n+1)(-2n-1)}{-6} = \frac{n(n+1)(2n+1)}{6}
+&amp; = \frac{n(n+1)(-2n-1)}{-6} = \frac{n(n+1)(2n+1)}{6}
 \end{split}
 \]</div>
 <p>因此，经过繁琐的代数化简后，极限值恰好会收敛于：</p>
@@ -1372,7 +1372,7 @@ x \frac{\mathrm d}{\mathrm dx} \bigl(S(x)\bigr) = x + 2x^2 + 3x^3 + \cdots + n x
     = &amp;\lim_{n\to \infty}\frac{1}{n}\left[\left(\frac{1}{n}\right)^p+\left(\frac{2}{n}\right)^p+\cdots +\left(\frac{n}{n}\right)^p\right]=\int_{0}^{1}x^p\,\mathrm dx = \left.\frac{x^{p+1}}{p+1}\right|_0^1 = \frac{1}{p+1}
 \end{split}
 \]</div>
-<p>因此可知 <span class="arithmatex">\(1^p+2^p+\cdots+n^p \sim \frac{n^{p+1}}{p+1}\)</span>，它是以 <span class="arithmatex">\(n^{p+1}\)</span> 的级别趋于无穷大的。</p>
+<p>因此可知 <span class="arithmatex">\(1^p+2^p+\cdots+n^p \sim \frac{n^{p+1}}{p+1}\)</span>，它是以 <span class="arithmatex">\(\frac{n^{p+1}}{p+1}\)</span> 的级别趋于无穷大的。比如对于 <span class="arithmatex">\(1^{100}+2^{100}+\cdots + n^{100}\)</span> 我虽然不知道它的求和公式具体是多少，但我知道它是以 <span class="arithmatex">\(\frac{n^{101}}{101}\)</span> 的速度趋于无穷大的。</p>
 <h3 id="_4">注：另外的普遍方法</h3>
 <p>利用相邻项的立方差恒等式构造裂项相消，是计算 <span class="arithmatex">\(1^2+2^2+\cdots +n^2\)</span>求和公式的普通方法。根据：</p>
 <div class="arithmatex">\[
