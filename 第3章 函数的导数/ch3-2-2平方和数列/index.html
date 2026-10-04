@@ -1359,7 +1359,7 @@ x \frac{\mathrm d}{\mathrm dx} \bigl(S(x)\bigr) = x + 2x^2 + 3x^3 + \cdots + n x
 <ol>
 <li>一次方和对应：<span class="arithmatex">\(\Theta\left(x^k\right) = k x^k\)</span>;</li>
 <li>平方和对应：<span class="arithmatex">\(\Theta^2\left(x^k\right) = \Theta\left(k x^k\right) = k^2 x^k\)</span>;</li>
-<li><span class="arithmatex">\(p\)</span>次方和对应：<span class="arithmatex">\(\Theta^p\left(x^k\right) = k^p x^k\)</span>.</li>
+<li><span class="arithmatex">\(p\)</span> 次方和对应：<span class="arithmatex">\(\Theta^p\left(x^k\right) = k^p x^k\)</span>.</li>
 </ol>
 <p>因此，任意正整数次方的离散数列求和公式可以如此计算：</p>
 <div class="arithmatex">\[
@@ -1372,7 +1372,7 @@ x \frac{\mathrm d}{\mathrm dx} \bigl(S(x)\bigr) = x + 2x^2 + 3x^3 + \cdots + n x
     = &amp;\lim_{n\to \infty}\frac{1}{n}\left[\left(\frac{1}{n}\right)^p+\left(\frac{2}{n}\right)^p+\cdots +\left(\frac{n}{n}\right)^p\right]=\int_{0}^{1}x^p\,\mathrm dx = \left.\frac{x^{p+1}}{p+1}\right|_0^1 = \frac{1}{p+1}
 \end{split}
 \]</div>
-<p>因此可知 <span class="arithmatex">\(1^p+2^p+\cdots+n^p \sim \frac{n^{p+1}}{p+1}\)</span>，它是以 <span class="arithmatex">\(\frac{n^{p+1}}{p+1}\)</span> 的级别趋于无穷大的。比如对于 <span class="arithmatex">\(1^{100}+2^{100}+\cdots + n^{100}\)</span> 我虽然不知道它的求和公式具体是多少，但我知道它是以 <span class="arithmatex">\(\frac{n^{101}}{101}\)</span> 的速度趋于无穷大的。</p>
+<p>这说明 <span class="arithmatex">\(1^p+2^p+\cdots+n^p\)</span> 与 <span class="arithmatex">\(\frac{n^{p+1}}{p+1}\)</span> 是等价无穷大：<span class="arithmatex">\(1^p+2^p+\cdots+n^p \sim \frac{n^{p+1}}{p+1}\)</span>，它是以 <span class="arithmatex">\(n^{p+1}\)</span> 的级别趋于无穷大的。比如，对于 <span class="arithmatex">\(1^{100}+2^{100}+\cdots + n^{100}\)</span> 我虽然不知道它的求和公式具体是多少，但我知道它是以 <span class="arithmatex">\(n^{101}\)</span> 的速度趋于无穷大的。</p>
 <h3 id="_4">注：另外的普遍方法</h3>
 <p>利用相邻项的立方差恒等式构造裂项相消，是计算 <span class="arithmatex">\(1^2+2^2+\cdots +n^2\)</span>求和公式的普通方法。根据：</p>
 <div class="arithmatex">\[
