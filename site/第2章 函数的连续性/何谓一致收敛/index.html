@@ -7,7 +7,7 @@
       
       
       
-        <link rel="canonical" href="https://monohunter.github.io/cgmpedia/%E7%AC%AC2%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/%E5%85%B3%E4%BA%8E%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B/">
+        <link rel="canonical" href="https://monohunter.github.io/cgmpedia/%E7%AC%AC2%E7%AB%A0%20%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/%E4%BD%95%E8%B0%93%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B/">
       
       
         <link rel="prev" href="../%E4%B8%80%E8%87%B4%E8%BF%9E%E7%BB%AD%E9%87%8A%E4%B9%89/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>关于一致收敛 - 数学分析习题项目</title>
+        <title>何谓一致收敛 - 数学分析习题项目</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              关于一致收敛
+              何谓一致收敛
             
           </span>
         </div>
@@ -637,7 +637,7 @@
   <span class="md-ellipsis">
     
   
-    关于一致收敛
+    何谓一致收敛
   
 
     
@@ -655,7 +655,7 @@
   <span class="md-ellipsis">
     
   
-    关于一致收敛
+    何谓一致收敛
   
 
     
@@ -1231,35 +1231,60 @@
 
 
 
-<h1 id="_1">关于一致收敛</h1>
-<p>定义在区间 <span class="arithmatex">\([a,b]\)</span> 上的函数列 <span class="arithmatex">\(\left\{f_n(x)\right\}\)</span> 收敛到 <span class="arithmatex">\(f(x)\)</span>，可以表示为： <span class="arithmatex">\(\lim\limits_{n\to \infty}{f_n(x)}=f(x),x \in [a,b]\)</span>。当 <span class="arithmatex">\(x\)</span> 在变动时，函数列收敛到一个函数，这就包含了无数个数项级数收敛。在不同的位置，这些数项级数的收敛速度未必是一致的，所谓一致收敛，就是考察函数列收敛速度是否一致。</p>
+<h1 id="_1">何谓一致收敛</h1>
+<p>设函数列 <span class="arithmatex">\(\{f_n(x)\}\)</span> 定义在区间 <span class="arithmatex">\([a,b]\)</span> 上，如果对于每个固定的 <span class="arithmatex">\(x\in[a,b]\)</span>，都有：</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}f_n(x)=f(x)
+\]</div>
+<p>那么就称函数列 <span class="arithmatex">\(\{f_n(x)\}\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上<strong>逐点收敛</strong>到函数 <span class="arithmatex">\(f(x)\)</span>。</p>
+<p>固定一个 <span class="arithmatex">\(x\)</span>，函数列就对应一个数列 <span class="arithmatex">\(\{f_n(x)\}\)</span>。因此函数列收敛到一个函数，就包含了无数个数列的收敛。不过，在不同的位置，这些数列的收敛速度未必是一致的，也就是这些数列达到同一误差要求（所谓的任意正数 <span class="arithmatex">\(\varepsilon\)</span>）所需的项数可能不同。一致收敛所考察的，就是能否对整个区间上的收敛速度进行统一控制。</p>
 <h2 id="_2">一个收敛速度不一致的例子</h2>
 <p>考察函数列：</p>
 <div class="arithmatex">\[
-f_n(x)=x^n,\;n\in \mathbf N^*,\,x\in (0,1).
+f_n(x)=x^n,\qquad n\in \mathbf N^*,\quad x\in (0,1).
 \]</div>
-<p>此函数列在 <span class="arithmatex">\((0,1)\)</span> 区间上逐点收敛于函数 <span class="arithmatex">\(f(x)=0\)</span>，如下图所示。图像展示了 <span class="arithmatex">\(n=1,2,4,8,16,32\)</span> 时函数的图像。可知随着 <span class="arithmatex">\(n\)</span> 的增大，函数越来越陡峭，越来越逼近于 <span class="arithmatex">\(x=1\)</span>。当 <span class="arithmatex">\(n\to \infty\)</span> 时，对于任意的 <span class="arithmatex">\(x\in(0,1)\)</span>，都有 <span class="arithmatex">\(x^n \to 0\)</span>。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/%E9%9D%9E%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B%E5%87%BD%E6%95%B02.svg" data-desc-position="bottom"><img alt="" src="../../images/%E9%9D%9E%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B%E5%87%BD%E6%95%B02.svg" style="display: block; margin-left: auto; margin-right: auto;" width="500"></a></p>
-<p>对于固定的 <span class="arithmatex">\(x\)</span>，这个收敛过程可以表述为：</p>
+<p>对于每个固定的 <span class="arithmatex">\(x\in(0,1)\)</span>，都有 <span class="arithmatex">\(\lim\limits_{n\to\infty} x^n = 0\)</span>，因此这个函数列在 <span class="arithmatex">\((0,1)\)</span> 上逐点收敛到函数 <span class="arithmatex">\(f(x)=0\)</span>。下图展示了 <span class="arithmatex">\(n=1,2,4,8,16,32\)</span> 时函数的图像。随着 <span class="arithmatex">\(n\)</span> 的增大，对于固定的 <span class="arithmatex">\(x\)</span>，函数值越来越接近 <span class="arithmatex">\(0\)</span>；同时，曲线急速上升（陡峭）的部分越来越集中在靠近 <span class="arithmatex">\(x=1\)</span> 的位置。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/pointwise-not-uniform.svg" data-desc-position="bottom"><img alt="" src="../../images/pointwise-not-uniform.svg" style="display: block; margin-left: auto; margin-right: auto;" width="500"></a></p>
+<p>对于固定的 <span class="arithmatex">\(x\)</span>，上述收敛过程可以表述为：对于任意的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在正整数 <span class="arithmatex">\(N=N(\varepsilon,x)\)</span>，使得当 <span class="arithmatex">\(n&gt;N\)</span> 时，恒有：</p>
 <div class="arithmatex">\[
-\forall\,\varepsilon &gt;0,\exists\,N(\varepsilon,x),\text{使得当}\,n&gt;N\,\text{时，有}\left|f_n(x)-f(x)\right|=x^n&lt;\varepsilon.
+\left|f_n(x)-f(x)\right|=x^n&lt;\varepsilon.
 \]</div>
-<p>这里的 <span class="arithmatex">\(N\)</span>，除了与选定的正数 <span class="arithmatex">\(\varepsilon\)</span> 有关，还与 <span class="arithmatex">\(x\)</span> 点的位置有关，因此记作 <span class="arithmatex">\(N(\varepsilon,x)\)</span>。为了展示 <span class="arithmatex">\(N\)</span> 的取值与 <span class="arithmatex">\(x\)</span> 位置的关系，我们作如下分析：</p>
-<p>上述不等式 <span class="arithmatex">\(x^n&lt;\varepsilon\)</span> 等价于 <span class="arithmatex">\(n\lg{x}&lt;\lg{\varepsilon}\)</span>，其中 <span class="arithmatex">\(\lg x\)</span> 表示以 <span class="arithmatex">\(10\)</span> 为底的对数函数。解得：<span class="arithmatex">\(n&gt;\frac{\lg \varepsilon}{\lg x}\)</span>，即可以取 <span class="arithmatex">\(N=\left[\frac{\lg \varepsilon}{\lg x}\right]\)</span>，那么当 <span class="arithmatex">\(n&gt;N\)</span> 时，就成立 <span class="arithmatex">\(x^n&lt;\varepsilon\)</span>。</p>
-<p>如果取定 <span class="arithmatex">\(\varepsilon = 10^{-100}\)</span>，那么：</p>
+<p>这里的 <span class="arithmatex">\(N\)</span>，除了与选定的正数 <span class="arithmatex">\(\varepsilon\)</span> 有关，还与 <span class="arithmatex">\(x\)</span> 点的位置有关，因此记作 <span class="arithmatex">\(N(\varepsilon,x)\)</span>。为了说明这种依赖关系，固定 <span class="arithmatex">\(0&lt; \varepsilon &lt;1\)</span>，对上述不等式取以 <span class="arithmatex">\(10\)</span> 为底的对数，得：</p>
+<div class="arithmatex">\[
+x^n&lt;\varepsilon \implies n\lg{x}&lt;\lg{\varepsilon} \implies n&gt;\frac{\lg \varepsilon}{\lg x}
+\]</div>
+<p>因此可以取：</p>
+<div class="arithmatex">\[
+N(\varepsilon,x) = \left\lfloor\frac{\lg\varepsilon}{\lg x}\right\rfloor
+\]</div>
+<p>这样，当整数 <span class="arithmatex">\(n&gt;N(\varepsilon,x)\)</span> 时，就有 <span class="arithmatex">\(x^n&lt;\varepsilon\)</span>。</p>
+<p>例如，如果取定 <span class="arithmatex">\(\varepsilon = 10^{-100}\)</span>，那么在不同的位置：</p>
 <ol>
-<li>在 <span class="arithmatex">\(x_1=10^{-10}\)</span> 处，解得 <span class="arithmatex">\(N=10\)</span>。即 <span class="arithmatex">\(n&gt;10\)</span> 时，从第 <span class="arithmatex">\(11\)</span> 项开始，才有 <span class="arithmatex">\({(x_1)}^n&lt;10^{-100}\)</span>；</li>
-<li>在 <span class="arithmatex">\(x_2=10^{-4}\)</span> 处，解得 <span class="arithmatex">\(N=25\)</span>。即 <span class="arithmatex">\(n&gt;25\)</span> 时，从第 <span class="arithmatex">\(26\)</span> 项开始，才有 <span class="arithmatex">\({(x_2)}^n&lt;10^{-100}\)</span>；</li>
+<li>在 <span class="arithmatex">\(x_1=10^{-10}\)</span> 处，解得 <span class="arithmatex">\(N=10\)</span>。即从第 <span class="arithmatex">\(11\)</span> 项开始，才有 <span class="arithmatex">\({(x_1)}^n&lt;10^{-100}\)</span>；</li>
+<li>在 <span class="arithmatex">\(x_2=10^{-4}\)</span> 处，解得 <span class="arithmatex">\(N=25\)</span>。即从第 <span class="arithmatex">\(26\)</span> 项开始，才有 <span class="arithmatex">\({(x_2)}^n&lt;10^{-100}\)</span>；</li>
 <li>在 <span class="arithmatex">\(x_3=10^{-1}\)</span> 处，解得 <span class="arithmatex">\(N=100\)</span>。即从第 <span class="arithmatex">\(101\)</span> 项开始，才有 <span class="arithmatex">\({(x_3)}^n&lt;10^{-100}\)</span>；</li>
 <li>在 <span class="arithmatex">\(x_4 = 0.5\)</span> 处，解得 <span class="arithmatex">\(N=332\)</span>。即从 第 <span class="arithmatex">\(333\)</span> 项开始，才有 <span class="arithmatex">\({(x_4)}^n&lt;10^{-100}\)</span>；</li>
 <li>在 <span class="arithmatex">\(x_5 = 0.9\)</span> 处，解得 <span class="arithmatex">\(N=2185\)</span>。即从 第 <span class="arithmatex">\(2186\)</span> 项开始，才有 <span class="arithmatex">\({(x_5)}^n&lt;10^{-100}\)</span>。</li>
 </ol>
-<p>由此可知，对于不同的 <span class="arithmatex">\(x\)</span>，函数列收敛到 <span class="arithmatex">\(0\)</span> 的速度不一样（不一致）。当 <span class="arithmatex">\(x\)</span> 越靠近 <span class="arithmatex">\(0\)</span>，级数收敛得越快；随着 <span class="arithmatex">\(x\)</span> 向 <span class="arithmatex">\(1\)</span> 靠拢，级数收敛的速度越来越慢，取到的 <span class="arithmatex">\(N\)</span> 也就越来越大，当 <span class="arithmatex">\(x\rightarrow 1\)</span> 时，<span class="arithmatex">\(N\rightarrow +\infty\)</span>，因此没有<strong>公共的</strong> <span class="arithmatex">\(N\)</span>。这就叫做，函数列 <span class="arithmatex">\(x^n\)</span> 在区间 <span class="arithmatex">\((0,1)\)</span> 上逐点收敛但不一致收敛。</p>
+<p>由此可知，对于不同的 <span class="arithmatex">\(x\)</span>，函数列收敛到 <span class="arithmatex">\(0\)</span> 的速度不一样（不一致）。当 <span class="arithmatex">\(x\)</span> 越靠近 <span class="arithmatex">\(0\)</span>，数列 <span class="arithmatex">\(\{f_n(x)\}\)</span> 收敛得越快；随着 <span class="arithmatex">\(x\)</span> 向 <span class="arithmatex">\(1\)</span> 靠拢，数列收敛的速度越来越慢，对于同一个误差要求，取到的 <span class="arithmatex">\(N\)</span> 也就越大，所需的项数也越大。对于固定的 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，当 <span class="arithmatex">\(x\rightarrow 1^-\)</span> 时，有：</p>
+<div class="arithmatex">\[
+\frac{\lg \varepsilon}{\lg x}\to +\infty\quad \implies\quad N(\varepsilon,x)\rightarrow +\infty
+\]</div>
+<p>因此，无法找到一个对所有 <span class="arithmatex">\(x\in(0,1)\)</span> 都适用的<strong>公共的</strong> <span class="arithmatex">\(N\)</span>。这说明，函数列 <span class="arithmatex">\(x^n\)</span> 在区间 <span class="arithmatex">\((0,1)\)</span> 上逐点收敛到 <span class="arithmatex">\(0\)</span>，但不一致收敛到 <span class="arithmatex">\(0\)</span>。</p>
 <h2 id="_3">函数列的一致收敛</h2>
-<p><strong>（一致收敛的定义）</strong>设函数列 <span class="arithmatex">\(\{f_n(x)\}\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上收敛到 <span class="arithmatex">\(f\)</span>，如果对于任意的 <span class="arithmatex">\(\varepsilon &gt;0\)</span>，存在只与 <span class="arithmatex">\(\varepsilon\)</span> 有关的 <span class="arithmatex">\(N(\varepsilon)\)</span>，使得当 <span class="arithmatex">\(n&gt;N(\varepsilon)\)</span> 时，有：<span class="arithmatex">\(|f_n(x)-f(x)|&lt;\varepsilon\)</span> 对任意的 <span class="arithmatex">\(x \in I\)</span> 都成立，此时称 <span class="arithmatex">\(\{f_n(x)\}\)</span> 在 <span class="arithmatex">\(I\)</span> 上一致收敛到 <span class="arithmatex">\(f\)</span>。记为：<span class="arithmatex">\(f_n \rightrightarrows f\)</span>，或者说，<span class="arithmatex">\(\lim\limits_{n \rightarrow \infty}{f_n(x)}=f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上 <strong>一致的成立</strong>。    </p>
-<p>其几何意义是明显的，如下图所示，就是说当 <span class="arithmatex">\(n\)</span> 充分大，大于一个<strong>公共的</strong> <span class="arithmatex">\(N\)</span> 时，所有的函数都落在 <span class="arithmatex">\(\left(f(x)-\varepsilon,f(x)+\varepsilon\right)\)</span> 的带状区域之内，这个 <span class="arithmatex">\(N\)</span> 与 <span class="arithmatex">\(x\)</span> 的位置是无关的。</p>
+<p><strong>定义：</strong>设函数列 <span class="arithmatex">\(\{f_n(x)\}\)</span> 和函数 <span class="arithmatex">\(f(x)\)</span> 定义在区间 <span class="arithmatex">\(I\)</span> 上，如果对于任意的 <span class="arithmatex">\(\varepsilon &gt;0\)</span>，存在只与 <span class="arithmatex">\(\varepsilon\)</span> 有关（与 <span class="arithmatex">\(x\)</span> 无关）的正整数 <span class="arithmatex">\(N=N(\varepsilon)\)</span>，使得当 <span class="arithmatex">\(n&gt;N\)</span> 时，有：</p>
+<div class="arithmatex">\[
+|f_n(x)-f(x)|&lt;\varepsilon
+\]</div>
+<p>对任意的 <span class="arithmatex">\(x \in I\)</span> 都成立，就称函数列 <span class="arithmatex">\(\{f_n(x)\}\)</span> 在 <span class="arithmatex">\(I\)</span> 上<strong>一致收敛</strong>到 <span class="arithmatex">\(f\)</span>。记为：<span class="arithmatex">\(f_n \rightrightarrows f\)</span> 于 <span class="arithmatex">\(I\)</span>。在比较老的中文教材中，也说：<span class="arithmatex">\(\lim\limits_{n \rightarrow \infty}{f_n(x)}=f(x)\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上 <strong>一致的成立</strong>。  </p>
+<p>其几何意义是明显的，如下图所示，给定 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 后，曲线 <span class="arithmatex">\(y=f(x)+\varepsilon\)</span> 和 <span class="arithmatex">\(y=f(x)-\varepsilon\)</span> 围成一个带状区域。一致收敛则意味着：当 <span class="arithmatex">\(n&gt;N\)</span> 时，每条 <span class="arithmatex">\(f_n\)</span> 的整条图像都落在 <span class="arithmatex">\(\left(f(x)-\varepsilon,f(x)+\varepsilon\right)\)</span> 的带状区域内。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B.svg" data-desc-position="bottom"><img alt="" src="../../images/%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B.svg" style="display: block; margin-left: auto; margin-right: auto;" width="600"></a></p>
-<p>但上述例子中，<span class="arithmatex">\(x^n\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 区间就不满足这个性质，从图像上也可以看出，对于 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，当 <span class="arithmatex">\(x \rightarrow 1\)</span> 时，由于 <span class="arithmatex">\(N\to+\infty\)</span>，那么不管 <span class="arithmatex">\(n\)</span> 多大，每条曲线在靠近 <span class="arithmatex">\(1\)</span> 的位置总会超出带状区域。</p>
+<p>回到函数列 <span class="arithmatex">\(f_n(x)=x^n\)</span>。对于任意固定的 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，曲线 <span class="arithmatex">\(y=x^n\)</span> 与带状区域上边界 <span class="arithmatex">\(y=\varepsilon\)</span> 的交点横坐标为</p>
+<div class="arithmatex">\[
+x_n=\varepsilon^{1/n}
+\]</div>
+<p>虽然 <span class="arithmatex">\(x_n\to1\)</span>，但对于每个有限的 <span class="arithmatex">\(n\)</span>，仍然有 <span class="arithmatex">\(x_n&lt;1\)</span>。因此，在区间 <span class="arithmatex">\(\left(\varepsilon^{1/n},1\right)\)</span> 之内，始终有 <span class="arithmatex">\(x^n&gt;\varepsilon\)</span>。那么从几何上看，无论 <span class="arithmatex">\(n\)</span> 多大，每条曲线在靠近 <span class="arithmatex">\(1\)</span> 的位置总有一部分超出带状区域；从代数上看，当 <span class="arithmatex">\(x\)</span> 从左侧趋于 <span class="arithmatex">\(1\)</span> 时，满足 <span class="arithmatex">\(x^n&lt;\varepsilon\)</span> 的 <span class="arithmatex">\(N\)</span> 就趋于无穷大。</p>
+<p>所以，逐点收敛允许根据不同的 <span class="arithmatex">\(x\)</span> 选择不同的 <span class="arithmatex">\(N\)</span>；一致收敛则要求用同一个 <span class="arithmatex">\(N\)</span> 控制整个区间上的误差。</p>
 
 
 
