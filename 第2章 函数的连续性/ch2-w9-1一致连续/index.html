@@ -1289,7 +1289,7 @@
 
 <h1 id="ch2-w9-1">ch2-w9-1 一致连续与极限证明</h1>
 <h2 id="291">问题2.9.1</h2>
-<p>函数<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([0,+\infty)\)</span>上一致连续，且对任何<span class="arithmatex">\(x\in [0,1]\)</span>有<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\;(n\in \mathbf N^*)\)</span>,证明：<span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span>.举例说明，仅有<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([0,+\infty)\)</span>上的连续性推不出上述结论。</p>
+<p>函数 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0,+\infty)\)</span> 上一致连续，且对任何 <span class="arithmatex">\(x\in [0,1]\)</span> 有 <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\;(n\in \mathbf N^*)\)</span>，证明：<span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span>. 举例说明，仅有 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0,+\infty)\)</span> 上的连续性推不出上述结论。</p>
 <h2 id="_1">证明</h2>
 <p>因为 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0, +\infty)\)</span> 上一致连续，那么对于任意给定的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得对于任意 <span class="arithmatex">\(x, y \in [0, +\infty)\)</span>，只要 <span class="arithmatex">\(\vert{}x - y\vert{} &lt; \delta\)</span>，就有 <span class="arithmatex">\(\vert{}f(x) - f(y)\vert{} &lt; \frac{\varepsilon}{2}\)</span>。</p>
 <p>取正整数 <span class="arithmatex">\(k\)</span> 使得 <span class="arithmatex">\(\frac{1}{k} &lt; \delta\)</span>。我们将区间 <span class="arithmatex">\([0,1]\)</span> 进行 <span class="arithmatex">\(k\)</span> 等分，取分点 <span class="arithmatex">\(x_i = \frac{i}{k}\)</span>，其中 <span class="arithmatex">\(i = 0, 1, 2, \dots, k\)</span>。由题设条件已知，对于每一个固定的分点<span class="arithmatex">\(x_i\)</span>，均有 <span class="arithmatex">\(\lim\limits_{n\to\infty} f(x_i + n) = 0\)</span>。因为分点的个数是有限的（共 <span class="arithmatex">\(k+1\)</span> 个），所以必定存在一个正整数 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(n &gt; N\)</span> 时，对于所有的 <span class="arithmatex">\(i = 0, 1, 2, \dots, k\)</span>，同时满足：</p>
@@ -1344,7 +1344,7 @@ g(x) = \frac{x}{1+x^2\sin^2{(\pi x)}}
 <div class="arithmatex">\[
 g_n(t)=f(n+t),\qquad t\in[0,1].
 \]</div>
-<p>这是一个函数列<span class="arithmatex">\(\{g_n(t)\}\)</span>。题设条件<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\)</span> 对于 <span class="arithmatex">\(x \in [0,1]\)</span> 成立，直接等价于函数列 <span class="arithmatex">\(g_n(t) \to 0\)</span> 在 <span class="arithmatex">\(t \in [0,1]\)</span> 上逐点收敛。</p>
+<p>这是一个函数列 <span class="arithmatex">\(\{g_n(t)\}\)</span>。题设条件<span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f(x+n)=0\)</span> 对于 <span class="arithmatex">\(x \in [0,1]\)</span> 成立，直接等价于函数列 <span class="arithmatex">\(g_n(t) \to 0\)</span> 在 <span class="arithmatex">\(t \in [0,1]\)</span> 上逐点收敛。</p>
 <p>而要证的结论： <span class="arithmatex">\(\lim\limits_{x\rightarrow +\infty}f(x)=0\)</span> 等价于要求：</p>
 <p>对于任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，当 <span class="arithmatex">\(n &gt; N\)</span> 时，对所有的 <span class="arithmatex">\(t \in [0,1]\)</span>，都有： <span class="arithmatex">\(\vert{}f(n+t)\vert{} &lt; \varepsilon\)</span>。</p>
 <p>这恰恰就是 <span class="arithmatex">\(g_n(t)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上一致收敛于 <span class="arithmatex">\(0\)</span> 的严格定义，记作 <span class="arithmatex">\(g_n(t) \rightrightarrows 0\)</span>。</p>
