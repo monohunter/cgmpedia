@@ -1333,11 +1333,11 @@
 
 <h1 id="ch3-2-6">ch3-2-6 导数极限定理</h1>
 <h2 id="_1">题目</h2>
-<p>设函数<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([a,b]\)</span>上连续，<span class="arithmatex">\(f(a)=f(b)=0\)</span>，</p>
+<p>设函数 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，<span class="arithmatex">\(f(a)=f(b)=0\)</span>，</p>
 <div class="arithmatex">\[
 \left(\lim_{x\rightarrow a^+ }f'(x)\right)\cdot \left(\lim_{x\rightarrow b^- }f'(x)\right)&gt;0
 \]</div>
-<p>证明：<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\((a,b)\)</span>内至少有一个零点。</p>
+<p>证明：<span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\((a,b)\)</span> 内至少有一个零点。</p>
 <h2 id="_2">证明</h2>
 <p>由题设条件<span class="arithmatex">\(\lim\limits_{x\to a^+} f'(x) \cdot \lim\limits_{x\to b^-} f'(x)&gt;0\)</span>可知，这两个极限同号。不妨设它们均大于<span class="arithmatex">\(0\)</span>。</p>
 <p>因为<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\([a,b]\)</span>上连续，且导数的右极限<span class="arithmatex">\(\lim\limits_{x\to a^+}f'(x)\)</span>存在，那么（根据下面的导数极限定理）<span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 点的右导数必定存在且等于该极限：</p>
@@ -1371,7 +1371,7 @@ f'_-(b) = \lim_{x\rightarrow b^- }f'(x) = \lim_{h\to 0^+}\frac{f(b)-f(b-h)}{h}&g
 f'_+(a) = \lim_{x \to a^+} \frac{f(x) - f(a)}{x - a}
 \]</div>
 <p>要计算它，只需要知道 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(a\)</span> 点及其右侧邻域的函数值即可。</p>
-<p>二、 导数的右极限 <span class="arithmatex">\(\lim\limits_{x \to a^+} f'(x)\)</span> 是导函数的极限。它的前提是 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(a\)</span> 的右侧邻域 <span class="arithmatex">\((a, a+\delta)\)</span> 内必须处处可导，从而得到一个新的函数 <span class="arithmatex">\(f'(x)\)</span>，然后求这个新函数在 <span class="arithmatex">\(x \to a^+\)</span> 时的极限。</p>
+<p>二、 导数的右极限 <span class="arithmatex">\(\lim\limits_{x \to a^+} f'(x)\)</span> 是导函数的右极限。它的前提是 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(a\)</span> 的右侧邻域 <span class="arithmatex">\((a, a+\delta)\)</span> 内必须处处可导，从而得到一个新的函数 <span class="arithmatex">\(f'(x)\)</span>，然后求这个新函数在 <span class="arithmatex">\(x \to a^+\)</span> 时的极限。</p>
 <p>前者是较弱的条件，后者是较强的条件。两者不一定相等，可以分别举出以下两类反例。</p>
 <h3 id="_4">反例一</h3>
 <p>右导数存在，导数的右极限不一定存在。弱条件推不出强条件，是理所应当。即使函数在 <span class="arithmatex">\(a\)</span> 点有右导数，导函数在 <span class="arithmatex">\(a\)</span> 点附近也可能会发生剧烈震荡，导致导函数的极限不存在。最经典的实分析反例是：</p>
@@ -1427,6 +1427,10 @@ f(x) - f(a) = f'(\xi)(x - a)\implies\frac{f(x) - f(a)}{x - a} = f'(\xi)
 <p>等式的左侧严格符合 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 点右导数的定义。由此即可得出结论：</p>
 <div class="arithmatex">\[
 f'_+(a) = \lim_{x\to a^+} f'(x)
+\]</div>
+<p>【备注】以上思考了那么多，才发现在第3版教材中，题设条件直接给出：</p>
+<div class="arithmatex">\[
+f'_+(a)\cdot f'_-(b)&gt;0
 \]</div>
 
 

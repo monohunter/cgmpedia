@@ -1314,7 +1314,7 @@ f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
 \]</div>
 <p>即所有的分点都落入 <span class="arithmatex">\((0,\delta)\)</span> 之内，因此对于所有的 <span class="arithmatex">\(k\leqslant n\)</span>，都有 <span class="arithmatex">\(\left|\eta\left(\frac{k}{n^2}\right)\right|&lt;\varepsilon\)</span>，因此误差项之和：</p>
 <div class="arithmatex">\[
-\left|E_n\right|=\left\vert{} \sum_{k=1}^n \alpha\left(\frac{k}{n^2}\right)\frac{k}{n^2} \right\vert{} \leqslant \sum_{k=1}^n \left\vert{} \alpha\left(\frac{k}{n^2}\right) \right\vert{} \frac{k}{n^2} &lt; \varepsilon \sum_{k=1}^n \frac{k}{n^2} = \varepsilon \frac{n(n+1)}{2n^2}
+\left|E_n\right|=\left\vert{} \sum_{k=1}^n \eta\left(\frac{k}{n^2}\right)\frac{k}{n^2} \right\vert{} \leqslant \sum_{k=1}^n \left\vert{} \eta\left(\frac{k}{n^2}\right) \right\vert{} \frac{k}{n^2} &lt; \varepsilon \sum_{k=1}^n \frac{k}{n^2} = \varepsilon \frac{n(n+1)}{2n^2}
 \]</div>
 <p>又因为当 <span class="arithmatex">\(n\geqslant 1\)</span> 时，有 <span class="arithmatex">\(\frac{n(n+1)}{2n^2}\leqslant 1\)</span>，代入上式即得 <span class="arithmatex">\(|E_n|&lt;\varepsilon\)</span>。以上逻辑链总结一下就是：对于任意的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在 <span class="arithmatex">\(N\in \mathbf N^*\)</span>，使得当 <span class="arithmatex">\(n&gt;N\)</span> 时，恒有 <span class="arithmatex">\(|E_n|&lt;\varepsilon\)</span>，因此 <span class="arithmatex">\(\lim\limits_{n\to \infty}E_n = 0\)</span>。</p>
 <p>也就是无穷多个无穷小的高阶误差相加，极限为 <span class="arithmatex">\(0\)</span>，因此可以放心忽略掉它，那么 <span class="arithmatex">\(x_n\)</span> 的确是由线性主部，也就是 <span class="arithmatex">\(x=0\)</span> 处的切线斜率 <span class="arithmatex">\(f'(0)\)</span> 决定。这就推证了：</p>
@@ -1373,7 +1373,7 @@ f(x)=f'(0)x+\eta(x)x,\qquad \text{其中：}\lim\limits_{x\to 0}\eta (x)=0
 \sum_{k=1}^n \varepsilon_n \frac{k}{n^2} = \varepsilon_n \left( \sum_{k=1}^n \frac{k}{n^2} \right) = \varepsilon_n \frac{n(n+1)}{2n^2}
 \]</div>
 <p>从而将“无限个无穷小相加”转化为“一个无穷小量 <span class="arithmatex">\(\times\)</span> 一个有界宏观量”的问题。</p>
-<p>所谓“一致（Uniform）”即意味着 <strong>寻找到一个统一的界限，它不依赖于局部参数（如本题中的 <span class="arithmatex">\(k\)</span>）的变化</strong>。</p>
+<p>所谓“一致”即意味着 <strong>寻找到一个统一的界限，它不依赖于局部参数（如本题中的 <span class="arithmatex">\(k\)</span>）的变化</strong>。</p>
 
 
 
